@@ -39,7 +39,7 @@
             <span class="icon_close"></span>
         </div>
         <div class="logo">
-            <a href="./index.html">
+            <a href="./index.php">
                 <img src="img/logo.png" alt="">
             </a>
         </div>
@@ -67,7 +67,7 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <div class="logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                            <a href="./index.php"><img src="img/logo.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-10">
@@ -91,7 +91,7 @@
                     <div class="col-lg-9">
                         <nav class="nav-menu">
                             <ul>
-                                <li class="active"><a href="./index.html">Home</a></li>
+                                <li class="active"><a href="./index.php">Home</a></li>
                                 <li><a href="./about.html">About</a></li>
                                 <li><a href="#">Products</a>
                                     <ul class="dropdown">
@@ -328,139 +328,72 @@
                 </div>
             </div>
             <div class="row property-filter">
-                <div class="col-lg-4 col-md-6 mix all house">
-                    <div class="property-item">
-                        <div class="pi-pic set-bg" data-setbg="img/property/property-1.jpg">
-                            <div class="label">IN STOCK</div>
-                        </div>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price">Rs. 2500<span>/MRP</span></div>
-                            <h5><a href="#">Island Carara</a></h5>
-                            <p></span> Item Code .: 1001<br>
-                                Color.: Cream, Brand.: Somany, Material.: Marble</p>
-                            <ul>
-                                <li> 100x100x100 mm</li>
-                                <li>   
-                                    <i class="fa fa-object-group">   </i> &nbsp;&nbsp;
-                                    <i class="fa fa-bathtub">  </i> &nbsp;&nbsp;
-                                    <i class="fa fa-bed"></i> &nbsp;&nbsp;
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <?php
+    // Database connection
+    $servername = "localhost";
+    $username = "epravidi_admin1";
+    $password = "+?b]@DrT68R0";
+    $dbname = "epravidi_osrt";
+    
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    
+    // SQL Query to fetch product data
+    $sql = "SELECT stock, price, product_code, color, brand, material, dimensions, product_name, image, category 
+            FROM products";
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+        // Output data for each row
+        while($row = $result->fetch_assoc()) {
+            // Determine the stock status based on the stock quantity
+            $stock_label = '';
+            $stock_status = '';
+    
+            if ($row['stock'] > 0) {
+                $stock_label = 'label'; // no additional class for in stock
+                $stock_status = 'IN STOCK';
+            } else {
+                $stock_label = 'label c-red'; // for out of stock
+                $stock_status = 'NOT IN STOCK';
+            }
+    
+            // Display each property item
+            echo '<div class="col-lg-4 col-md-6 mix all house">';
+            echo '<div class="property-item">';
+            echo '<div class="pi-pic set-bg" data-setbg="img/property/' . htmlspecialchars($row["image"]) . '">';
+            echo '<div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>';
+            echo '</div>';
+            echo '<div class="pi-text">';
+            echo '<a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>';
+            echo '<div class="pt-price">Rs. ' . htmlspecialchars($row["price"]) . '<span>/MRP</span></div>';
+            echo '<h5><a href="#">' . htmlspecialchars($row["product_name"]) . '</a></h5>';
+            echo '<p>Item Code .: ' . htmlspecialchars($row["product_code"]) . '<br>';
+            echo 'Color.: ' . htmlspecialchars($row["color"]) . ', Brand.: ' . htmlspecialchars($row["brand"]) . ', Material.: ' . htmlspecialchars($row["material"]) . '</p>';
+            echo '<ul>';
+            echo '<li>' . htmlspecialchars($row["dimensions"]) . '</li>';
+            echo '<li>';
+            echo '<i class="fa fa-object-group"></i>&nbsp;&nbsp;';
+            echo '<i class="fa fa-bathtub"></i>&nbsp;&nbsp;';
+            echo '<i class="fa fa-bed"></i>&nbsp;&nbsp;';
+            echo '</li>';
+            echo '</ul>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+        }
+    } else {
+        echo "0 results";
+    }
+    $conn->close();
+    ?>
+    
+    
                 </div>
-                <div class="col-lg-4 col-md-6 mix all restaurent hotel">
-                    <div class="property-item">
-                        <div class="pi-pic set-bg" data-setbg="img/property/property-2.jpg">
-                            <div class="label c-red">OUT OF STOCK</div>
-                        </div>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price">Rs. 2500<span>/MRP</span></div>
-                            <h5><a href="#">Island Carara</a></h5>
-                            <p></span> Item Code .: 1001<br>
-                                Color.: Cream, Brand.: Somany, Material.: Marble</p>
-                            <ul>
-                                <li> 100x100x100 mm</li>
-                                <li>   
-                                    <i class="fa fa-object-group">   </i> &nbsp;&nbsp;
-                                    <i class="fa fa-bathtub">  </i> &nbsp;&nbsp;
-                                    <i class="fa fa-bed"></i> &nbsp;&nbsp;
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mix all apart office">
-                    <div class="property-item">
-                        <div class="pi-pic set-bg" data-setbg="img/property/property-2.jpg">
-                            <div class="label c-red">OUT OF STOCK</div>
-                        </div>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price">Rs. 2500<span>/MRP</span></div>
-                            <h5><a href="#">Island Carara</a></h5>
-                            <p></span> Item Code .: 1001<br>
-                                Color.: Cream, Brand.: Somany, Material.: Marble</p>
-                            <ul>
-                                <li> 100x100x100 mm</li>
-                                <li>   
-                                    <i class="fa fa-object-group">   </i> &nbsp;&nbsp;
-                                    <i class="fa fa-bathtub">  </i> &nbsp;&nbsp;
-                                    <i class="fa fa-bed"></i> &nbsp;&nbsp;
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mix all hotel restaruent">
-                    <div class="property-item">
-                        <div class="pi-pic set-bg" data-setbg="img/property/property-4.jpg">
-                            <div class="label c-red">OUT OF STOCK</div>
-                        </div>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price">Rs. 2500<span>/MRP</span></div>
-                            <h5><a href="#">Island Carara</a></h5>
-                            <p></span> Item Code .: 1001<br>
-                                Color.: Cream, Brand.: Somany, Material.: Marble</p>
-                            <ul>
-                                <li> 100x100x100 mm</li>
-                                <li>   
-                                    <i class="fa fa-object-group">   </i> &nbsp;&nbsp;
-                                    <i class="fa fa-bathtub">  </i> &nbsp;&nbsp;
-                                    <i class="fa fa-bed"></i> &nbsp;&nbsp;
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mix all office hotel">
-                    <div class="property-item">
-                        <div class="pi-pic set-bg" data-setbg="img/property/property-5.jpg">
-                            <div class="label c-magenta">ON BACKORDER</div>
-                        </div>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price">Rs. 2500<span>/MRP</span></div>
-                            <h5><a href="#">Island Carara</a></h5>
-                            <p></span> Item Code .: 1001<br>
-                                Color.: Cream, Brand.: Somany, Material.: Marble</p>
-                            <ul>
-                                <li> 100x100x100 mm</li>
-                                <li>   
-                                    <i class="fa fa-object-group">   </i> &nbsp;&nbsp;
-                                    <i class="fa fa-bathtub">  </i> &nbsp;&nbsp;
-                                    <i class="fa fa-bed"></i> &nbsp;&nbsp;
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mix house apart office">
-                    <div class="property-item">
-                        <div class="pi-pic set-bg" data-setbg="img/property/property-6.jpg">
-                            <div class="label">IN STOCK</div>
-                        </div>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price">Rs. 2500<span>/MRP</span></div>
-                            <h5><a href="#">Island Carara</a></h5>
-                            <p></span> Item Code .: 1001<br>
-                                Color.: Cream, Brand.: Somany, Material.: Marble</p>
-                            <ul>
-                                <li> 100x100x100 mm</li>
-                                <li>   
-                                    <i class="fa fa-object-group">   </i> &nbsp;&nbsp;
-                                    <i class="fa fa-bathtub">  </i> &nbsp;&nbsp;
-                                    <i class="fa fa-bed"></i> &nbsp;&nbsp;
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <!-- Property Section End -->
