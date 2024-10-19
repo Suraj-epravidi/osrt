@@ -323,7 +323,43 @@ ol {
   text-transform: uppercase;
   display: inline-block;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+.hs-nav {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10; /* Ensure it stays on top */
+}
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  animation: fadeIn 0.5s forwards; /* Apply fade-in animation */
+}
+
+.hide-navbar {
+  animation: fadeOut 0.5s forwards; /* Apply fade-out animation */
+}
 .hs-nav .nav-menu ul li {
   list-style: none;
   display: inline-block;
@@ -751,7 +787,7 @@ ol {
 }
 
 .more-option .card-heading a:after,
-.more-option .card-heading > a.active[aria-expanded=false]:after {
+.more-option .card-heading > a.active[aria-expanded="false"]:after {
   content: "L";
   font-size: 16px;
   font-family: "ElegantIcons";
@@ -759,7 +795,7 @@ ol {
   background: #bb8e29;
 }
 
-.more-option .card-heading a[aria-expanded=true]:after,
+.more-option .card-heading a[aria-expanded="true"]:after,
 .more-option .card-heading > a.active:after {
   content: "K";
   font-size: 16px;
@@ -819,14 +855,14 @@ ol {
   text-transform: uppercase;
   padding: 3px 10px 2px;
   display: inline-block;
-  background: #0166D0;
+  background: #0166d0;
   color: #ffffff;
   position: absolute;
   left: 20px;
   top: 20px;
 }
 .property-item .pi-pic .label.c-red {
-  background: #D41800;
+  background: #d41800;
 }
 .property-item .pi-pic .label.c-magenta {
   background: #000080;
@@ -1124,7 +1160,7 @@ ol {
   text-transform: uppercase;
   color: #ffffff;
   padding: 2px 10px;
-  background: #32AA00;
+  background: #32aa00;
   font-weight: 600;
   margin-right: 10px;
 }
@@ -1547,7 +1583,7 @@ ol {
 .fs-widget .subscribe-form input {
   width: 100%;
   height: 52px;
-  border: 1px solid #536A68;
+  border: 1px solid #536a68;
   font-size: 14px;
   padding-left: 30px;
   color: #ffffff;
@@ -1670,7 +1706,7 @@ ol {
   text-transform: uppercase;
   padding: 3px 10px 2px;
   display: inline-block;
-  background: #0166D0;
+  background: #0166d0;
   color: #ffffff;
   margin-right: 10px;
 }
@@ -1761,10 +1797,22 @@ ol {
   width: 50%;
   float: left;
 }
-.pd-text .pd-board .tab-board .tab-content .tab-details ul.left-table li:nth-child(even) {
+.pd-text
+  .pd-board
+  .tab-board
+  .tab-content
+  .tab-details
+  ul.left-table
+  li:nth-child(even) {
   background: #f7f7f7;
 }
-.pd-text .pd-board .tab-board .tab-content .tab-details ul.right-table li:nth-child(odd) {
+.pd-text
+  .pd-board
+  .tab-board
+  .tab-content
+  .tab-details
+  ul.right-table
+  li:nth-child(odd) {
   background: #f7f7f7;
 }
 .pd-text .pd-board .tab-board .tab-content .tab-details ul li {
@@ -2068,11 +2116,19 @@ ol {
   background: #d7d7d7;
   margin-right: 10px;
 }
-.property-sidebar .single-sidebar .sf-slider.owl-carousel .owl-dots button.active {
+.property-sidebar
+  .single-sidebar
+  .sf-slider.owl-carousel
+  .owl-dots
+  button.active {
   height: 3px;
   background: #bb8e29;
 }
-.property-sidebar .single-sidebar .sf-slider.owl-carousel .owl-dots button:last-child {
+.property-sidebar
+  .single-sidebar
+  .sf-slider.owl-carousel
+  .owl-dots
+  button:last-child {
   margin-right: 0;
 }
 .property-sidebar .single-sidebar .sf-slider .sf-item {
@@ -2115,7 +2171,11 @@ ol {
   color: #666666;
   opacity: 0.6;
 }
-.property-sidebar .single-sidebar .calculator-form .filter-input input::placeholder {
+.property-sidebar
+  .single-sidebar
+  .calculator-form
+  .filter-input
+  input::placeholder {
   color: #666666;
   opacity: 0.6;
 }
@@ -2257,7 +2317,12 @@ ol {
   padding-bottom: 6px;
   display: inline-block;
 }
-.property-submit-form form .pf-summernote .text-editor .button-group .btn-item.media-insert {
+.property-submit-form
+  form
+  .pf-summernote
+  .text-editor
+  .button-group
+  .btn-item.media-insert {
   background: #bb8e29;
   color: #ffffff;
   padding-left: 34px;
@@ -2267,7 +2332,13 @@ ol {
   top: -2px;
   height: 40px;
 }
-.property-submit-form form .pf-summernote .text-editor .button-group .btn-item.media-insert i {
+.property-submit-form
+  form
+  .pf-summernote
+  .text-editor
+  .button-group
+  .btn-item.media-insert
+  i {
   margin-right: 5px;
 }
 .property-submit-form form .pf-summernote .text-editor textarea {
@@ -2411,10 +2482,21 @@ ol {
   display: block;
   margin-bottom: 20px;
 }
-.property-submit-form form .pf-feature .features-list .feature-item label:last-child {
+.property-submit-form
+  form
+  .pf-feature
+  .features-list
+  .feature-item
+  label:last-child {
   margin-right: 0;
 }
-.property-submit-form form .pf-feature .features-list .feature-item label .checkbox {
+.property-submit-form
+  form
+  .pf-feature
+  .features-list
+  .feature-item
+  label
+  .checkbox {
   position: absolute;
   left: 0;
   top: 4px;
@@ -2424,11 +2506,24 @@ ol {
   border-radius: 2px;
   content: "";
 }
-.property-submit-form form .pf-feature .features-list .feature-item label input {
+.property-submit-form
+  form
+  .pf-feature
+  .features-list
+  .feature-item
+  label
+  input {
   position: absolute;
   visibility: hidden;
 }
-.property-submit-form form .pf-feature .features-list .feature-item label input:checked ~ span {
+.property-submit-form
+  form
+  .pf-feature
+  .features-list
+  .feature-item
+  label
+  input:checked
+  ~ span {
   background: #666666;
 }
 .property-submit-form form .pf-feature-image {
@@ -2438,13 +2533,29 @@ ol {
   background: #f5f5f5;
   position: relative;
 }
-.property-submit-form form .pf-feature-image .feature-image-content .image-uploader {
+.property-submit-form
+  form
+  .pf-feature-image
+  .feature-image-content
+  .image-uploader {
   min-height: 13rem;
 }
-.property-submit-form form .pf-feature-image .feature-image-content .image-uploader .uploaded .uploaded-image .delete-image i {
+.property-submit-form
+  form
+  .pf-feature-image
+  .feature-image-content
+  .image-uploader
+  .uploaded
+  .uploaded-image
+  .delete-image
+  i {
   font-size: 15px;
 }
-.property-submit-form form .pf-feature-image .feature-image-content .upload-input-class {
+.property-submit-form
+  form
+  .pf-feature-image
+  .feature-image-content
+  .upload-input-class {
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -2485,7 +2596,7 @@ ol {
 }
 
 .richText .richText-toolbar:last-child {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .richText .richText-editor {
@@ -2500,7 +2611,7 @@ ol {
   border: none;
 }
 
-li .richText-btn[data-command=toggleCode] {
+li .richText-btn[data-command="toggleCode"] {
   opacity: 0;
   visibility: hidden;
 }
@@ -2959,7 +3070,7 @@ li .richText-btn[data-command=toggleCode] {
   color: #ffffff;
   height: 46px;
   width: 46px;
-  background: #3263AF;
+  background: #3263af;
   line-height: 46px;
   text-align: center;
   border-radius: 50%;
@@ -2970,10 +3081,10 @@ li .richText-btn[data-command=toggleCode] {
   margin-right: 0;
 }
 .blog-sidebar .follow-us .fu-links a.twitter {
-  background: #40C4FF;
+  background: #40c4ff;
 }
 .blog-sidebar .follow-us .fu-links a.youtube {
-  background: #FF0000;
+  background: #ff0000;
 }
 .blog-sidebar .follow-us .fu-links a.instagram {
   background: linear-gradient(45deg, #af00e1, #ff9e35);
@@ -3174,7 +3285,12 @@ li .richText-btn[data-command=toggleCode] {
   position: relative;
   padding-left: 22px;
 }
-.blog-details-content .bc-widget .related-post .related-item .ri-text span:after {
+.blog-details-content
+  .bc-widget
+  .related-post
+  .related-item
+  .ri-text
+  span:after {
   position: absolute;
   left: 0;
   top: 5px;
@@ -3229,7 +3345,13 @@ li .richText-btn[data-command=toggleCode] {
   margin-right: 25px;
   display: inline-block;
 }
-.blog-details-content .bc-widget .comment-option .co-item .ci-text ul li:last-child {
+.blog-details-content
+  .bc-widget
+  .comment-option
+  .co-item
+  .ci-text
+  ul
+  li:last-child {
   margin-right: 0;
 }
 .blog-details-content .bc-widget .comment-option .co-item .ci-text ul li i {
@@ -3450,7 +3572,12 @@ li .richText-btn[data-command=toggleCode] {
     margin-bottom: 30px;
   }
 
-  .property-submit-form form .pf-summernote .text-editor .button-group .btn-item {
+  .property-submit-form
+    form
+    .pf-summernote
+    .text-editor
+    .button-group
+    .btn-item {
     padding-right: 10px;
   }
 
@@ -3468,7 +3595,11 @@ li .richText-btn[data-command=toggleCode] {
     margin-right: 0;
   }
 
-  .property-submit-form form .pf-property-details .property-details-inputs input {
+  .property-submit-form
+    form
+    .pf-property-details
+    .property-details-inputs
+    input {
     width: 100%;
     float: none;
     margin-right: 0;
@@ -3508,16 +3639,16 @@ li .richText-btn[data-command=toggleCode] {
   }
 
   .review-form .group-input input,
-.leave-comment-form .group-input input,
-.cc-form .group-input input {
+  .leave-comment-form .group-input input,
+  .cc-form .group-input input {
     width: 100%;
     float: none;
     margin-right: 0;
   }
 
   .review-form .group-input,
-.leave-comment-form .group-input,
-.cc-form .group-input {
+  .leave-comment-form .group-input,
+  .cc-form .group-input {
     margin-right: 0;
   }
 
@@ -3697,7 +3828,7 @@ li .richText-btn[data-command=toggleCode] {
     margin: 0;
   }
   .offcanvas-menu-wrapper .slicknav_nav .slicknav_row,
-.offcanvas-menu-wrapper .slicknav_nav a {
+  .offcanvas-menu-wrapper .slicknav_nav a {
     padding: 10px 0;
     margin: 0;
     color: #111111;
@@ -3762,7 +3893,11 @@ li .richText-btn[data-command=toggleCode] {
     margin-right: 0;
   }
 
-  .property-submit-form form .pf-property-details .property-details-inputs input {
+  .property-submit-form
+    form
+    .pf-property-details
+    .property-details-inputs
+    input {
     width: 100%;
     float: none;
     margin-right: 0;
@@ -3803,16 +3938,16 @@ li .richText-btn[data-command=toggleCode] {
   }
 
   .review-form .group-input input,
-.leave-comment-form .group-input input,
-.cc-form .group-input input {
+  .leave-comment-form .group-input input,
+  .cc-form .group-input input {
     width: 100%;
     float: none;
     margin-right: 0;
   }
 
   .review-form .group-input,
-.leave-comment-form .group-input,
-.cc-form .group-input {
+  .leave-comment-form .group-input,
+  .cc-form .group-input {
     margin-right: 0;
   }
 
@@ -3993,7 +4128,12 @@ li .richText-btn[data-command=toggleCode] {
     float: none;
   }
 
-  .property-submit-form form .pf-summernote .text-editor .button-group .btn-item.media-insert {
+  .property-submit-form
+    form
+    .pf-summernote
+    .text-editor
+    .button-group
+    .btn-item.media-insert {
     position: relative;
     right: 0;
     top: 0;
@@ -4157,7 +4297,7 @@ li .richText-btn[data-command=toggleCode] {
     margin: 0;
   }
   .offcanvas-menu-wrapper .slicknav_nav .slicknav_row,
-.offcanvas-menu-wrapper .slicknav_nav a {
+  .offcanvas-menu-wrapper .slicknav_nav a {
     padding: 10px 0;
     margin: 0;
     color: #111111;
@@ -4219,8 +4359,8 @@ li .richText-btn[data-command=toggleCode] {
   }
 
   .review-form .rating,
-.leave-comment-form .rating,
-.cc-form .rating {
+  .leave-comment-form .rating,
+  .cc-form .rating {
     position: relative;
     right: 0;
     margin-bottom: 20px;

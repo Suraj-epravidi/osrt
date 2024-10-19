@@ -59,7 +59,31 @@
         </div>
     </div>
     <!-- Offcanvas Menu Wrapper End -->
-
+<script>// JavaScript to handle activating the sticky navbar after scrolling 20% of the page
+    document.addEventListener("DOMContentLoaded", function () {
+        var navbar = document.getElementById("stickyNav");
+    
+        window.addEventListener("scroll", function () {
+            var scrollPosition = window.scrollY;
+            var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var scrollPercentage = (scrollPosition / pageHeight) * 100;
+    
+            if (scrollPercentage > 10) {
+                if (!navbar.classList.contains("fixed-navbar")) {
+      
+                    navbar.classList.add("fixed-navbar");   // Add fixed-navbar class for fade-in effect
+                }
+            } else {
+                if (navbar.classList.contains("fixed-navbar")) {
+                    navbar.classList.remove("fixed-navbar"); // Remove fixed-navbar class
+                   
+                }
+            }
+         
+        });
+    });
+    
+    </script>
     <!-- Header Section Begin -->
     <header class="header-section">
         <div class="hs-top">
@@ -85,7 +109,7 @@
                 </div>
             </div>
         </div>
-        <div class="hs-nav">
+        <div class="hs-nav" id="stickyNav">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9">
@@ -592,6 +616,31 @@
                 <a href="#" class="lc-item">
                     <div class="lc-item-inner">
                         <img src="img/logo-carousel/lc-6.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="lc-item">
+                    <div class="lc-item-inner">
+                        <img src="img/logo-carousel/lc-6.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="lc-item">
+                    <div class="lc-item-inner">
+                        <img src="img/logo-carousel/lc-6.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="lc-item">
+                    <div class="lc-item-inner">
+                        <img src="img/logo-carousel/lc-6.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="lc-item">
+                    <div class="lc-item-inner">
+                        <img src="img/logo-carousel/lc-6.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="lc-item">
+                    <div class="lc-item-inner">
+                        <img src="img/logo-carousel/lc-7.png" alt="">
                     </div>
                 </a>
             </div>
