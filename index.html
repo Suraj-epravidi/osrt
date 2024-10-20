@@ -219,14 +219,14 @@
             <div class="search-form-content">
                 <form action="process.php" method="POST" class="filter-form">
                     <select class="sm-width" name="materials">
-                        <option value="" disabled selected>Materials</option>
+                        <option value="">Materials</option>
                         <option value="office">Office</option>
                         <option value="house">House</option>
                         <option value="apartment">Apartment</option>
                         <option value="commercial">Commercial</option>
                     </select>
                     <select class="sm-width" name="general_color">
-                        <option value="" disabled selected>General Color</option>
+                        <option value="">General Color</option>
                         <option value="black">Black</option>
                         <option value="white">White</option>
                         <option value="cream">Cream</option>
@@ -238,7 +238,7 @@
                         <option value="purple">Purple</option>
                     </select>
                     <select class="sm-width" name="brand">
-                        <option value="" disabled selected>Brand's</option>
+                        <option value="">Brand</option>
                         <option value="roca">Roca</option>
                         <option value="parryware">Parryware</option>
                         <option value="somany">Somany</option>
@@ -247,7 +247,7 @@
                         <option value="schneider">Schneider</option>
                     </select>
                     <select class="sm-width" name="room_type">
-                        <option value="" disabled selected>Room Type</option>
+                        <option value="">Room Type</option>
                         <option value="office">Office</option>
                         <option value="kitchen">Kitchen</option>
                         <option value="bedroom">Bedroom</option>
@@ -255,7 +255,7 @@
                         <option value="washrooms">Washrooms</option>
                     </select>
                     <select class="sm-width" name="product_type">
-                        <option value="" disabled selected>Type of Product</option>
+                        <option value="">Type of Product</option>
                         <option value="tiles">Tiles</option>
                         <option value="marble">Marble</option>
                         <option value="bathware">Bathware</option>
@@ -263,7 +263,7 @@
                         <option value="raw_material">Raw material</option>
                     </select>
                     <select class="sm-width" name="no_of_products">
-                        <option value="" disabled selected>No Of Products</option>
+                        <option value="">No Of Products</option>
                         <option value="1-100">1-100</option>
                         <option value="100-1000">100-1000</option>
                         <option value="1000-10000">1000-10000</option>
@@ -286,7 +286,7 @@
                     <button type="submit" class="search-btn sm-width">Search</button>
                 </form>
             </div>
-            
+                        
         </div>
     </section>
     <!-- Search Section End -->
@@ -316,9 +316,9 @@
             <div class="row property-filter">
                 <?php
     // Database connection
-    $servername = "192.250.235.20";
-    $username = "epravidi_admin1";
-    $password = "+?b]@DrT68R0";
+    $servername = "localhost";
+    $username = "epravidi_osrt_data";
+    $password = "UQ!r.gTOz=oo";
     $dbname = "epravidi_osrt";
     
     $conn = new mysqli($servername, $username, $password, $dbname);
