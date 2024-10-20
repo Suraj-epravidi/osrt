@@ -167,6 +167,8 @@ ol {
   padding-bottom: 70px;
 }
 
+
+
 .text-white h1,
 .text-white h2,
 .text-white h3,
@@ -372,7 +374,7 @@ ol {
   top: 80px;
   width: 270px;
   background: #ffffff;
-  z-index: 9;
+  z-index: 999;
   padding: 26px 0 14px;
   box-shadow: 1px 3px 15px rgba(11, 27, 32, 0.1);
   opacity: 0;
@@ -568,6 +570,19 @@ ol {
   margin-right: 4px;
 }
 
+
+ .video-wrapper {
+  width: 100%;
+  height: 83%;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} 
+
+
 /*---------------------
   Search Form
 -----------------------*/
@@ -602,12 +617,23 @@ ol {
 }
 
 .search-form-content {
-  overflow: hidden;
+  height : fit-content;
   margin-bottom: 26px;
+  
 }
 .search-form-content .filter-form {
   margin-right: -20px;
 }
+
+ select{
+  overflow-y: scroll !important;
+  z-index:999 !important;
+  height: 20px;
+}
+option{
+  z-index: 999;
+}
+
 .search-form-content .filter-form .sm-width {
   width: calc(33.33% - 20px);
 }
@@ -4333,6 +4359,11 @@ li .richText-btn[data-command="toggleCode"] {
   .hs-item .hc-inner-text {
     padding: 25px 14px;
   }
+
+   .video-wrapper{
+    height: 105%;
+    width: 100vw;
+  } 
 
   .hs-slider.owl-carousel .owl-nav {
     display: none;
