@@ -33,7 +33,7 @@ function handleContactForm($conn) {
 
         // Execute the statement
         if ($stmt->execute()) {
-            echo "Thank you for your message. We will get back to you shortly!";
+            header("Location: ./index.php?alert_message=Thank you for your message. We will get back to you shortly!");
         } else {
             echo "Error: " . $stmt->error;
         }
@@ -57,3 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
+
+
+

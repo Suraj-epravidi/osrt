@@ -27,11 +27,11 @@
 </head>
 
 <body>
-    <!-- Page Preloder -->
+    <!-- Page Preloder
     <div id="preloder">
         <div class="loader"></div>
-    </div>
-
+    </div> -->
+ 
     <!-- Offcanvas Menu Wrapper Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
@@ -59,30 +59,30 @@
         </div>
     </div>
     <!-- Offcanvas Menu Wrapper End -->
-    <script>// JavaScript to handle activating the sticky navbar after scrolling 20% of the page
-    document.addEventListener("DOMContentLoaded", function () {
-        var navbar = document.getElementById("stickyNav");
-    
-        window.addEventListener("scroll", function () {
-            var scrollPosition = window.scrollY;
-            var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
-            var scrollPercentage = (scrollPosition / pageHeight) * 100;
-    
-            if (scrollPercentage > 10) {
-                if (!navbar.classList.contains("fixed-navbar")) {
-      
-                    navbar.classList.add("fixed-navbar");   // Add fixed-navbar class for fade-in effect
+    <script>
+        // JavaScript to handle activating the sticky navbar after scrolling 20% of the page
+        document.addEventListener("DOMContentLoaded", function() {
+            var navbar = document.getElementById("stickyNav");
+
+            window.addEventListener("scroll", function() {
+                var scrollPosition = window.scrollY;
+                var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+                var scrollPercentage = (scrollPosition / pageHeight) * 100;
+
+                if (scrollPercentage > 10) {
+                    if (!navbar.classList.contains("fixed-navbar")) {
+
+                        navbar.classList.add("fixed-navbar"); // Add fixed-navbar class for fade-in effect
+                    }
+                } else {
+                    if (navbar.classList.contains("fixed-navbar")) {
+                        navbar.classList.remove("fixed-navbar"); // Remove fixed-navbar class
+
+                    }
                 }
-            } else {
-                if (navbar.classList.contains("fixed-navbar")) {
-                    navbar.classList.remove("fixed-navbar"); // Remove fixed-navbar class
-                   
-                     }
-                }
-         
+
             });
         });
-    
     </script>
     <!-- Header Section Begin -->
     <header class="header-section" style="z-index: 30;">
@@ -136,7 +136,7 @@
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-youtube-play"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -145,28 +145,28 @@
     </header>
     <!-- Header End -->
 
-    <div class="video-wrapper" style="width: 100vw;">
+    <div class="video-wrapper">
 
         <h2 class="video-title">High Quality Products At Affordable Price</h2>
-        
+
         <!-- Buttons below the text, left-aligned -->
         <div class="button-wrapper">
             <button class="video-button">ABOUT US</button>
             <button class="video-button">CONTACT US</button>
         </div>
-    
+
         <div class="overlay"></div>
-    
+
         <video autoplay loop muted>
             <source src="video_osrt.mp4" type="video/mp4" width="100%" style="display: block;">
         </video>
     </div>
-    
+
     <style>
         .video-wrapper {
             position: relative;
         }
-    
+
         .video-title {
             position: absolute;
             top: 50%;
@@ -177,7 +177,7 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             pointer-events: none;
         }
-    
+
         .button-wrapper {
             position: absolute;
             top: 54%;
@@ -187,7 +187,7 @@
             display: flex;
             gap: 20px;
         }
-    
+
         .video-button {
             background-color: transparent;
             border: 2px solid white;
@@ -198,91 +198,62 @@
             transition: all 0.3s ease;
             text-align: left;
         }
-    
+
         .video-button:hover {
             background-color: white;
             color: black;
         }
-    
+
         .overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.4); /* 30% opacity black */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* 30% opacity black */
             z-index: 1;
         }
-    
+
         video {
             width: 100%;
             display: block;
         }
-    
+
         /* Media Query for screens up to 840px */
         @media (max-width: 464px) {
             .video-title {
-                 /* Adjust font size for smaller screens */
-                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Less shadow */
+                /* Adjust font size for smaller screens */
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+                /* Less shadow */
             }
-    
-            .button-wrapper {
-            position: absolute;
-        
-            top: 67%; /* Adjust as needed */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            
-            display: block; /* Stack buttons vertically if needed */
-            z-index: 10;
-        }
 
-        .video-button {
-            width: 100%; /* Full width for buttons */
-            margin-bottom: 10px; /* Space between buttons */
-            text-align: center; /* Center text inside buttons */
-        }
-        
+            .button-wrapper {
+                position: absolute;
+
+                top: 67%;
+                /* Adjust as needed */
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                display: block;
+                /* Stack buttons vertically if needed */
+                z-index: 10;
+            }
+
+            .video-button {
+                width: 100%;
+                /* Full width for buttons */
+                margin-bottom: 10px;
+                /* Space between buttons */
+                text-align: center;
+                /* Center text inside buttons */
+            }
+
         }
     </style>
-    
-    
-  <!-- Hero Section Begin -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                        
-                </div>  
-     
 
-<!-- 
-                Product Information -->
-                <!-- <div class="hc-inner-text">
-                    <div class="hc-text">
-                        <h4>Island carara</h4>
-                        <p> Item Code.: 1001</p>
-                        <div class="label">In Stock</div>
-                        <h5>Rs. 1,000<span>/MRP</span></h5>
-                    </div>
-                    <div class="hc-widget">
-                        <ul>
-                            <li> 100x100x100 </li>
-                            <li>mm</li>
-                            <li>   
-                                <i class="fa fa-object-group"></i> &nbsp;&nbsp;
-                                <i class="fa fa-bathtub"></i> &nbsp;&nbsp;
-                                <i class="fa fa-bed"></i> &nbsp;&nbsp;
-                            </li>
-                        </ul>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- Hero Section End -->
+
 
     <!-- Search Section Begin -->
     <section class="search-section spad">
@@ -380,7 +351,7 @@
                     <button type="submit" class="search-btn sm-width">Search</button>
                 </form>
             </div>
-                        
+
         </div>
     </section>
     <!-- Search Section End -->
@@ -407,73 +378,86 @@
                     </div>
                 </div>
             </div>
-            <div class="row property-filter">
+            <script>
+                function product_redirect(id){
+                    window.location.href='./property-details.php?id='+id;
+                }
+            </script>
+            <div class="row">
+
                 <?php
-    // Database connection
-    $servername = "localhost";
-    $username = "epravidi_osrt_data";
-    $password = "UQ!r.gTOz=oo";
-    $dbname = "epravidi_osrt";
-    
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    
-    // SQL Query to fetch product data
-    $sql = "SELECT stock, price, product_code, color, brand, material, dimensions, product_name, image, category 
-            FROM products";
-    $result = $conn->query($sql);
-    
-    if ($result->num_rows > 0) {
-        // Output data for each row
-        while($row = $result->fetch_assoc()) {
-            // Determine the stock status based on the stock quantity
-            $stock_label = '';
-            $stock_status = '';
-    
-            if ($row['stock'] > 0) {
-                $stock_label = 'label'; // no additional class for in stock
-                $stock_status = 'IN STOCK';
-            } else {
-                $stock_label = 'label c-red'; // for out of stock
-                $stock_status = 'NOT IN STOCK';
-            }
-    
-            // Display each property item
-            echo '<div class="col-lg-4 col-md-6 mix all house">';
-            echo '<div class="property-item">';
-            echo '<div class="pi-pic set-bg" data-setbg="img/property/' . htmlspecialchars($row["image"]) . '">';
-            echo '<div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>';
-            echo '</div>';
-            echo '<div class="pi-text">';
-            echo '<a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>';
-            echo '<div class="pt-price">Rs. ' . htmlspecialchars($row["price"]) . '<span>/MRP</span></div>';
-            echo '<h5><a href="#">' . htmlspecialchars($row["product_name"]) . '</a></h5>';
-            echo '<p>Item Code .: ' . htmlspecialchars($row["product_code"]) . '<br>';
-            echo 'Color.: ' . htmlspecialchars($row["color"]) . ', Brand.: ' . htmlspecialchars($row["brand"]) . ', Material.: ' . htmlspecialchars($row["material"]) . '</p>';
-            echo '<ul>';
-            echo '<li>' . htmlspecialchars($row["dimensions"]) . '</li>';
-            echo '<li>';
-            echo '<i class="fa fa-object-group"></i>&nbsp;&nbsp;';
-            echo '<i class="fa fa-bathtub"></i>&nbsp;&nbsp;';
-            echo '<i class="fa fa-bed"></i>&nbsp;&nbsp;';
-            echo '</li>';
-            echo '</ul>';
-            echo '</div>';
-            echo '</div>';
-            echo '</div>';
-        }
-    } else {
-        echo "0 results";
-    }
-    $conn->close();
-    ?>
-    
-    
-                </div>
+                // Database connection
+                $servername = "192.250.235.20";
+                $username = "epravidi_osrt_data";
+                $password = "UQ!r.gTOz=oo";
+                $dbname = "epravidi_osrt";
+
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                } else {
+                    
+                }
+
+                // SQL Query to fetch product data
+                $sql = "SELECT price, product_id, product_code, color, brand, material, dimensions, product_name, image, category, stock FROM products";
+                $result = $conn->query($sql);
+
+                if (!$result) {
+                    die("Query failed: " . $conn->error);
+                }
+
+                if ($result->num_rows > 0) {
+                   
+                    while ($row = $result->fetch_assoc()) {
+                        // Determine the stock status
+                        $stock_label = '';
+                        $stock_status = '';
+
+                        if ($row['stock'] > 0) {
+                            $stock_label = 'label';
+                            $stock_status = 'IN STOCK';
+                        } else {
+                            $stock_label = 'label c-red';
+                            $stock_status = 'NOT IN STOCK';
+                        }
+
+                        // Display each property item 
+                        echo '<div class="col-lg-4 col-md-6 mix all house" onclick="product_redirect(' . $row["product_id"] . ')" style="cursor:pointer;">';
+                        echo '<div class="property-item">';
+                        echo '<div class="pi-pic set-bg" data-setbg="https://www.panel-osrt.epravidi.com/pages/product_image/'.htmlspecialchars($row["image"]).'">';
+                        echo '<div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>';
+                        echo '</div>';
+                        echo '<div class="pi-text">';
+                        echo '<a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>';
+                        echo '<div class="pt-price">Rs. ' . htmlspecialchars($row["price"]) . '<span>/MRP</span></div>';
+                        echo '<h5><a href="#">' . htmlspecialchars($row["product_name"]) . '</a></h5>';
+                        echo '<p>Item Code: ' . htmlspecialchars($row["product_code"]) . '<br>';
+                        echo 'Color: ' . htmlspecialchars($row["color"]) . ', Brand: ' . htmlspecialchars($row["brand"]) . ', Material: ' . htmlspecialchars($row["material"]) . '</p>';
+                        echo '<ul>';
+                        echo '<li>' . htmlspecialchars($row["dimensions"]) . '</li>';
+                        echo '<li>';
+                        echo '<i class="fa fa-object-group"></i>&nbsp;&nbsp;';
+                        echo '<i class="fa fa-bathtub"></i>&nbsp;&nbsp;';
+                        echo '<i class="fa fa-bed"></i>&nbsp;&nbsp;';
+                        echo '</li>';
+                        echo '</ul>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                } else {
+                    echo "No products found in the database";
+                }
+
+                $conn->close();
+                ?>
+
+
+
+            </div>
         </div>
     </section>
     <!-- Property Section End -->
@@ -533,100 +517,100 @@
     </section>
     <!-- Chooseus Section End -->
 
-    
-<section class="property-section latest-property-section spad">
-  
-   <div class="logo-carousel">
 
-       <div class="container">
-           <div class="row">
-               <div class="col-lg-8">
-                   <div class="section-title">
-                           <h4>Proudly the dealers of.:</h4>
-                   </div>
-               </div>
-           </div>
-           <div class="lc-slider owl-carousel">
-               
-               <a href="#" class="lc-item">
-                   <div class="lc-item-inner">
-                       <img src="img/logo-carousel/lc-1.png" alt="">
-                   </div>
-               </a>
-               <a href="#" class="lc-item">
-                   <div class="lc-item-inner">
-                       <img src="img/logo-carousel/lc-2.png" alt="">
-                   </div>
-               </a>
-               <a href="#" class="lc-item">
-                   <div class="lc-item-inner">
-                       <img src="img/logo-carousel/lc-3.png" alt="">
-                   </div>
-               </a>
-               <a href="#" class="lc-item">
-                   <div class="lc-item-inner">
-                       <img src="img/logo-carousel/lc-4.png" alt="">
-                   </div>
-               </a>
-               <a href="#" class="lc-item">
-                   <div class="lc-item-inner">
-                       <img src="img/logo-carousel/lc-5.png" alt="">
-                   </div>
-               </a>
-               <a href="#" class="lc-item">
-                   <div class="lc-item-inner">
-                       <img src="img/logo-carousel/lc-6.png" alt="">
-                   </div>
-               </a>
-               <a href="#" class="lc-item">
-                   <div class="lc-item-inner">
-                       <img src="img/logo-carousel/lc-6.png" alt="">
-                   </div>
-               </a>
-               <a href="#" class="lc-item">
-                   <div class="lc-item-inner">
-                       <img src="img/logo-carousel/lc-6.png" alt="">
-                   </div>
-               </a>
-               <a href="#" class="lc-item">
-                   <div class="lc-item-inner">
-                       <img src="img/logo-carousel/lc-6.png" alt="">
-                   </div>
-               </a>
-               <a href="#" class="lc-item">
-                   <div class="lc-item-inner">
-                       <img src="img/logo-carousel/lc-6.png" alt="">
-                   </div>
-               </a>
-               <a href="#" class="lc-item">
-                   <div class="lc-item-inner">
-                       <img src="img/logo-carousel/lc-7.png" alt="">
-                   </div>
-               </a>
-           </div>
-       </div>
-   </div>
+    <section class="property-section latest-property-section spad">
 
-</section>
-   <!-- Logo Carousel End -->
+        <div class="logo-carousel">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="section-title">
+                            <h4>Proudly the dealers of.:</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-slider owl-carousel">
+
+                    <a href="#" class="lc-item">
+                        <div class="lc-item-inner">
+                            <img src="img/logo-carousel/lc-1.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="lc-item">
+                        <div class="lc-item-inner">
+                            <img src="img/logo-carousel/lc-2.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="lc-item">
+                        <div class="lc-item-inner">
+                            <img src="img/logo-carousel/lc-3.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="lc-item">
+                        <div class="lc-item-inner">
+                            <img src="img/logo-carousel/lc-4.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="lc-item">
+                        <div class="lc-item-inner">
+                            <img src="img/logo-carousel/lc-5.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="lc-item">
+                        <div class="lc-item-inner">
+                            <img src="img/logo-carousel/lc-6.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="lc-item">
+                        <div class="lc-item-inner">
+                            <img src="img/logo-carousel/lc-6.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="lc-item">
+                        <div class="lc-item-inner">
+                            <img src="img/logo-carousel/lc-6.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="lc-item">
+                        <div class="lc-item-inner">
+                            <img src="img/logo-carousel/lc-6.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="lc-item">
+                        <div class="lc-item-inner">
+                            <img src="img/logo-carousel/lc-6.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="lc-item">
+                        <div class="lc-item-inner">
+                            <img src="img/logo-carousel/lc-7.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Logo Carousel End -->
 
 
 
-    
 
-    
 
-    
+
+
+
     <!-- Categories Section End -->
 
     <!-- Testimonial Section Begin -->
-    
+
     <!-- Testimonial Section End -->
 
     <!-- Logo Carousel Begin -->
-     
 
-    
+
+
 
     <!-- Contact Section Begin -->
     <section class="contact-section">
@@ -651,7 +635,7 @@
                                 <h5>Phone</h5>
                                 <ul>
                                     <li> 977-01-5554421</li>
-                                   
+
                                 </ul>
                             </div>
                         </div>
@@ -732,9 +716,11 @@
                 </div>
             </div>
             <div class="copyright-text">
-                
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
-  </p>
+
+                Copyright &copy;<script>
+                    document.write(new Date().getFullYear());
+                </script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
+                </p>
             </div>
         </div>
     </footer>
@@ -752,6 +738,23 @@
     <script src="js/jquery.richtext.min.js"></script>
     <script src="js/image-uploader.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+    // Function to get URL parameters
+    function getQueryParam(param) {
+      let params = new URLSearchParams(window.location.search);
+      return params.get(param);
+    }
+
+    // Function to show alert on page load if alert_message exists
+
+    window.onload = function() {
+      let alertMessage = getQueryParam('alert_message');
+      if (alertMessage) {
+        console.log(alertMessage);
+        alert(alertMessage); // Display the alert box
+      }
+    }
+  </script>
 </body>
 
 </html>

@@ -60,91 +60,143 @@
     </div>
     <!-- Offcanvas Menu Wrapper End -->
 
-    <script>// JavaScript to handle activating the sticky navbar after scrolling 20% of the page
-        document.addEventListener("DOMContentLoaded", function () {
+    <script>
+        // JavaScript to handle activating the sticky navbar after scrolling 20% of the page
+        document.addEventListener("DOMContentLoaded", function() {
             var navbar = document.getElementById("stickyNav");
-        
-            window.addEventListener("scroll", function () {
+
+            window.addEventListener("scroll", function() {
                 var scrollPosition = window.scrollY;
                 var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
                 var scrollPercentage = (scrollPosition / pageHeight) * 100;
-        
+
                 if (scrollPercentage > 10) {
                     if (!navbar.classList.contains("fixed-navbar")) {
-          
-                        navbar.classList.add("fixed-navbar");   // Add fixed-navbar class for fade-in effect
+
+                        navbar.classList.add("fixed-navbar"); // Add fixed-navbar class for fade-in effect
                     }
                 } else {
                     if (navbar.classList.contains("fixed-navbar")) {
                         navbar.classList.remove("fixed-navbar"); // Remove fixed-navbar class
-                       
+
                     }
                 }
-             
+
             });
         });
-        
-        </script>
-        <!-- Header Section Begin -->
-        <header class="header-section" style="z-index: 30;">
-            <div class="hs-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-2">
-                            <div class="logo">
-                                <a href="./index.php"><img src="img/logo.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-10">
-                            <div class="ht-widget">
-                                <ul>
-                                    <li><i class="icon_mail_alt"></i> info@osrtraders.com.np</li>
-                                    <li><i class="fa fa-mobile-phone"></i> 977-01-5554421</span></li>
-                                </ul>
-                                <a href="#" class="hw-btn">Visit Us Today</a>
-                            </div>
+    </script>
+    <!-- Header Section Begin -->
+    <header class="header-section" style="z-index: 30;">
+        <div class="hs-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="logo">
+                            <a href="./index.php"><img src="img/logo.png" alt=""></a>
                         </div>
                     </div>
-                    <div class="canvas-open">
-                        <span class="icon_menu"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="hs-nav" id="stickyNav">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-9">
-                            <nav class="nav-menu">
-                                <ul>
-                                    <li><a href="./index.php">Home</a></li>
-                                    <li><a href="./about.html">About</a></li>
-                                    <li  class="active"><a href="#">Products</a>
-                                        <ul class="dropdown">
-                                            <li><a href="./products-list.html">Product List</a></li>
-                                            <li><a href="./property-comparison.html">Product Comparison</a></li>
-                                            <li><a href="./category.html">Product Category</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="./brands.html">Brands</a></li>
-                                    <li><a href="./blog.html">FAQ's</a></li>
-                                    <li><a href="./contact.html">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="hn-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                
-                            </div>
+                    <div class="col-lg-10">
+                        <div class="ht-widget">
+                            <ul>
+                                <li><i class="icon_mail_alt"></i> info@osrtraders.com.np</li>
+                                <li><i class="fa fa-mobile-phone"></i> 977-01-5554421</span></li>
+                            </ul>
+                            <a href="#" class="hw-btn">Visit Us Today</a>
                         </div>
                     </div>
                 </div>
+                <div class="canvas-open">
+                    <span class="icon_menu"></span>
+                </div>
             </div>
-        </header>
-        <!-- Header End -->
+        </div>
+        <div class="hs-nav" id="stickyNav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <nav class="nav-menu">
+                            <ul>
+                                <li><a href="./index.php">Home</a></li>
+                                <li><a href="./about.html">About</a></li>
+                                <li class="active"><a href="#">Products</a>
+                                    <ul class="dropdown">
+                                        <li><a href="./products-list.html">Product List</a></li>
+                                        <li><a href="./property-comparison.html">Product Comparison</a></li>
+                                        <li><a href="./category.html">Product Category</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./brands.html">Brands</a></li>
+                                <li><a href="./blog.html">FAQ's</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="hn-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+
+    <?php
+    // Step 1: Database connection (Adjust the connection details as per your setup)
+    // Database connection
+    $servername = "192.250.235.20";
+    $username = "epravidi_osrt_data";
+    $password = "UQ!r.gTOz=oo";
+    $dbname = "epravidi_osrt";
+
+    // Create a connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Check the connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Step 2: Retrieve Product ID from URL
+    // Assuming the URL is something like: http://yourwebsite.com/product.php?id=123
+    if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+        $product_id = intval($_GET['id']);  // Ensure it's an integer
+
+        // Step 3: Prepare the SQL statement to get product details by product_id
+        $sql = "SELECT * FROM products WHERE product_id = ?";
+        $stmt = $conn->prepare($sql);
+
+        if ($stmt) {
+            $stmt->bind_param("i", $product_id);  // Bind the product_id to the query
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            // Step 4: Check if product exists
+            if ($result->num_rows > 0) {
+                // Fetch the product details
+                $product = $result->fetch_assoc();
+            } else {
+                echo "<p>Product not found.</p>";
+            }
+
+            $stmt->close();
+        } else {
+            echo "<p>Failed to prepare statement.</p>";
+        }
+    } else {
+        echo "<p>Invalid product ID.</p>";
+    }
+
+    // Close the connection
+    $conn->close();
+    ?>
+
 
     <!-- Property Details Section Begin -->
     <section class="property-details-section">
@@ -153,19 +205,26 @@
             <br>
             </div>
         </section>
-        
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="pd-text">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="pd-title">
-                                    <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                                    <div class="label">In Stock</div>
-                                    <div class="pt-price">Rs 289.0</div>
-                                    <h3>Home in Merrick Way</h3>
-                                    <p><span class="icon_pin_alt"></span> 3 Middle Winchendon Rd, Rindge, NH 03463</p>
+                                <div class="pd-title">  
+                                    <div class="label <?php if ($product['stock'] < 0) {
+                                        echo "bg-danger";
+                                    }?>  .bg-danger"> <?php if ($product['stock'] < 0) {
+                                        echo "Out of stock";
+                                    }
+                                        else{
+                                            echo "In Stock";
+                                        }?>           </div>
+                                    <div class="pt-price">Rs.
+                                    <?php echo htmlspecialchars($product['price']); ?>
+                                    </div>
+                                    <h3><?php echo htmlspecialchars($product['product_name']); ?></h3>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -180,7 +239,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Description</a>
                                     </li>
-                                    
+
                                 </ul><!-- Tab panes -->
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="tabs-1" role="tabpanel">
@@ -192,49 +251,48 @@
                                                 </li>
                                                 <li>
                                                     <span class="type-name">Product ID</span>
-                                                    <span class="type-value">#219</span>
+                                                    <span class="type-value">#<?php echo htmlspecialchars($product['product_code']); ?></span>
                                                 </li>
                                                 <li>
                                                     <span class="type-name">Price</span>
-                                                    <span class="type-value">$ 289.0/mounth</span>
+                                                    <span class="type-value">Rs.<?php echo htmlspecialchars($product['price']); ?></span>
                                                 </li>
-                                                
+
                                                 <li>
                                                     <span class="type-name">Material</span>
-                                                    <span class="type-value">Ashton Kutcher</span>
+                                                    <span class="type-value"><?php echo htmlspecialchars($product['material']); ?></span>
                                                 </li>
                                             </ul>
                                             <ul class="right-table">
                                                 <li>
                                                     <span class="type-name">Dimension</span>
-                                                    <span class="type-value">1200 sqft</span>
+                                                    <span class="type-value"><?php echo htmlspecialchars($product['dimensions']); ?></span>
                                                 </li>
                                                 <li>
                                                     <span class="type-name">Pattern</span>
-                                                    <span class="type-value">9</span>
+                                                    <span class="type-value">#</span>
                                                 </li>
                                                 <li>
                                                     <span class="type-name">Color</span>
-                                                    <span class="type-value">2019</span>
+                                                    <span class="type-value"><?php echo htmlspecialchars($product['color']); ?></span>
                                                 </li>
                                                 <li>
                                                     <span class="type-name">Brand</span>
-                                                    <span class="type-value">Rent</span>
+                                                    <span class="type-value"><?php echo htmlspecialchars($product['brand']); ?></span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="tabs-2" role="tabpanel">
                                         <div class="tab-desc">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolor itaque facere consequatur, dignissimos minus adipisci ipsam repudiandae nisi illum provident, natus quidem vero? Quaerat ducimus sequi praesentium commodi, consectetur corporis eos sit perspiciatis, quae sed officia error, iure quasi.</p>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolor itaque facere consequatur, dignissimos minus adipisci ipsam repudiandae nisi illum provident, natus quidem vero? Quaerat ducimus sequi praesentium commodi, consectetur corporis eos sit perspiciatis, quae sed officia error, iure quasi.</p>
+                                     <?php   echo "<p>Description: " . htmlspecialchars($product['description']) . "</p>" ?>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="pd-widget">
                             <h4>Address</h4>
                             <div class="map">
@@ -247,24 +305,24 @@
                                             <div class="ml-single-item">
                                                 <h6>OSR Traders <span>( <i class="fa fa-location-arrow"></i> 5 km )</span></h6>
                                                 <p>Khumaltar, Lalitpur</p>
-                                            </div> 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="pd-widget">
                             <h4>Inquiry on product</h4>
-                            <form action="#" class="review-form">
+                            <form action="process_contact.php" class="review-form" method = "post">
                                 <div class="group-input">
-                                    <input type="text" placeholder="Name">
-                                    <input type="text" placeholder="Email">
-                                    <input type="text" placeholder="Website">
+                                    <input  name = "name" type="text" placeholder="Name" required>
+                                    <input type="text" name = "email" placeholder="Email" required>
+                                    <input type="text" name = "website" placeholder="Website">
                                 </div>
-                                <textarea placeholder="Messages"></textarea>
-                                
+                                <textarea placeholder="Messages" name="comment" required></textarea>
+
                                 <button type="submit" class="site-btn">send messages</button>
                             </form>
                         </div>
@@ -273,32 +331,32 @@
                 <div class="col-lg-4">
                     <div class="property-sidebar">
                         <div class="single-sidebar">
-    
-                        
-                        <div class="single-sidebar slider-op">
-                            <div class="section-title sidebar-title">
-                                <h4>Product Image</h4>
-                            </div>
-                            <div class="sf-slider owl-carousel">
-                                <div class="sf-item set-bg" data-setbg="img/categories/cat-1.jpg">
-                                    
+
+
+                            <div class="single-sidebar slider-op">
+                                <div class="section-title sidebar-title">
+                                    <h4>Product Image</h4>
                                 </div>
-                                
+                                <div class="sf-slider owl-carousel">
+                                   <div class="sf-item set-bg" data-setbg="<?php echo'https://panel-osrt.epravidi.com/pages/product_image/' . htmlspecialchars($product['image']); ?>">
+
+                                    </div>
+
+                                </div>
                             </div>
+
                         </div>
-                       
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!-- Property Details Section End -->
 
     <!-- Contact Section Begin -->
-    
+
     <!-- Contact Section End -->
 
-        <!-- Footer Section Begin -->
+    <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
             <div class="row">
@@ -354,9 +412,11 @@
                 </div>
             </div>
             <div class="copyright-text">
-                
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
-  </p>
+
+                Copyright &copy;<script>
+                    document.write(new Date().getFullYear());
+                </script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
+                </p>
             </div>
         </div>
     </footer>
