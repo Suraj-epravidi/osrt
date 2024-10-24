@@ -59,7 +59,7 @@
         </div>
     </div>
     <!-- Offcanvas Menu Wrapper End -->
-<script>// JavaScript to handle activating the sticky navbar after scrolling 20% of the page
+    <script>// JavaScript to handle activating the sticky navbar after scrolling 20% of the page
     document.addEventListener("DOMContentLoaded", function () {
         var navbar = document.getElementById("stickyNav");
     
@@ -77,15 +77,15 @@
                 if (navbar.classList.contains("fixed-navbar")) {
                     navbar.classList.remove("fixed-navbar"); // Remove fixed-navbar class
                    
+                     }
                 }
-            }
          
+            });
         });
-    });
     
     </script>
     <!-- Header Section Begin -->
-    <header class="header-section">
+    <header class="header-section" style="z-index: 30;">
         <div class="hs-top">
             <div class="container">
                 <div class="row">
@@ -121,7 +121,7 @@
                                     <ul class="dropdown">
                                         <li><a href="./products-list.html">Product List</a></li>
                                         <li><a href="./property-comparison.html">Product Comparison</a></li>
-                                        <li><a href="./property-submit.html">Product Inquiry</a></li>
+                                        <li><a href="./category.html">Product Category</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="./brands.html">Brands</a></li>
@@ -146,11 +146,105 @@
     <!-- Header End -->
 
     <div class="video-wrapper" style="width: 100vw;">
-        <video autoplay loop muted >
-            <source src="video_osrt.mp4" type="video/mp4" width="100%">
-            Your browser does not support the video tag.
+
+        <h2 class="video-title">High Quality Products At Affordable Price</h2>
+        
+        <!-- Buttons below the text, left-aligned -->
+        <div class="button-wrapper">
+            <button class="video-button">ABOUT US</button>
+            <button class="video-button">CONTACT US</button>
+        </div>
+    
+        <div class="overlay"></div>
+    
+        <video autoplay loop muted>
+            <source src="video_osrt.mp4" type="video/mp4" width="100%" style="display: block;">
         </video>
     </div>
+    
+    <style>
+        .video-wrapper {
+            position: relative;
+        }
+    
+        .video-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            pointer-events: none;
+        }
+    
+        .button-wrapper {
+            position: absolute;
+            top: 54%;
+            left: 50%;
+            transform: translateX(-110%);
+            z-index: 10;
+            display: flex;
+            gap: 20px;
+        }
+    
+        .video-button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+    
+        .video-button:hover {
+            background-color: white;
+            color: black;
+        }
+    
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* 30% opacity black */
+            z-index: 1;
+        }
+    
+        video {
+            width: 100%;
+            display: block;
+        }
+    
+        /* Media Query for screens up to 840px */
+        @media (max-width: 464px) {
+            .video-title {
+                 /* Adjust font size for smaller screens */
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Less shadow */
+            }
+    
+            .button-wrapper {
+            position: absolute;
+        
+            top: 67%; /* Adjust as needed */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            display: block; /* Stack buttons vertically if needed */
+            z-index: 10;
+        }
+
+        .video-button {
+            width: 100%; /* Full width for buttons */
+            margin-bottom: 10px; /* Space between buttons */
+            text-align: center; /* Center text inside buttons */
+        }
+        
+        }
+    </style>
     
     
   <!-- Hero Section Begin -->
@@ -385,7 +479,7 @@
     <!-- Property Section End -->
 
     <!-- Chooseus Section Begin -->
-    <section class="chooseus-section spad set-bg" data-setbg="img/chooseus/chooseus-bg.jpg">
+    <section class="chooseus-section spad set-bg" data-setbg="img/chooseus/chooseus-bg.png">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -439,92 +533,90 @@
     </section>
     <!-- Chooseus Section End -->
 
-    <!-- Feature Property Section Begin -->
-    <section class="feature-property-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 p-0">
-                    <div class="feature-property-left">
-                        <div class="section-title">
-                            <h4>Feature Product</h4>
-                        </div>
-                        <ul>
-                            <li>Tiles</li>
-                            <li>Shower Head</li>
-                            <li>Light Switches</li>
-                            <li>Commode</li>
-                            <li>Vanity Basin's</li>
-                            <li>Bathware's</li>
-                        </ul>
-                        <a href="#">View all Products</a>
-                    </div>
-                </div>
-                <div class="col-lg-8 p-0">
-                    <div class="fp-slider owl-carousel">
-                        <div class="fp-item set-bg" data-setbg="img/feature-property/fp-1.jpg">
-                            <div class="fp-text">
-                                <h5 class="title">Island Carara</h5>
-                                <p> Item Code .: 1001<br>
-                                    Color.: Cream, Brand.: Somany, Material.: Marble</p>
-                                <div class="label">IN STOCK</div>
-                                <h5>Rs 2900<span>/MRP</span></h5>
-                                
-                            </div>
-                        </div>
-                        <div class="fp-item set-bg" data-setbg="img/feature-property/fp-2.jpg">
-                            <div class="fp-text">
-                                <h5 class="title">Island Carara</h5>
-                                <p> Item Code .: 1001<br>
-                                    Color.: Cream, Brand.: Somany, Material.: Marble</p>
-                                <div class="label">IN STOCK</div>
-                                <h5>Rs 2900<span>/MRP</span></h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Feature Property Section End -->
+    
+<section class="property-section latest-property-section spad">
+  
+   <div class="logo-carousel">
+
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-8">
+                   <div class="section-title">
+                           <h4>Proudly the dealers of.:</h4>
+                   </div>
+               </div>
+           </div>
+           <div class="lc-slider owl-carousel">
+               
+               <a href="#" class="lc-item">
+                   <div class="lc-item-inner">
+                       <img src="img/logo-carousel/lc-1.png" alt="">
+                   </div>
+               </a>
+               <a href="#" class="lc-item">
+                   <div class="lc-item-inner">
+                       <img src="img/logo-carousel/lc-2.png" alt="">
+                   </div>
+               </a>
+               <a href="#" class="lc-item">
+                   <div class="lc-item-inner">
+                       <img src="img/logo-carousel/lc-3.png" alt="">
+                   </div>
+               </a>
+               <a href="#" class="lc-item">
+                   <div class="lc-item-inner">
+                       <img src="img/logo-carousel/lc-4.png" alt="">
+                   </div>
+               </a>
+               <a href="#" class="lc-item">
+                   <div class="lc-item-inner">
+                       <img src="img/logo-carousel/lc-5.png" alt="">
+                   </div>
+               </a>
+               <a href="#" class="lc-item">
+                   <div class="lc-item-inner">
+                       <img src="img/logo-carousel/lc-6.png" alt="">
+                   </div>
+               </a>
+               <a href="#" class="lc-item">
+                   <div class="lc-item-inner">
+                       <img src="img/logo-carousel/lc-6.png" alt="">
+                   </div>
+               </a>
+               <a href="#" class="lc-item">
+                   <div class="lc-item-inner">
+                       <img src="img/logo-carousel/lc-6.png" alt="">
+                   </div>
+               </a>
+               <a href="#" class="lc-item">
+                   <div class="lc-item-inner">
+                       <img src="img/logo-carousel/lc-6.png" alt="">
+                   </div>
+               </a>
+               <a href="#" class="lc-item">
+                   <div class="lc-item-inner">
+                       <img src="img/logo-carousel/lc-6.png" alt="">
+                   </div>
+               </a>
+               <a href="#" class="lc-item">
+                   <div class="lc-item-inner">
+                       <img src="img/logo-carousel/lc-7.png" alt="">
+                   </div>
+               </a>
+           </div>
+       </div>
+   </div>
+
+</section>
+   <!-- Logo Carousel End -->
+
+
 
     
 
-    <!-- Categories Section Begin -->
-    <section class="categories-section">
-        <div class="cs-item-list">
-            <div class="cs-item set-bg" data-setbg="img/categories/cat-1.jpg">
-                <div class="cs-text">
-                    <h5>Tiles</h5>
-                    <span>230 Products</span>
-                </div>
-            </div>
-            <div class="cs-item set-bg" data-setbg="img/categories/cat-2.jpg">
-                <div class="cs-text">
-                    <h5>Basin's</h5>
-                    <span>230 Products</span>
-                </div>
-            </div>
-            <div class="cs-item set-bg" data-setbg="img/categories/cat-3.jpg">
-                <div class="cs-text">
-                    <h5>Shower Heads</h5>
-                    <span>230 Products</span>
-                </div>
-            </div>
-            <div class="cs-item set-bg" data-setbg="img/categories/cat-4.jpg">
-                <div class="cs-text">
-                    <h5>Marble</h5>
-                    <span>230 Products</span>
-                </div>
-            </div>
-            <div class="cs-item set-bg" data-setbg="img/categories/cat-5.jpg">
-                <div class="cs-text">
-                    <h5>Commode</h5>
-                    <span>230 Products</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    
+
+    
     <!-- Categories Section End -->
 
     <!-- Testimonial Section Begin -->
@@ -532,83 +624,7 @@
     <!-- Testimonial Section End -->
 
     <!-- Logo Carousel Begin -->
-     <br>
-     <br>
-     <br>
      
-     
-
-    <div class="logo-carousel">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="section-title">
-                            <h4>Proudly the dealers of.:</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="lc-slider owl-carousel">
-                
-                <a href="#" class="lc-item">
-                    <div class="lc-item-inner">
-                        <img src="img/logo-carousel/lc-1.png" alt="">
-                    </div>
-                </a>
-                <a href="#" class="lc-item">
-                    <div class="lc-item-inner">
-                        <img src="img/logo-carousel/lc-2.png" alt="">
-                    </div>
-                </a>
-                <a href="#" class="lc-item">
-                    <div class="lc-item-inner">
-                        <img src="img/logo-carousel/lc-3.png" alt="">
-                    </div>
-                </a>
-                <a href="#" class="lc-item">
-                    <div class="lc-item-inner">
-                        <img src="img/logo-carousel/lc-4.png" alt="">
-                    </div>
-                </a>
-                <a href="#" class="lc-item">
-                    <div class="lc-item-inner">
-                        <img src="img/logo-carousel/lc-5.png" alt="">
-                    </div>
-                </a>
-                <a href="#" class="lc-item">
-                    <div class="lc-item-inner">
-                        <img src="img/logo-carousel/lc-6.png" alt="">
-                    </div>
-                </a>
-                <a href="#" class="lc-item">
-                    <div class="lc-item-inner">
-                        <img src="img/logo-carousel/lc-6.png" alt="">
-                    </div>
-                </a>
-                <a href="#" class="lc-item">
-                    <div class="lc-item-inner">
-                        <img src="img/logo-carousel/lc-6.png" alt="">
-                    </div>
-                </a>
-                <a href="#" class="lc-item">
-                    <div class="lc-item-inner">
-                        <img src="img/logo-carousel/lc-6.png" alt="">
-                    </div>
-                </a>
-                <a href="#" class="lc-item">
-                    <div class="lc-item-inner">
-                        <img src="img/logo-carousel/lc-6.png" alt="">
-                    </div>
-                </a>
-                <a href="#" class="lc-item">
-                    <div class="lc-item-inner">
-                        <img src="img/logo-carousel/lc-7.png" alt="">
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Logo Carousel End -->
 
     
 

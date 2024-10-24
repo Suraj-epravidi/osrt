@@ -60,77 +60,103 @@
     </div>
     <!-- Offcanvas Menu Wrapper End -->
 
-    <!-- Header Section Begin -->
-    <header class="header-section">
-        <div class="hs-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-2">
-                        <div class="logo">
-                            <a href="./index.php"><img src="img/logo.png" alt=""></a>
+    <script>// JavaScript to handle activating the sticky navbar after scrolling 20% of the page
+        document.addEventListener("DOMContentLoaded", function () {
+            var navbar = document.getElementById("stickyNav");
+        
+            window.addEventListener("scroll", function () {
+                var scrollPosition = window.scrollY;
+                var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+                var scrollPercentage = (scrollPosition / pageHeight) * 100;
+        
+                if (scrollPercentage > 10) {
+                    if (!navbar.classList.contains("fixed-navbar")) {
+          
+                        navbar.classList.add("fixed-navbar");   // Add fixed-navbar class for fade-in effect
+                    }
+                } else {
+                    if (navbar.classList.contains("fixed-navbar")) {
+                        navbar.classList.remove("fixed-navbar"); // Remove fixed-navbar class
+                       
+                    }
+                }
+             
+            });
+        });
+        
+        </script>
+        <!-- Header Section Begin -->
+        <header class="header-section" style="z-index: 30;">
+            <div class="hs-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="logo">
+                                <a href="./index.php"><img src="img/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="ht-widget">
+                                <ul>
+                                    <li><i class="icon_mail_alt"></i> info@osrtraders.com.np</li>
+                                    <li><i class="fa fa-mobile-phone"></i> 977-01-5554421</span></li>
+                                </ul>
+                                <a href="#" class="hw-btn">Visit Us Today</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-10">
-                        <div class="ht-widget">
-                            <ul>
-                                <li><i class="icon_mail_alt"></i> info@osrtraders.com.np</li>
-                                <li><i class="fa fa-mobile-phone"></i> 977-01-5554421</span></li>
-                            </ul>
-                            <a href="#" class="hw-btn">Visit Us Today</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="canvas-open">
-                    <span class="icon_menu"></span>
-                </div>
-            </div>
-        </div>
-        <div class="hs-nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9">
-                        <nav class="nav-menu">
-                            <ul>
-                                <li ><a href="./index.php">Home</a></li>
-                                <li><a href="./about.html">About</a></li>
-                                <li class="active"><a href="#">Products</a>
-                                    <ul class="dropdown">
-                                        <li><a href="./products-list.html">Product List</a></li>
-                                        <li ><a href="./property-comparison.html">Product Comparison</a></li>
-                                        <li><a href="./property-submit.html">Product Inquiry</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="./brands.html">Brands</a></li>
-                                <li><a href="./blog.html">FAQ's</a></li>
-                                <li><a href="./contact.html">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="hn-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            
-                        </div>
+                    <div class="canvas-open">
+                        <span class="icon_menu"></span>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <!-- Header End -->
+            <div class="hs-nav" id="stickyNav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <nav class="nav-menu">
+                                <ul>
+                                    <li><a href="./index.php">Home</a></li>
+                                    <li><a href="./about.html">About</a></li>
+                                    <li  class="active"><a href="#">Products</a>
+                                        <ul class="dropdown">
+                                            <li><a href="./products-list.html">Product List</a></li>
+                                            <li  class="active"><a href="./property-comparison.html">Product Comparison</a></li>
+                                            <li><a href="./category.html">Product Category</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./brands.html">Brands</a></li>
+                                    <li><a href="./blog.html">FAQ's</a></li>
+                                    <li><a href="./contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="hn-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
 
     <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
+    <section class="breadcrumb-section spad set-bg" data-setbg="img/breadcrum.png">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text">
-                        <h4>Property comparison</h4>
+                        <h4>Product comparison</h4>
                         <div class="bt-option">
                             <a href="./index.php"><i class="fa fa-home"></i> Home</a>
-                            <span>Property</span>
+                            <a>Products</a>
+                            <span>Product comparison</span>
                         </div>
                     </div>
                 </div>
@@ -226,7 +252,7 @@
                             </div>
                             <div class="ci-text">
                                 <h5>Address</h5>
-                                <p>160 Pennsylvania Ave NW, Washington, Castle, PA 16101-5161</p>
+                                <p>Khumaltar-15, Sathadobato Road, Lalitpur</p>
                             </div>
                         </div>
                         <div class="ci-item">
@@ -236,8 +262,8 @@
                             <div class="ci-text">
                                 <h5>Phone</h5>
                                 <ul>
-                                    <li>125-711-811</li>
-                                    <li>125-668-886</li>
+                                    <li> 977-01-5554421</li>
+                                   
                                 </ul>
                             </div>
                         </div>
@@ -247,7 +273,7 @@
                             </div>
                             <div class="ci-text">
                                 <h5>Support</h5>
-                                <p>Support.aler@gmail.com</p>
+                                <p>info@osrtraders.com.np</p>
                             </div>
                         </div>
                     </div>
@@ -255,7 +281,9 @@
             </div>
         </div>
         <div class="cs-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d735515.5813275519!2d-80.41163541934742!3d43.93644386501528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882a55bbf3de23d7%3A0x3ada5af229b47375!2sMono%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sbd!4v1583262687289!5m2!1sen!2sbd" height="450" style="border:0;" allowfullscreen=""></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4173.916163515737!2d85.32849037479467!3d27.653187787351264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1780d7621ea1%3A0x8b58e862052fa651!2sOSR%20TRADERS%20Pvt.Ltd.!5e0!3m2!1sen!2snp!4v1726069735507!5m2!1sen!2snp"
+                height="450" style="border:0;" allowfullscreen="">
+            </iframe>
         </div>
     </section>
     <!-- Contact Section End -->

@@ -60,69 +60,94 @@
     </div>
     <!-- Offcanvas Menu Wrapper End -->
 
-    <!-- Header Section Begin -->
-    <header class="header-section">
-        <div class="hs-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-2">
-                        <div class="logo">
-                            <a href="./index.php"><img src="img/logo.png" alt=""></a>
+    <script>// JavaScript to handle activating the sticky navbar after scrolling 20% of the page
+        document.addEventListener("DOMContentLoaded", function () {
+            var navbar = document.getElementById("stickyNav");
+        
+            window.addEventListener("scroll", function () {
+                var scrollPosition = window.scrollY;
+                var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+                var scrollPercentage = (scrollPosition / pageHeight) * 100;
+        
+                if (scrollPercentage > 10) {
+                    if (!navbar.classList.contains("fixed-navbar")) {
+          
+                        navbar.classList.add("fixed-navbar");   // Add fixed-navbar class for fade-in effect
+                    }
+                } else {
+                    if (navbar.classList.contains("fixed-navbar")) {
+                        navbar.classList.remove("fixed-navbar"); // Remove fixed-navbar class
+                       
+                    }
+                }
+             
+            });
+        });
+        
+        </script>
+        <!-- Header Section Begin -->
+        <header class="header-section" style="z-index: 30;">
+            <div class="hs-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="logo">
+                                <a href="./index.php"><img src="img/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="ht-widget">
+                                <ul>
+                                    <li><i class="icon_mail_alt"></i> info@osrtraders.com.np</li>
+                                    <li><i class="fa fa-mobile-phone"></i> 977-01-5554421</span></li>
+                                </ul>
+                                <a href="#" class="hw-btn">Visit Us Today</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-10">
-                        <div class="ht-widget">
-                            <ul>
-                                <li><i class="icon_mail_alt"></i> info@osrtraders.com.np</li>
-                                <li><i class="fa fa-mobile-phone"></i> 977-01-5554421</span></li>
-                            </ul>
-                            <a href="#" class="hw-btn">Visit Us Today</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="canvas-open">
-                    <span class="icon_menu"></span>
-                </div>
-            </div>
-        </div>
-        <div class="hs-nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9">
-                        <nav class="nav-menu">
-                            <ul>
-                                <li ><a href="./index.php">Home</a></li>
-                                <li><a href="./about.html">About</a></li>
-                                <li><a href="#">Products</a>
-                                    <ul class="dropdown">
-                                        <li><a href="./products-list.html">Product List</a></li>
-                                        <li><a href="./property-comparison.html">Product Comparison</a></li>
-                                        <li><a href="./property-submit.html">Product Inquiry</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="./brands.html">Brands</a></li>
-                                <li class="active"><a href="./blog.html">FAQ's</a></li>
-                                <li><a href="./contact.html">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="hn-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            
-                        </div>
+                    <div class="canvas-open">
+                        <span class="icon_menu"></span>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <!-- Header End -->
+            <div class="hs-nav" id="stickyNav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <nav class="nav-menu">
+                                <ul>
+                                    <li><a href="./index.php">Home</a></li>
+                                    <li><a href="./about.html">About</a></li>
+                                    <li><a href="#">Products</a>
+                                        <ul class="dropdown">
+                                            <li><a href="./products-list.html">Product List</a></li>
+                                            <li><a href="./property-comparison.html">Product Comparison</a></li>
+                                            <li><a href="./category.html">Product Category</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./brands.html">Brands</a></li>
+                                    <li  class="active"><a href="./blog.html">FAQ's</a></li>
+                                    <li><a href="./contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="hn-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
 
     <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
+    <section class="breadcrumb-section spad set-bg" data-setbg="img/breadcrum.png">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -176,7 +201,7 @@
                         <div class="blog-item">
                             <div class="bc-widget">
                                 <h4>Ask us a question</h4>
-                                <form action="process_contact.php" class="leave-comment-form">
+                                <form action="#" class="leave-comment-form">
                                     <div class="group-input">
                                         <input type="text" placeholder="Name">
                                         <input type="text" placeholder="Email">
