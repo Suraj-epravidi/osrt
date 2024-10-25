@@ -37,7 +37,6 @@
             
         }
         .cs-item {
-            width: 40px; /* 5 items per row (20% width each) */
         
             background-size: cover;
             background-position: center;
@@ -257,54 +256,46 @@
 
     <!-- Categories Section Begin -->
     <section class="categories">
-        <div class="cs-item-list">
-            <div class="cs-item set-bg" data-setbg="img/categories/cat-1.jpg">
-                <div class="cs-text">
-                    <h5>Tiles</h5>
-                    <span>230 Products</span>
-                </div>
-            </div>
-            <div class="cs-item set-bg" data-setbg="img/categories/cat-2.jpg">
-                <div class="cs-text">
-                    <h5>Basin's</h5>
-                    <span>230 Products</span>
-                </div>
-            </div>
-            <div class="cs-item set-bg" data-setbg="img/categories/cat-3.jpg">
-                <div class="cs-text">
-                    <h5>Shower Heads</h5>
-                    <span>230 Products</span>
-                </div>
-            </div>
-            <div class="cs-item set-bg" data-setbg="img/categories/cat-4.jpg">
-                <div class="cs-text">
-                    <h5>Marble</h5>
-                    <span>230 Products</span>
-                </div>
-            </div>
-            <div class="cs-item set-bg" data-setbg="img/categories/cat-5.jpg">
-                <div class="cs-text">
-                    <h5>Commode</h5>
-                    <span>230 Products</span>
-                </div>
-            </div>
-            <div class="cs-item set-bg" data-setbg="img/categories/cat-5.jpg">
-                <div class="cs-text">
-                    <h5>Commode</h5>
-                    <span>230 Products</span>
-                </div>
-            </div>
-            <div class="cs-item set-bg" data-setbg="img/categories/cat-5.jpg">
-                <div class="cs-text">
-                    <h5>Commode</h5>
-                    <span>230 Products</span>
-                </div>
-            </div>
-            
-            
-            
-        </div>
-    </section>
+    <div class="cs-item-list">
+        <?php
+          function connectToDatabase()
+          {
+              $servername = "192.250.235.20";
+              $username = "epravidi_osrt_data";
+              $password = "UQ!r.gTOz=oo";
+              $dbname = "epravidi_osrt";
+              $conn = new mysqli($servername, $username, $password, $dbname);
+              if ($conn->connect_error) {
+                  die("Connection failed: " . $conn->connect_error);
+              }
+              return $conn;
+          }
+        $conn = connectToDatabase();
+        
+        // Query to get categories
+        $sql = "SELECT category_name, category_image, product_count FROM categories"; // Make sure you have product_count in your table
+        $result = $conn->query($sql);
+        
+        if ($result && $result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                // Category display
+                echo '<div class="cs-item set-bg" data-setbg="https://panel-osrt.epravidi.com/pages/category/' . htmlspecialchars($row["category_image"]) . '">';
+                echo '<div class="cs-text">';
+                echo '<h5>' . htmlspecialchars($row["category_name"]) . '</h5>';
+                echo '<span>' . htmlspecialchars($row["product_count"]) . ' Products</span>';
+                echo '</div>';
+                echo '</div>';
+            }
+        } else {
+            echo "<p>No categories found.</p>";
+        }
+        
+        // Close the connection
+        $conn->close();
+        ?>
+    </div>
+</section>
+
     <!-- Categories Section End -->
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2024/10/25/06/20241025061942-VB7QGSPE.js"></script>

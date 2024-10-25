@@ -10,20 +10,20 @@
     <title>OSR traders</title>
 
     <!-- Google Font -->
-    <link ="hhrefttps://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
+    <link="hhrefttps: //fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+        <!-- Css Styles -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+        <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+        <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+        <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
     <div id="preloder">
         <div class="loader"></div>
     </div> -->
- 
+
     <!-- Offcanvas Menu Wrapper Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
@@ -61,10 +61,10 @@
     <!-- Offcanvas Menu Wrapper End -->
     <script>
         // JavaScript to handle activating the sticky navbar after scrolling 20% of the page
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             var navbar = document.getElementById("stickyNav");
 
-            window.addEventListener("scroll", function() {
+            window.addEventListener("scroll", function () {
                 var scrollPosition = window.scrollY;
                 var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
                 var scrollPercentage = (scrollPosition / pageHeight) * 100;
@@ -256,7 +256,8 @@
 
     <!-- Search Section Begin -->
     <?php
-    function connectToDatabase() {
+    function connectToDatabase()
+    {
         $servername = "192.250.235.20";
         $username = "epravidi_osrt_data";
         $password = "UQ!r.gTOz=oo";
@@ -267,72 +268,123 @@
         }
         return $conn;
     }
-// Ensure database connection
-$conn = connectToDatabase();
+    // Ensure database connection
+    $conn = connectToDatabase();
 
-// Fetch distinct values for each dropdown
-function fetchDistinctValues($conn, $column) {
-    $sql = "SELECT DISTINCT $column FROM products ORDER BY $column";
-    $result = $conn->query($sql);
+    // Fetch distinct values for each dropdown
+    function fetchDistinctValues($conn, $column)
+    {
+        $sql = "SELECT DISTINCT $column FROM products ORDER BY $column";
+        $result = $conn->query($sql);
 
-    $values = [];
-    if ($result && $result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $values[] = $row[$column];
+        $values = [];
+        if ($result && $result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $values[] = $row[$column];
+            }
         }
+        return $values;
     }
-    return $values;
-}
 
-// Get dropdown data
-$materials = fetchDistinctValues($conn, 'material');
-$colors = fetchDistinctValues($conn, 'color');
-$brands = fetchDistinctValues($conn, 'brand');
-$types = fetchDistinctValues($conn, 'category');
+    // Get dropdown data
+    $materials = fetchDistinctValues($conn, 'material');
+    $colors = fetchDistinctValues($conn, 'color');
+    $brands = fetchDistinctValues($conn, 'brand');
+    $types = fetchDistinctValues($conn, 'category');
 
-// Close the database connection after fetching all values
-$conn->close();
-?>
+    // Close the database connection after fetching all values
+    $conn->close();
+    ?>
 
-<section class="search-section spad">
-    <div class="container">
-        <!-- Other HTML here -->
-        <div class="search-form-content">
-            <form action="property.php" method="POST" class="filter-form">
-                <select class="sm-width" name="materials">
-                    <option value="">Materials</option>
-                    <?php foreach ($materials as $material) {
-                        echo "<option value='" . htmlspecialchars($material) . "'>" . htmlspecialchars($material) . "</option>";
-                    } ?>
-                </select>
-                
-                <select class="sm-width" name="general_color">
-                    <option value="">General Color</option>
-                    <?php foreach ($colors as $color) {
-                        echo "<option value='" . htmlspecialchars($color) . "'>" . htmlspecialchars($color) . "</option>";
-                    } ?>
-                </select>
-                
-                <select class="sm-width" name="brand">
-                    <option value="">Brand</option>
-                    <?php foreach ($brands as $brand) {
-                        echo "<option value='" . htmlspecialchars($brand) . "'>" . htmlspecialchars($brand) . "</option>";
-                    } ?>
-                </select>
-                
-                <select class="sm-width" name="product_type">
-                    <option value="">Type of Product</option>
-                    <?php foreach ($types as $type) {
-                        echo "<option value='" . htmlspecialchars($type) . "'>" . htmlspecialchars($type) . "</option>";
-                    } ?>
-                </select>
-                
-                <!-- Add the rest of your form elements as needed -->
-                <button type="submit" class="search-btn sm-width">Search</button>
-            </form>
+    <section class="search-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="section-title">
+                        <h4>Find Best Product For you</h4>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="change-btn">
+                        <div class="cb-item">
+                            <label for="cb-rent" class="active">
+                                All Product's
+                                <input type="radio" id="cb-rent">
+                            </label>
+                        </div>
+                        <div class="cb-item">
+                            <label for="cb-sale">
+                                In Stock
+                                <input type="radio" id="cb-sale">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-form-content">
+                <form action="property.php" method="POST" class="filter-form">
+                    <select class="sm-width" name="materials">
+                        <option value="">Materials</option>
+                        <?php foreach ($materials as $material) {
+                            echo "<option value='" . htmlspecialchars($material) . "'>" . htmlspecialchars($material) . "</option>";
+                        } ?>
+                    </select>
+
+                    <select class="sm-width" name="general_color">
+                        <option value="">General Color</option>
+                        <?php foreach ($colors as $color) {
+                            echo "<option value='" . htmlspecialchars($color) . "'>" . htmlspecialchars($color) . "</option>";
+                        } ?>
+                    </select>
+
+                    <select class="sm-width" name="brand">
+                        <option value="">Brand</option>
+                        <?php foreach ($brands as $brand) {
+                            echo "<option value='" . htmlspecialchars($brand) . "'>" . htmlspecialchars($brand) . "</option>";
+                        } ?>
+                    </select>
+                    <select class="sm-width" name="room_type">
+                        <option value="">Room Type</option>
+                        <option value="office">Office</option>
+                        <option value="kitchen">Kitchen</option>
+                        <option value="bedroom">Bedroom</option>
+                        <option value="bathroom">Bathroom</option>
+                        <option value="washrooms">Washrooms</option>
+                    </select>
+
+                    <select class="sm-width" name="product_type">
+                        <option value="">Type of Product</option>
+                        <?php foreach ($types as $type) {
+                            echo "<option value='" . htmlspecialchars($type) . "'>" . htmlspecialchars($type) . "</option>";
+                        } ?>
+                    </select>
+
+                    <select class="sm-width" name="no_of_products">
+                        <option value="">No Of Products</option>
+                        <option value="1-100">1-100</option>
+                        <option value="100-1000">100-1000</option>
+                        <option value="1000-10000">1000-10000</option>
+                        <option value="10000+">10000+</option>
+                    </select>
+                    <div class="room-size-range-wrap sm-width">
+                        <div class="price-text">
+                            <label for="roomsizeRange">Size of property:</label>
+                            <input type="text" id="roomsizeRange" readonly>
+                        </div>
+                        <div id="roomsize-range" class="slider"></div>
+                    </div>
+                    <div class="price-range-wrap sm-width">
+                        <div class="price-text">
+                            <label for="priceRange">Price:</label>
+                            <input type="text" id="priceRange" name="price_range" readonly>
+                        </div>
+                        <div id="price-range" class="slider"></div>
+                    </div>
+                    <button type="submit" class="search-btn sm-width">Search</button>
+                </form>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Search Section End -->
 
@@ -359,8 +411,8 @@ $conn->close();
                 </div>
             </div>
             <script>
-                function product_redirect(id){
-                    window.location.href='./property-details.php?id='+id;
+                function product_redirect(id) {
+                    window.location.href = './property-details.php?id=' + id;
                 }
             </script>
             <div class="row">
@@ -378,7 +430,7 @@ $conn->close();
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 } else {
-                    
+
                 }
 
                 // SQL Query to fetch product data
@@ -390,7 +442,7 @@ $conn->close();
                 }
 
                 if ($result->num_rows > 0) {
-                   
+
                     while ($row = $result->fetch_assoc()) {
                         // Determine the stock status
                         $stock_label = '';
@@ -407,7 +459,7 @@ $conn->close();
                         // Display each property item 
                         echo '<div class="col-lg-4 col-md-6 mix all house" onclick="product_redirect(' . $row["product_id"] . ')" style="cursor:pointer;">';
                         echo '<div class="property-item">';
-                        echo '<div class="pi-pic set-bg" data-setbg="https://www.panel-osrt.epravidi.com/pages/product_image/'.htmlspecialchars($row["image"]).'">';
+                        echo '<div class="pi-pic set-bg" data-setbg="https://www.panel-osrt.epravidi.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">';
                         echo '<div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>';
                         echo '</div>';
                         echo '<div class="pi-text">';
@@ -441,7 +493,7 @@ $conn->close();
         </div>
     </section>
     <!-- Property Section End -->
-                
+
     <!-- Chooseus Section Begin -->
     <section class="chooseus-section spad set-bg" data-setbg="img/chooseus/chooseus-bg.png">
         <div class="container">
@@ -451,7 +503,10 @@ $conn->close();
                         <div class="section-title">
                             <h4>Why choose us</h4>
                         </div>
-                        <p>OSRT is a leading trading company specializing in high-quality construction equipment, materials, bathware, and hardware. With a commitment to excellence and innovation, OSRT caters to both residential and commercial projects, offering a wide range of products to meet diverse needs.</p>
+                        <p>OSRT is a leading trading company specializing in high-quality construction equipment,
+                            materials, bathware, and hardware. With a commitment to excellence and innovation, OSRT
+                            caters to both residential and commercial projects, offering a wide range of products to
+                            meet diverse needs.</p>
                     </div>
                     <div class="chooseus-features">
                         <div class="cf-item">
@@ -633,17 +688,18 @@ $conn->close();
             </div>
         </div>
         <div class="cs-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4173.916163515737!2d85.32849037479467!3d27.653187787351264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1780d7621ea1%3A0x8b58e862052fa651!2sOSR%20TRADERS%20Pvt.Ltd.!5e0!3m2!1sen!2snp!4v1726069735507!5m2!1sen!2snp"
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4173.916163515737!2d85.32849037479467!3d27.653187787351264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1780d7621ea1%3A0x8b58e862052fa651!2sOSR%20TRADERS%20Pvt.Ltd.!5e0!3m2!1sen!2snp!4v1726069735507!5m2!1sen!2snp"
                 height="450" style="border:0;" allowfullscreen="">
             </iframe>
         </div>
     </section>
     <!-- Contact Section End -->
-     <!-- chatbot -->
-                 
+    <!-- chatbot -->
+
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2024/10/25/06/20241025061942-VB7QGSPE.js"></script>
-    
+    <script src="https://files.bpcontent.cloud/2024/10/25/06/20241025061942-VB7QGSPE.js"></script>
+
 
     <!-- Footer Section Begin -->
     <footer class="footer-section">
@@ -656,7 +712,8 @@ $conn->close();
                                 <img src="img/f-logo.png" alt="">
                             </a>
                         </div>
-                        <p>Be sure to follow us on our social media platforms. Stay informed about industry trends, new products, and expert tips to keep your projects on the cutting edge.</p>
+                        <p>Be sure to follow us on our social media platforms. Stay informed about industry trends, new
+                            products, and expert tips to keep your projects on the cutting edge.</p>
                         <div class="fs-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -702,9 +759,11 @@ $conn->close();
             </div>
             <div class="copyright-text">
 
-                Copyright &copy;<script>
+                Copyright &copy;
+                <script>
                     document.write(new Date().getFullYear());
-                </script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
+                </script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com"
+                    target="_blank">E-pravidi Pvt. Ltd.</a>
                 </p>
             </div>
         </div>
@@ -724,22 +783,22 @@ $conn->close();
     <script src="js/image-uploader.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-    // Function to get URL parameters
-    function getQueryParam(param) {
-      let params = new URLSearchParams(window.location.search);
-      return params.get(param);
-    }
+        // Function to get URL parameters
+        function getQueryParam(param) {
+            let params = new URLSearchParams(window.location.search);
+            return params.get(param);
+        }
 
-    // Function to show alert on page load if alert_message exists
+        // Function to show alert on page load if alert_message exists
 
-    window.onload = function() {
-      let alertMessage = getQueryParam('alert_message');
-      if (alertMessage) {
-        console.log(alertMessage);
-        alert(alertMessage); // Display the alert box
-      }
-    }
-  </script>
+        window.onload = function () {
+            let alertMessage = getQueryParam('alert_message');
+            if (alertMessage) {
+                console.log(alertMessage);
+                alert(alertMessage); // Display the alert box
+            }
+        }
+    </script>
 </body>
 
 </html>
