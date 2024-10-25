@@ -461,7 +461,7 @@
         </div>
     </section>
     <!-- Property Section End -->
-
+                
     <!-- Chooseus Section Begin -->
     <section class="chooseus-section spad set-bg" data-setbg="img/chooseus/chooseus-bg.png">
         <div class="container">
@@ -659,6 +659,11 @@
         </div>
     </section>
     <!-- Contact Section End -->
+     <!-- chatbot -->
+                 
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/10/25/06/20241025061942-VB7QGSPE.js"></script>
+    
 
     <!-- Footer Section Begin -->
     <footer class="footer-section">
