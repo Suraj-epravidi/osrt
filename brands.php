@@ -119,12 +119,11 @@
                                     <li><a href="./about.html">About</a></li>
                                     <li><a href="#">Products</a>
                                         <ul class="dropdown">
-                                            <li><a href="./products-list.html">Product List</a></li>
-                                            <li><a href="./property-comparison.html">Product Comparison</a></li>
-                                            <li><a href="./category.html">Product Category</a></li>
+                                            <li><a href="./products-list.php">Product List</a></li>
+                                            <li><a href="./category.php">Product Category</a></li>
                                         </ul>
                                     </li>
-                                    <li  class="active"><a href="./brands.html">Brands</a></li>
+                                    <li  class="active"><a href="./brands.php">Brands</a></li>
                                     <li><a href="./blog.html">FAQ's</a></li>
                                     <li><a href="./contact.html">Contact</a></li>
                                 </ul>
@@ -176,202 +175,71 @@
                     </div>
                 </div>
             </div>
-            <div class="as-slider owl-carousel">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="as-item">
-                            <div class="as-pic">
-                                <img src="img/agents/agent-1.jpg" alt="">
-                                
-                            </div>
-                            <div class="as-text">
-                                <div class="at-title">
-                                    <h6>Ashton Kutcher</h6>
-                            
-                                </div>
-                                
-                                <a href="#" class="primary-btn">View Website</a>
-                            </div>
-                        </div>
+            <?php
+        $servername = "192.250.235.20";
+        $username = "epravidi_osrt_data";
+        $password = "UQ!r.gTOz=oo";
+        $dbname = "epravidi_osrt";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch brand data
+$sql = "SELECT brand_logo, brand_name, brand_website FROM brands";
+$result = $conn->query($sql);
+
+// Display structure
+if ($result->num_rows > 0) {
+    echo '<div class="as-slider owl-carousel">';
+    
+    // Row counter to create rows of 6 brands
+    $count = 0;
+    
+    while ($row = $result->fetch_assoc()) {
+        if ($count % 6 == 0) {
+            echo '<div class="row">';   
+        }
+        
+        echo '
+            <div class="col-lg-4 col-md-6">
+                <div class="as-item">
+                    <div class="as-pic">
+                        <img src="https://panel-osrt.epravidi.com/pages/brands/' . $row['brand_logo'] . '" alt="">
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="as-item">
-                            <div class="as-pic">
-                                <img src="img/agents/agent-2.jpg" alt="">
-                            </div>
-                            <div class="as-text">
-                                <div class="at-title">
-                                    <h6>Ashton Kutcher</h6>
-                                </div>
-                               
-                                <a href="#" class="primary-btn">View Website</a>
-                            </div>
+                    <div class="as-text">
+                        <div class="at-title">
+                            <h6>' . $row['brand_name'] . '</h6>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="as-item">
-                            <div class="as-pic">
-                                <img src="img/agents/agent-3.jpg" alt="">
-                                
-                            </div>
-                            <div class="as-text">
-                                <div class="at-title">
-                                    <h6>Ashton Kutcher</h6>
-                                    
-                                </div>
-                                
-                                <a href="#" class="primary-btn">view website</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="as-item">
-                            <div class="as-pic">
-                                <img src="img/agents/agent-4.jpg" alt="">
-                                
-                            </div>
-                            <div class="as-text">
-                                <div class="at-title">
-                                    <h6>Ashton Kutcher</h6>
-                                    
-                                </div>
-                                
-                                <a href="#" class="primary-btn">view website</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="as-item">
-                            <div class="as-pic">
-                                <img src="img/agents/agent-5.jpg" alt="">
-                                
-                            </div>
-                            <div class="as-text">
-                                <div class="at-title">
-                                    <h6>Ashton Kutcher</h6>
-                                  
-                                </div>
-                                
-                                <a href="#" class="primary-btn">view website</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="as-item">
-                            <div class="as-pic">
-                                <img src="img/agents/agent-6.jpg" alt="">
-                                
-                            </div>
-                            <div class="as-text">
-                                <div class="at-title">
-                                    <h6>Ashton Kutcher</h6>
-                                  
-                                </div>
-                                
-                                <a href="#" class="primary-btn">view website</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="as-item">
-                            <div class="as-pic">
-                                <img src="img/agents/agent-1.jpg" alt="">
-                                
-                            </div>
-                            <div class="as-text">
-                                <div class="at-title">
-                                    <h6>Ashton Kutcher</h6>
-                                 
-                                </div>
-                               
-                                <a href="#" class="primary-btn">view website</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="as-item">
-                            <div class="as-pic">
-                                <img src="img/agents/agent-2.jpg" alt="">
-                                
-                            </div>
-                            <div class="as-text">
-                                <div class="at-title">
-                                    <h6>Ashton Kutcher</h6>
-                                   
-                                </div>
-                                
-                                <a href="#" class="primary-btn">view website</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="as-item">
-                            <div class="as-pic">
-                                <img src="img/agents/agent-3.jpg" alt="">
-                                
-                            </div>
-                            <div class="as-text">
-                                <div class="at-title">
-                                    <h6>Ashton Kutcher</h6>
-                                    
-                                </div>
-                                
-                                <a href="#" class="primary-btn">view website</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="as-item">
-                            <div class="as-pic">
-                                <img src="img/agents/agent-4.jpg" alt="">
-                               
-                            </div>
-                            <div class="as-text">
-                                <div class="at-title">
-                                    <h6>Ashton Kutcher</h6>
-                                   
-                                </div>
-                               
-                                <a href="#" class="primary-btn">view website</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="as-item">
-                            <div class="as-pic">
-                                <img src="img/agents/agent-5.jpg" alt="">
-                                
-                            </div>
-                            <div class="as-text">
-                                <div class="at-title">
-                                    <h6>Ashton Kutcher</h6>
-                                   
-                                </div>
-                                
-                                <a href="#" class="primary-btn">view website</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="as-item">
-                            <div class="as-pic">
-                                <img src="img/agents/agent-6.jpg" alt="">
-                                
-                            </div>
-                            <div class="as-text">
-                                <div class="at-title">
-                                    <h6>Ashton Kutcher</h6>
-                                    
-                                </div>
-                                
-                                <a href="#" class="primary-btn">view website</a>
-                            </div>
-                        </div>
+                        <a href="' . $row['brand_website'] . '" class="primary-btn">View Website</a>
                     </div>
                 </div>
             </div>
+        ';
+
+        $count++;
+
+        // Close row div every 6 items
+        if ($count % 6 == 0) {
+            echo '</div>';
+        }
+    }
+    
+    // Close any remaining open row div
+    if ($count % 6 != 0) {
+        echo '</div>';
+    }
+    
+    echo '</div>';
+} else {
+    echo "No brands found.";
+}
+
+$conn->close();
+?>
+
         </div>
     </section>
     <!-- Agent Section End -->

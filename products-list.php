@@ -211,12 +211,11 @@
                                 <li><a href="./about.html">About</a></li>
                                 <li class="active"><a href="#">Products</a>
                                     <ul class="dropdown">
-                                        <li class="active"><a href="./products-list.html">Product List</a></li>
-                                        <li><a href="./property-comparison.html">Product Comparison</a></li>
-                                        <li><a href="./category.html">Product Category</a></li>
+                                        <li class="active"><a href="./products-list.php">Product List</a></li>
+                                        <li><a href="./category.php">Product Category</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./brands.html">Brands</a></li>
+                                <li><a href="./brands.php">Brands</a></li>
                                 <li><a href="./blog.html">FAQ's</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
                             </ul>
@@ -248,7 +247,7 @@
                         <h4>Products</h4>
                         <div class="bt-option">
                             <a href="./index.php"><i class="fa fa-home"></i> Home</a>
-                            <a href="./brands.html">Products</a>
+                            <a href="./brands.php">Products</a>
                             <span>Lists</span>
                         </div>
                     </div>

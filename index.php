@@ -10,7 +10,7 @@
     <title>OSR traders</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
+    <link ="hhrefttps://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
 
@@ -119,12 +119,11 @@
                                 <li><a href="./about.html">About</a></li>
                                 <li><a href="#">Products</a>
                                     <ul class="dropdown">
-                                        <li><a href="./products-list.html">Product List</a></li>
-                                        <li><a href="./property-comparison.html">Product Comparison</a></li>
-                                        <li><a href="./category.html">Product Category</a></li>
+                                        <li><a href="./products-list.php">Product List</a></li>
+                                        <li><a href="./category.php">Product Category</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./brands.html">Brands</a></li>
+                                <li><a href="./brands.php">Brands</a></li>
                                 <li><a href="./blog.html">FAQ's</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
                             </ul>
@@ -256,104 +255,85 @@
 
 
     <!-- Search Section Begin -->
-    <section class="search-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="section-title">
-                        <h4>Find Best Product For you</h4>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="change-btn">
-                        <div class="cb-item">
-                            <label for="cb-rent" class="active">
-                                All Product's
-                                <input type="radio" id="cb-rent">
-                            </label>
-                        </div>
-                        <div class="cb-item">
-                            <label for="cb-sale">
-                                In Stock
-                                <input type="radio" id="cb-sale">
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="search-form-content">
-                <form action="process.php" method="POST" class="filter-form">
-                    <select class="sm-width" name="materials">
-                        <option value="">Materials</option>
-                        <option value="office">Office</option>
-                        <option value="house">House</option>
-                        <option value="apartment">Apartment</option>
-                        <option value="commercial">Commercial</option>
-                    </select>
-                    <select class="sm-width" name="general_color">
-                        <option value="">General Color</option>
-                        <option value="black">Black</option>
-                        <option value="white">White</option>
-                        <option value="cream">Cream</option>
-                        <option value="red">Red</option>
-                        <option value="pink">Pink</option>
-                        <option value="green">Green</option>
-                        <option value="blue">Blue</option>
-                        <option value="torquise">Torquise</option>
-                        <option value="purple">Purple</option>
-                    </select>
-                    <select class="sm-width" name="brand">
-                        <option value="">Brand</option>
-                        <option value="roca">Roca</option>
-                        <option value="parryware">Parryware</option>
-                        <option value="somany">Somany</option>
-                        <option value="asianpaints">Asianpaints</option>
-                        <option value="philips">Philips</option>
-                        <option value="schneider">Schneider</option>
-                    </select>
-                    <select class="sm-width" name="room_type">
-                        <option value="">Room Type</option>
-                        <option value="office">Office</option>
-                        <option value="kitchen">Kitchen</option>
-                        <option value="bedroom">Bedroom</option>
-                        <option value="bathroom">Bathroom</option>
-                        <option value="washrooms">Washrooms</option>
-                    </select>
-                    <select class="sm-width" name="product_type">
-                        <option value="">Type of Product</option>
-                        <option value="tiles">Tiles</option>
-                        <option value="marble">Marble</option>
-                        <option value="bathware">Bathware</option>
-                        <option value="electricals">Electricals</option>
-                        <option value="raw_material">Raw material</option>
-                    </select>
-                    <select class="sm-width" name="no_of_products">
-                        <option value="">No Of Products</option>
-                        <option value="1-100">1-100</option>
-                        <option value="100-1000">100-1000</option>
-                        <option value="1000-10000">1000-10000</option>
-                        <option value="10000+">10000+</option>
-                    </select>
-                    <div class="room-size-range-wrap sm-width">
-                        <div class="price-text">
-                            <label for="roomsizeRange">Size of property:</label>
-                            <input type="text" id="roomsizeRange" readonly>
-                        </div>
-                        <div id="roomsize-range" class="slider"></div>
-                    </div>
-                    <div class="price-range-wrap sm-width">
-                        <div class="price-text">
-                            <label for="priceRange">Price:</label>
-                            <input type="text" id="priceRange" name="price_range" readonly>
-                        </div>
-                        <div id="price-range" class="slider"></div>
-                    </div>
-                    <button type="submit" class="search-btn sm-width">Search</button>
-                </form>
-            </div>
+    <?php
+    function connectToDatabase() {
+        $servername = "192.250.235.20";
+        $username = "epravidi_osrt_data";
+        $password = "UQ!r.gTOz=oo";
+        $dbname = "epravidi_osrt";
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        return $conn;
+    }
+// Ensure database connection
+$conn = connectToDatabase();
 
+// Fetch distinct values for each dropdown
+function fetchDistinctValues($conn, $column) {
+    $sql = "SELECT DISTINCT $column FROM products ORDER BY $column";
+    $result = $conn->query($sql);
+
+    $values = [];
+    if ($result && $result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $values[] = $row[$column];
+        }
+    }
+    return $values;
+}
+
+// Get dropdown data
+$materials = fetchDistinctValues($conn, 'material');
+$colors = fetchDistinctValues($conn, 'color');
+$brands = fetchDistinctValues($conn, 'brand');
+$types = fetchDistinctValues($conn, 'category');
+
+// Close the database connection after fetching all values
+$conn->close();
+?>
+
+<section class="search-section spad">
+    <div class="container">
+        <!-- Other HTML here -->
+        <div class="search-form-content">
+            <form action="property.php" method="POST" class="filter-form">
+                <select class="sm-width" name="materials">
+                    <option value="">Materials</option>
+                    <?php foreach ($materials as $material) {
+                        echo "<option value='" . htmlspecialchars($material) . "'>" . htmlspecialchars($material) . "</option>";
+                    } ?>
+                </select>
+                
+                <select class="sm-width" name="general_color">
+                    <option value="">General Color</option>
+                    <?php foreach ($colors as $color) {
+                        echo "<option value='" . htmlspecialchars($color) . "'>" . htmlspecialchars($color) . "</option>";
+                    } ?>
+                </select>
+                
+                <select class="sm-width" name="brand">
+                    <option value="">Brand</option>
+                    <?php foreach ($brands as $brand) {
+                        echo "<option value='" . htmlspecialchars($brand) . "'>" . htmlspecialchars($brand) . "</option>";
+                    } ?>
+                </select>
+                
+                <select class="sm-width" name="product_type">
+                    <option value="">Type of Product</option>
+                    <?php foreach ($types as $type) {
+                        echo "<option value='" . htmlspecialchars($type) . "'>" . htmlspecialchars($type) . "</option>";
+                    } ?>
+                </select>
+                
+                <!-- Add the rest of your form elements as needed -->
+                <button type="submit" class="search-btn sm-width">Search</button>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
+
     <!-- Search Section End -->
 
     <!-- Property Section Begin -->
@@ -402,7 +382,7 @@
                 }
 
                 // SQL Query to fetch product data
-                $sql = "SELECT price, product_id, product_code, color, brand, material, dimensions, product_name, image, category, stock FROM products";
+                $sql = "SELECT price, product_id, product_code, color, brand, material, dimensions, product_name, image, category, stock FROM products LIMIT 9 ";
                 $result = $conn->query($sql);
 
                 if (!$result) {
