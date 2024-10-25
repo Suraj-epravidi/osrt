@@ -28,31 +28,120 @@
 
 <body>
 
-    <script>// JavaScript to handle activating the sticky navbar after scrolling 20% of the page
-        document.addEventListener("DOMContentLoaded", function () {
+    <script>
+        // JavaScript to handle activating the sticky navbar after scrolling 20% of the page
+        document.addEventListener("DOMContentLoaded", function() {
             var navbar = document.getElementById("stickyNav");
-        
-            window.addEventListener("scroll", function () {
+
+            window.addEventListener("scroll", function() {
                 var scrollPosition = window.scrollY;
                 var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
                 var scrollPercentage = (scrollPosition / pageHeight) * 100;
-        
+
                 if (scrollPercentage > 10) {
                     if (!navbar.classList.contains("fixed-navbar")) {
-          
-                        navbar.classList.add("fixed-navbar");   // Add fixed-navbar class for fade-in effect
+
+                        navbar.classList.add("fixed-navbar"); // Add fixed-navbar class for fade-in effect
                     }
                 } else {
                     if (navbar.classList.contains("fixed-navbar")) {
                         navbar.classList.remove("fixed-navbar"); // Remove fixed-navbar class
-                       
+
                     }
                 }
-             
+
             });
         });
-        
-        </script>
+        function getQueryParam(param) {
+      let params = new URLSearchParams(window.location.search);
+      return params.get(param);
+    }
+
+    // Function to show alert on page load if alert_message exists
+
+    window.onload = function() {
+      let alertMessage = getQueryParam('alert_message');
+    
+      if (alertMessage) {
+        console.log(alertMessage);
+        alert(alertMessage); // Display the alert box
+      }
+    }
+
+        function generatePagination(currentPage=1) {
+            var productsPerPage = 9;
+            totalProducts=document.getElementById("total_products").value;
+            // Calculate the total number of pages
+            var totalPages = Math.ceil(totalProducts / productsPerPage);
+
+            // Get the div where you want to append the pagination links
+            var container = document.querySelector('.property-pagination');
+
+            // Clear any existing content inside the div (optional)
+            // container.innerHTML = '';
+
+            // Function to create a link
+            function createLink(page, lower, upper) {
+                var link = document.createElement('a'); // Create a new <a> element
+                link.href = '?page_no='+page; // Set href with all params
+                link.textContent = page; // Set the link text
+                return link;
+            }
+
+            // Add "First Page" (Page 1)
+            if (currentPage !== 1) {
+                var lower = 1;
+                var upper = Math.min(productsPerPage, totalProducts);
+                container.appendChild(createLink(1, lower, upper)); // First page link
+                container.appendChild(document.createTextNode(' ')); // Space
+            }
+            // Add "Current Page"
+            var currentLower = (currentPage - 1) * productsPerPage + 1;
+            var currentUpper = Math.min(currentPage * productsPerPage, totalProducts);
+            var currentLink = document.createElement('span'); // Highlight current page (not clickable)
+            currentLink.textContent = currentPage;
+            container.appendChild(currentLink);
+            container.appendChild(document.createTextNode(' ')); // Space
+
+            // Add "Last Page" (only if not already the current page)
+            if (currentPage !== totalPages) {
+                var lastLower = (totalPages - 1) * productsPerPage + 1;
+                var lastUpper = totalProducts;
+                container.appendChild(createLink(totalPages, lastLower, lastUpper)); // Last page link
+                container.appendChild(document.createTextNode(' ')); // Space
+            }
+
+            // Add arrow for "Next Page" only if not on the last page
+            if (currentPage < totalPages) {
+                var nextPage = currentPage + 1;
+                console.log(nextPage);
+                var nextLower = (nextPage - 1) * productsPerPage + 1;
+                console.log(nextLower);
+                var nextUpper = Math.min(nextPage * productsPerPage, totalProducts);
+                console.log(nextUpper);
+
+                // Create an arrow element for the next page
+                var arrow = document.createElement('a'); // Create <a> for the arrow
+                arrow.href = '?lower=' + nextLower + '&upper=' + nextUpper; // Set href with next page params
+                arrow.className = 'icon'; // Set class to apply arrow styles
+
+                // Create the span inside the <a> for the arrow icon
+                var arrowSpan = document.createElement('span');
+                arrowSpan.className = 'arrow_right'; // Use the CSS class for the arrow icon
+                arrow.appendChild(arrowSpan); // Append the span to the <a>
+
+                // Append the arrow to the container
+                container.appendChild(arrow);
+            }
+        }
+
+        // Example usage: 120 products per page, 1000 total products, and current page is 5
+        // generatePagination(1000, 120, 1);
+
+
+        // Example usage: 120 products per page, 1000 total products, and current page is 5
+        // generatePagination(1000, 120, 5);
+    </script>
 
     <!-- Page Preloder -->
     <div id="preloder">
@@ -120,9 +209,9 @@
                             <ul>
                                 <li><a href="./index.php">Home</a></li>
                                 <li><a href="./about.html">About</a></li>
-                                <li  class="active"><a href="#">Products</a>
+                                <li class="active"><a href="#">Products</a>
                                     <ul class="dropdown">
-                                        <li  class="active"><a href="./products-list.html">Product List</a></li>
+                                        <li class="active"><a href="./products-list.html">Product List</a></li>
                                         <li><a href="./property-comparison.html">Product Comparison</a></li>
                                         <li><a href="./category.html">Product Category</a></li>
                                     </ul>
@@ -139,7 +228,7 @@
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-youtube-play"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -175,8 +264,8 @@
                     <div class="col-lg-4">
                         <div class="profile-agent-info">
                             <div class="pi-pic">
-                                <img src="img/agents/logo.png" alt="">
-                                
+                                <img src="img/agents/LOGO.png" alt="">
+
                             </div>
                             <div class="pi-text">
                                 <h5>OSR Traders</h5>
@@ -209,149 +298,132 @@
     </section>
     <!-- Profile Section End -->
 
+
+
     <!-- Property Section Begin -->
     <section class="property-section profile-page spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="property-item">
-                        <div class="pi-pic set-bg" data-setbg="img/property/property-1.jpg">
-                            <div class="label">In Stock</div>
-                        </div>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price">Rs 289.0<span>/MRP</span></div>
-                            <h5><a href="#">Home in Merrick Way</a></h5>
-                            <p>Item Code .: 1001 <br>
-                                Color.: Cream, Brand.: Somany, Material.: Marble </p>
-                            <ul>
-                                <li><i class="fa fa-object-group"></i> 2, 283</li>
-                                <li><i class="fa fa-bathtub"></i> 03</li>
-                                <li><i class="fa fa-bed"></i> 05</li>
-                                <li><i class="fa fa-automobile"></i> 01</li>
-                            </ul>
-                      
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="property-item">
-                        <div class="pi-pic set-bg" data-setbg="img/property/property-2.jpg">
-                            <div class="label c-red">Out Of Stock</div>
-                        </div>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price">$ 289.0</div>
-                            <h5><a href="#">Unimont Aurum</a></h5>
-                            <p>Item Code .: 1001 <br>
-                                Color.: Cream, Brand.: Somany, Material.: Marble </p>
-                            <ul>
-                                <li><i class="fa fa-object-group"></i> 2, 283</li>
-                                <li><i class="fa fa-bathtub"></i> 03</li>
-                                <li><i class="fa fa-bed"></i> 05</li>
-                                <li><i class="fa fa-automobile"></i> 01</li>
-                            </ul>
-       
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="property-item">
-                        <div class="pi-pic set-bg" data-setbg="img/property/property-2.jpg">
-                            <div class="label c-red">Out Of Stock</div>
-                        </div>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price">$ 289.0</div>
-                            <h5><a href="#">Vrindavan Flora</a></h5>
-                            <p>Item Code .: 1001 <br>
-                                Color.: Cream, Brand.: Somany, Material.: Marble </p>
-                            <ul>
-                                <li><i class="fa fa-object-group"></i> 2, 283</li>
-                                <li><i class="fa fa-bathtub"></i> 03</li>
-                                <li><i class="fa fa-bed"></i> 05</li>
-                                <li><i class="fa fa-automobile"></i> 01</li>
-                            </ul>
-                   
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="property-item">
-                        <div class="pi-pic set-bg" data-setbg="img/property/property-4.jpg">
-                            <div class="label c-red">Out Of Stock</div>
-                        </div>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price">$ 289.0</div>
-                            <h5><a href="#">Shramik Vaibhav</a></h5>
-                            <p>Item Code .: 1001 <br>
-                                Color.: Cream, Brand.: Somany, Material.: Marble </p>
-                            <ul>
-                                <li><i class="fa fa-object-group"></i> 2, 283</li>
-                                <li><i class="fa fa-bathtub"></i> 03</li>
-                                <li><i class="fa fa-bed"></i> 05</li>
-                                <li><i class="fa fa-automobile"></i> 01</li>
-                            </ul>
-          
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="property-item">
-                        <div class="pi-pic set-bg" data-setbg="img/property/property-5.jpg">
-                            <div class="label c-magenta">On Back Order</div>
-                        </div>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price">$ 289.0</div>
-                            <h5><a href="#">Poddar Wondercity</a></h5>
-                            <p>Item Code .: 1001 <br>
-                                Color.: Cream, Brand.: Somany, Material.: Marble </p>
-                            <ul>
-                                <li><i class="fa fa-object-group"></i> 2, 283</li>
-                                <li><i class="fa fa-bathtub"></i> 03</li>
-                                <li><i class="fa fa-bed"></i> 05</li>
-                                <li><i class="fa fa-automobile"></i> 01</li>
-                            </ul>
-               
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="property-item">
-                        <div class="pi-pic set-bg" data-setbg="img/property/property-6.jpg">
-                            <div class="label">In Stock</div>
-                        </div>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price">$ 289.0<span>/month</span></div>
-                            <h5><a href="#">GoldCrest Residency</a></h5>
-                            <p>Item Code .: 1001 <br>
-                                Color.: Cream, Brand.: Somany, Material.: Marble </p>
-                            <ul>
-                                <li><i class="fa fa-object-group"></i> 2, 283</li>
-                                <li><i class="fa fa-bathtub"></i> 03</li>
-                                <li><i class="fa fa-bed"></i> 05</li>
-                                <li><i class="fa fa-automobile"></i> 01</li>
-                            </ul>
-                 
-                        </div>
-                    </div>
-                </div>
+            <?php
+// Database connection
+$servername = "192.250.235.20";
+$username = "epravidi_osrt_data";
+$password = "UQ!r.gTOz=oo";
+$dbname = "epravidi_osrt";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Get page number from URL, default to 1 if not provided
+$page_no = isset($_GET['page_no']) ? (int)$_GET['page_no'] : 1;
+$products_per_page = 9; // Display 9 products per page  
+
+// Calculate the ID range for the current page
+            $start_id = $products_per_page * ($page_no -1) + 1 ;
+            $end_id = ($start_id + $products_per_page) - 1;
+
+// SQL Query to fetch product data within the calculated ID range
+$sql = "SELECT price, product_id, product_code, color, brand, material, dimensions, product_name, image, category, stock 
+        FROM products 
+        WHERE product_id BETWEEN ? AND ?";
+  
+// Initialize the prepared statement
+$stmt = $conn->prepare($sql);
+
+// Bind the parameters to the statement (two integers)
+$stmt->bind_param("ii", $start_id, $end_id);      
+$stmt->execute();
+$result = $stmt->get_result();
+// SQL Query to count total products
+$sql_count = "SELECT COUNT(*) as total_products FROM products";
+$result_count = $conn->query($sql_count);
+
+if (!$result_count) {
+    die("Query failed: " . $conn->error);
+}
+
+$row_count = $result_count->fetch_assoc();
+$total_products = (int)$row_count['total_products']; // Convert to integer
+echo '<input name="total_products" type="number" id="total_products" readonly value="' . $total_products . '" style="display:none;">';
+if (!$result) {
+    die("Query failed: " . $conn->error);
+}
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        // Determine the stock status
+        $stock_label = '';
+        $stock_status = '';
+
+        if ($row['stock'] > 0) {
+            $stock_label = 'label';
+            $stock_status = 'IN STOCK';
+        } else {
+            $stock_label = 'label c-red';
+            $stock_status = 'NOT IN STOCK';
+        }
+
+        // Display each product item
+        echo '<div class="col-lg-4 col-md-6 mix all house" onclick="product_redirect(' . $row["product_id"] . ')" style="cursor:pointer;">';
+        echo '<div class="property-item">';
+        echo '<div class="pi-pic set-bg" data-setbg="https://www.panel-osrt.epravidi.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">';
+        echo '<div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>';
+        echo '</div>';
+        echo '<div class="pi-text">';
+        echo '<a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>';
+        echo '<div class="pt-price">Rs. ' . htmlspecialchars($row["price"]) . '<span>/MRP</span></div>';
+        echo '<h5><a href="#">' . htmlspecialchars($row["product_name"]) . '</a></h5>';
+        echo '<p>Item Code: ' . htmlspecialchars($row["product_code"]) . '<br>';
+        echo 'Color: ' . htmlspecialchars($row["color"]) . ', Brand: ' . htmlspecialchars($row["brand"]) . ', Material: ' . htmlspecialchars($row["material"]) . '</p>';
+        echo '<ul>';
+        echo '<li>' . htmlspecialchars($row["dimensions"]) . '</li>';
+        echo '<li>';
+        echo '<i class="fa fa-object-group"></i>&nbsp;&nbsp;';
+        echo '<i class="fa fa-bathtub"></i>&nbsp;&nbsp;';
+        echo '<i class="fa fa-bed"></i>&nbsp;&nbsp;';
+        echo '</li>';
+        echo '</ul>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+                    echo "<script>
+
+        let pageNo =  getQueryParam('page_no');
+        console.log('pagination is working');
+        if(pageNo==null){
+            pageNo=1;
+            }
+            console.log(pageNo);
+            window.onload=function(){
+        generatePagination(pageNo);
+    }
+        </script>";
+    }
+} else {
+    echo "No products found in the database";
+}
+
+// Close the database connection
+$conn->close();
+?>
+
+
                 <div class="col-lg-12">
                     <div class="property-pagination">
-                        <a href="#">1</a>
+                        <!-- <a href="#">1</a>
                         <a href="#">2</a>
                         <a href="#">3</a>
-                        <a href="#" class="icon"><span class="arrow_right"></span></a>
+                        <a href="#" class="icon"><span class="arrow_right"></span></a> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Property Section End -->
-
 
     <!-- Footer Section Begin -->
     <footer class="footer-section">
@@ -409,9 +481,11 @@
                 </div>
             </div>
             <div class="copyright-text">
-                
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
-  </p>
+
+                Copyright &copy;<script>
+                    document.write(new Date().getFullYear());
+                </script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
+                </p>
             </div>
         </div>
     </footer>
@@ -429,6 +503,7 @@
     <script src="js/jquery.richtext.min.js"></script>
     <script src="js/image-uploader.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>
