@@ -145,47 +145,79 @@
     <!-- Header End -->
 
     <div class="video-wrapper">
+        <div class="content-wrapper">
+            <h2 class="video-title">High Quality Products At Affordable Price</h2>
 
-        <h2 class="video-title">High Quality Products At Affordable Price</h2>
-
-        <!-- Buttons below the text, left-aligned -->
-        <div class="button-wrapper">
-            <button class="video-button">ABOUT US</button>
-            <button class="video-button">CONTACT US</button>
+            <!-- Buttons below the text, left-aligned -->
+            <div class="button-wrapper">
+                <button class="video-button">ABOUT US</button>
+                <button class="video-button">CONTACT US</button>
+            </div>
         </div>
-
         <div class="overlay"></div>
 
         <video autoplay loop muted>
-            <source src="video_osrt.mp4" type="video/mp4" width="100%" style="display: block;">
+            <source src="osrtfinal.mp4" type="video/mp4" width="100%" style="display: block;">
         </video>
     </div>
 
     <style>
         .video-wrapper {
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Aligns the button-wrapper with the start of the text */
+            text-align: left; /* Aligns text inside content-wrapper */
+            gap: 0.5em; /* Adds minimal space between title and buttons */
         }
 
         .video-title {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             color: white;
-            z-index: 2;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             pointer-events: none;
+            font-size: 2em;
+            margin: 0;
         }
 
         .button-wrapper {
-            position: absolute;
-            top: 54%;
-            left: 50%;
-            transform: translateX(-110%);
-            z-index: 10;
             display: flex;
-            gap: 20px;
+            gap: 1em;
         }
+
+
+
+
 
         .video-button {
             background-color: transparent;
@@ -203,51 +235,40 @@
             color: black;
         }
 
-        .overlay {
+       
+
+        video {
+            display: block;
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-            /* 30% opacity black */
-            z-index: 1;
-        }
-
-        video {
-            width: 100%;
-            display: block;
         }
 
         /* Media Query for screens up to 840px */
-        @media (max-width: 464px) {
-            .video-title {
-                /* Adjust font size for smaller screens */
+        @media (max-width: 768px) {
+            /* .video-title {
+               
                 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-                /* Less shadow */
-            }
+                top: 30%;
+            } */
 
             .button-wrapper {
-                position: absolute;
-
-                top: 67%;
-                /* Adjust as needed */
-                left: 50%;
-                transform: translate(-50%, -50%);
-
-                display: block;
-                /* Stack buttons vertically if needed */
-                z-index: 10;
+                flex-direction: column;
             }
 
-            .video-button {
+            /* .video-button {
                 width: 100%;
-                /* Full width for buttons */
                 margin-bottom: 10px;
-                /* Space between buttons */
+                
                 text-align: center;
-                /* Center text inside buttons */
+               
+            } */
+            .content-wrapper {
+                padding: 5vw;
             }
+
 
         }
     </style>
