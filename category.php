@@ -63,7 +63,7 @@
             align-items: center;
             align-content: stretch;
             justify-content: center; /* Ensures space between items */
-            max-width: 100%; /* Allows items to take full width */
+            width: 100%; /* Allows items to take full width */
             
         }
     
@@ -74,7 +74,7 @@
             background-size: cover;
             background-position: center;
             height: 250px;
-           display: flex;
+            display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
