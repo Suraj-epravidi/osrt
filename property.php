@@ -298,8 +298,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="fs-widget">
                         <h5>Newsletter</h5>
                         <p>Subscribe to receive inspiration, ideas, and news in your inbox.</p>
-                        <form action="#" class="subscribe-form">
-                            <input type="text" placeholder="Email">
+                        <form action="newsletter.php" class="subscribe-form" method="POST">
+                            <input type="text" placeholder="Email" name="email">
                             <button type="submit" class="site-btn">Subscribe</button>
                         </form>
                     </div>
