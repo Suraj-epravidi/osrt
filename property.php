@@ -161,6 +161,11 @@
         </div>
     </section>
     <!-- Breadcrumb Section End -->
+    <script>
+                function product_redirect(id) {
+                    window.location.href = './property-details.php?id=' + id;
+                }
+            </script>
     <?php
 // Database connection function
 function connectToDatabase() {

@@ -68,79 +68,7 @@
             }
         }
 
-        // function generatePagination(currentPage = 1) {
-        //     var productsPerPage = 9;
-        //     totalProducts = document.getElementById("total_products").value;
-        //     // Calculate the total number of pages
-        //     var totalPages = Math.ceil(totalProducts / productsPerPage);
-
-        //     // Get the div where you want to append the pagination links
-        //     var container = document.querySelector('.property-pagination');
-
-        //     // Clear any existing content inside the div (optional)
-        //     // container.innerHTML = '';
-
-        //     // Function to create a link
-        //     function createLink(page, lower, upper) {
-        //         var link = document.createElement('a'); // Create a new <a> element
-        //         link.href = '?page_no=' + page; // Set href with all params
-        //         link.textContent = page; // Set the link text
-        //         return link;
-        //     }
-
-        //     // Add "First Page" (Page 1)
-        //     if (currentPage !== 1) {
-        //         var lower = 1;
-        //         var upper = Math.min(productsPerPage, totalProducts);
-        //         container.appendChild(createLink(1, lower, upper)); // First page link
-        //         container.appendChild(document.createTextNode(' ')); // Space
-        //     }
-        //     // Add "Current Page"
-        //     var currentLower = (currentPage - 1) * productsPerPage + 1;
-        //     var currentUpper = Math.min(currentPage * productsPerPage, totalProducts);
-        //     var currentLink = document.createElement('span'); // Highlight current page (not clickable)
-        //     currentLink.textContent = currentPage;
-        //     container.appendChild(currentLink);
-        //     container.appendChild(document.createTextNode(' ')); // Space
-
-        //     // Add "Last Page" (only if not already the current page)
-        //     if (currentPage !== totalPages) {
-        //         var lastLower = (totalPages - 1) * productsPerPage + 1;
-        //         var lastUpper = totalProducts;
-        //         container.appendChild(createLink(totalPages, lastLower, lastUpper)); // Last page link
-        //         container.appendChild(document.createTextNode(' ')); // Space
-        //     }
-
-        //     // Add arrow for "Next Page" only if not on the last page
-        //     if (currentPage < totalPages) {
-        //         var nextPage = currentPage + 1;
-        //         console.log(nextPage);
-        //         var nextLower = (nextPage - 1) * productsPerPage + 1;
-        //         console.log(nextLower);
-        //         var nextUpper = Math.min(nextPage * productsPerPage, totalProducts);
-        //         console.log(nextUpper);
-
-        //         // Create an arrow element for the next page
-        //         var arrow = document.createElement('a'); // Create <a> for the arrow
-        //         arrow.href = '?lower=' + nextLower + '&upper=' + nextUpper; // Set href with next page params
-        //         arrow.className = 'icon'; // Set class to apply arrow styles
-
-        //         // Create the span inside the <a> for the arrow icon
-        //         var arrowSpan = document.createElement('span');
-        //         arrowSpan.className = 'arrow_right'; // Use the CSS class for the arrow icon
-        //         arrow.appendChild(arrowSpan); // Append the span to the <a>
-
-        //         // Append the arrow to the container
-        //         container.appendChild(arrow);
-        //     }
-        // }
-
-        // Example usage: 120 products per page, 1000 total products, and current page is 5
-        // generatePagination(1000, 120, 1);
-
-
-        // Example usage: 120 products per page, 1000 total products, and current page is 5
-        // generatePagination(1000, 120, 5);
+       
     </script>
 
     <!-- Page Preloder -->
@@ -305,6 +233,11 @@
     <section class="property-section profile-page spad">
         <div class="container">
             <div class="row">
+            <script>
+                function product_redirect(id) {
+                    window.location.href = './property-details.php?id=' + id;
+                }
+            </script>
                 <?php
                 // Database connection
                 $servername = "192.250.235.20";
