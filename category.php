@@ -63,7 +63,7 @@
             align-items: center;
             align-content: stretch;
             justify-content: center; /* Ensures space between items */
-            width: 100%; /* Allows items to take full width */
+            width: 90vw; /* Allows items to take full width */
             
         }
     
