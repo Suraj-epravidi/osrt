@@ -167,11 +167,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="agent-search-form">
-                        <form action="#">
-                            <input type="text" placeholder="Find Brands">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
+                    <div class="section-title">
+                        <h4>Brands</h4>
                     </div>
                 </div>
             </div>
