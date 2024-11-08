@@ -207,7 +207,7 @@ function getProducts($conn, $materials, $general_color, $brand, $product_type, $
     return $result ? $result->fetch_all(MYSQLI_ASSOC) : [];
 }
     if (isset($_GET['productType'])) {
-        $product_type = $_GET['productType'];
+        $product_type = $_GET['productType'] ?? '';
         $materials = $_GET['materials'] ?? '';
     $general_color = $_GET['general_color'] ?? '';
     $brand = $_GET['brand'] ?? '';
