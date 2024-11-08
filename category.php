@@ -329,7 +329,7 @@
                         <li onclick="pageRedirect(this)">Vanity Basin's</li>
                         <li onclick="pageRedirect(this)">Bathware's</li>
                     </ul>
-                    <a href="#" onclick="pageRedirect(this)">View all Products</a>
+                    <a onclick="pageRedirect(this)">View all Products</a>
                 </div>
             </div>
             <div class="col-lg-8 p-0">
