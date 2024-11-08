@@ -434,7 +434,7 @@
             <script>
                 function pageRedirect(pageLocation){
                    url=pageLocation.innerText;
-                    if(url ="All"){
+                    if(url=="All"){
                         window.location.href='./property.php?productType';
                     }
                     else
