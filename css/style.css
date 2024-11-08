@@ -35,6 +35,20 @@ body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+::-webkit-scrollbar{
+  display: block;
+  overflow: auto;
+  width:5px;
+  padding: 1em;
+  margin: 1em auto;
+  outline: 2px solid #fff;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #000;
+  border-radius:5px;
+}
+
 
 h1,
 h2,
