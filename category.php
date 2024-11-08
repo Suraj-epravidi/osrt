@@ -214,7 +214,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="./brands.php">Brands</a></li>
-                                <li><a href="./blog.html">FAQ's</a></li>
+                                <li><a href="./faq.php">FAQ's</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
                             </ul>
                         </nav>
