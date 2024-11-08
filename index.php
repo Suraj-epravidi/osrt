@@ -421,17 +421,24 @@
                 <div class="col-lg-7">
                     <div class="property-controls">
                         <ul>
-                            <li data-filter="all">All</li>
-                            <li data-filter=".apart">Tiles</li>
-                            <li data-filter=".house">Bathware</li>
-                            <li data-filter=".office">Electricals</li>
-                            <li data-filter=".hotel">Commode</li>
-                            <li data-filter=".restaurent">Vanity Basin</li>
+                            <li data-filter="all" onclick="pageRedirect(this)">All</li>
+                            <li data-filter=".apart" onclick="pageRedirect(this)">Tiles</li>
+                            <li data-filter=".house"onclick="pageRedirect(this)">Bathware</li>
+                            <li data-filter=".office"onclick="pageRedirect(this)">Electricals</li>
+                            <li data-filter=".hotel"onclick="pageRedirect(this)">Commode</li>
+                            <li data-filter=".restaurent"onclick="pageRedirect(this)">Vanity Basin</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <script>
+                function pageRedirect(pageLocation){
+                   url=pageLocation.innerText;
+                    if(pageLocation ="All"){
+                        window.location.href='./property.php';
+                    }
+                    window.location.href='./property.php?productType=' + url;
+                }
                 function product_redirect(id) {
                     window.location.href = './property-details.php?id=' + id;
                 }
