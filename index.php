@@ -437,7 +437,10 @@
                     if(url ="All"){
                         window.location.href='./property.php';
                     }
-                    window.location.href='./property.php?productType=' + url;
+                    else
+                    { 
+                         window.location.href='./property.php?productType=' + url;
+                    }
                 }
                 function product_redirect(id) {
                     window.location.href = './property-details.php?id=' + id;
