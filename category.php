@@ -300,6 +300,19 @@
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2024/10/25/06/20241025061942-VB7QGSPE.js"></script>
    <!-- Feature Product Section Begin -->
+   <script>
+                function pageRedirect(pageLocation){
+                   url=pageLocation.innerText;
+                    if(url=="All"){
+                        window.location.href='./property.php?productType';
+                    }
+                    else
+                    { 
+                         window.location.href='./property.php?productType=' + url;
+                    }
+                }
+
+            </script>
    <section class="feature-property-section spad">
     <div class="container">
         <div class="row">
@@ -309,12 +322,12 @@
                         <h4>Feature Product</h4>
                     </div>
                     <ul>
-                        <li>Tiles</li>
-                        <li>Shower Head</li>
-                        <li>Light Switches</li>
-                        <li>Commode</li>
-                        <li>Vanity Basin's</li>
-                        <li>Bathware's</li>
+                        <li onclick="pageRedirect(this)">Tiles</li>
+                        <li onclick="pageRedirect(this)">Shower Head</li>
+                        <li onclick="pageRedirect(this)">Light Switches</li>
+                        <li onclick="pageRedirect(this)">Commode</li>
+                        <li onclick="pageRedirect(this)">Vanity Basin's</li>
+                        <li onclick="pageRedirect(this)">Bathware's</li>
                     </ul>
                     <a href="#">View all Products</a>
                 </div>
