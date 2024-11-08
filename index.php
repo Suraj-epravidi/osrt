@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
         <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
-        <link rel="icon" href="img/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body>
