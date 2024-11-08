@@ -191,7 +191,7 @@
                         }
                         
                         // Query to select questions and answers
-                        $sql = "SELECT questions, answers FROM faq";
+                        $sql = "SELECT questions, answers FROM faqs";
                         $result = $conn->query($sql);
                         
                         if ($result->num_rows > 0) {
