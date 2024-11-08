@@ -176,27 +176,42 @@
                                
                             </div>
                         </div>
-                        <div class="blog-item">
-                           
-                            <div class="bi-text">
-                                <h5>What is your return policy?</h5>
-                                <p><span class="arrow_right">&nbsp;</span>Our return policy allows returns within 30 days of purchase.</p>
-
-                            </div>
-                        </div>
-                        <div class="blog-item">
-                            <div class="bi-text">
-                                <h5>How long does shipping take?</h5>
-                                <p><span class="arrow_right">&nbsp;</span> Shipping typically takes 5-7 business days.</p>
-                                
-                            </div>
-                        </div>
-                        <div class="blog-item">
-                            <div class="bi-text">
-                                <h5>Do you ship internationally?</h5>
-                                <p><span class="arrow_right">&nbsp;</span>Yes, we ship to many countries worldwide. Please check our shipping policy for details.</p>
-                            </div>
-                        </div>
+                        <?php
+                        // Database connection
+                        $servername = "192.250.235.20";
+                        $username = "epravidi_osrt_data";
+                        $password = "UQ!r.gTOz=oo";
+                        $dbname = "epravidi_osrt";
+                        
+                        $conn = new mysqli($servername, $username, $password, $dbname);
+                        
+                        // Check connection
+                        if ($conn->connect_error) {
+                            die("Connection failed: " . $conn->connect_error);
+                        }
+                        
+                        // Query to select questions and answers
+                        $sql = "SELECT questions, answers FROM faq";
+                        $result = $conn->query($sql);
+                        
+                        if ($result->num_rows > 0) {
+                            // Output data for each row
+                            while($row = $result->fetch_assoc()) {
+                                echo '<div class="blog-item">';
+                                echo '    <div class="bi-text">';
+                                echo '        <h5>' . htmlspecialchars($row["questions"]) . '</h5>';
+                                echo '        <p><span class="arrow_right">&nbsp;</span>' . htmlspecialchars($row["answers"]) . '</p>';
+                                echo '    </div>';
+                                echo '</div>';
+                            }
+                        } else {
+                            echo "No FAQs found.";
+                        }
+                        
+                        // Close connection
+                        $conn->close();
+                        ?>
+                        
                         <div class="blog-item">
                             <div class="bc-widget">
                                 <h4>Ask us a question</h4>
