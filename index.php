@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OSR traders</title>
-
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <!-- Google Font -->
     <link="hhrefttps: //fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
         <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
-        <link rel="icon" type="image/x-icon" href="img/favicon.ico" >
+        
 </head>
 
 <body>
