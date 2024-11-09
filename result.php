@@ -151,10 +151,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text">
-                        <h4>Property Grid</h4>
+                        <h4>Product Result</h4>
                         <div class="bt-option">
                             <a href="./index.php"><i class="fa fa-home"></i> Home</a>
-                            <span>Property</span>
+                            <span>Results</span>
                         </div>
                     </div>
                 </div>

@@ -344,7 +344,7 @@
                 </div>
             </div>
             <div class="search-form-content">
-                <form action="property.php" method="POST" class="filter-form">
+                <form action="result.php" method="POST" class="filter-form">
                     <select class="sm-width" name="materials">
                         <option value="">Materials</option>
                         <?php foreach ($materials as $material) {
@@ -436,11 +436,11 @@
                 function pageRedirect(pageLocation){
                    url=pageLocation.innerText;
                     if(url=="All"){
-                        window.location.href='./property.php?productType';
+                        window.location.href='./result.php?productType';
                     }
                     else
                     { 
-                         window.location.href='./property.php?productType=' + url;
+                         window.location.href='./result.php?productType=' + url;
                     }
                 }
                 function product_redirect(id) {

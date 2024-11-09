@@ -305,11 +305,11 @@
                 function pageRedirect(pageLocation){
                    url=pageLocation.innerText;
                     if(url=="All"){
-                        window.location.href='./property.php?productType';
+                        window.location.href='./result.php?productType';
                     }
                     else
                     { 
-                         window.location.href='./property.php?productType=' + url;
+                         window.location.href='./result.php?productType=' + url;
                     }
                 }
 
@@ -330,7 +330,7 @@
                         <li onclick="pageRedirect(this)">Vanity Basin's</li>
                         <li onclick="pageRedirect(this)">Bathware's</li>
                     </ul>
-                    <a href="./property.php?productType">View all Products</a>
+                    <a href="./result.php?productType">View all Products</a>
                 </div>
             </div>
             <div class="col-lg-8 p-0">
