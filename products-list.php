@@ -24,16 +24,17 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body>
 
     <script>
         // JavaScript to handle activating the sticky navbar after scrolling 20% of the page
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             var navbar = document.getElementById("stickyNav");
 
-            window.addEventListener("scroll", function() {
+            window.addEventListener("scroll", function () {
                 var scrollPosition = window.scrollY;
                 var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
                 var scrollPercentage = (scrollPosition / pageHeight) * 100;
@@ -53,94 +54,22 @@
             });
         });
         function getQueryParam(param) {
-      let params = new URLSearchParams(window.location.search);
-      return params.get(param);
-    }
+            let params = new URLSearchParams(window.location.search);
+            return params.get(param);
+        }
 
-    // Function to show alert on page load if alert_message exists
+        // Function to show alert on page load if alert_message exists
 
-    window.onload = function() {
-      let alertMessage = getQueryParam('alert_message');
-    
-      if (alertMessage) {
-        console.log(alertMessage);
-        alert(alertMessage); // Display the alert box
-      }
-    }
+        window.onload = function () {
+            let alertMessage = getQueryParam('alert_message');
 
-        function generatePagination(currentPage=1) {
-            var productsPerPage = 9;
-            totalProducts=document.getElementById("total_products").value;
-            // Calculate the total number of pages
-            var totalPages = Math.ceil(totalProducts / productsPerPage);
-
-            // Get the div where you want to append the pagination links
-            var container = document.querySelector('.property-pagination');
-
-            // Clear any existing content inside the div (optional)
-            // container.innerHTML = '';
-
-            // Function to create a link
-            function createLink(page, lower, upper) {
-                var link = document.createElement('a'); // Create a new <a> element
-                link.href = '?page_no='+page; // Set href with all params
-                link.textContent = page; // Set the link text
-                return link;
-            }
-
-            // Add "First Page" (Page 1)
-            if (currentPage !== 1) {
-                var lower = 1;
-                var upper = Math.min(productsPerPage, totalProducts);
-                container.appendChild(createLink(1, lower, upper)); // First page link
-                container.appendChild(document.createTextNode(' ')); // Space
-            }
-            // Add "Current Page"
-            var currentLower = (currentPage - 1) * productsPerPage + 1;
-            var currentUpper = Math.min(currentPage * productsPerPage, totalProducts);
-            var currentLink = document.createElement('span'); // Highlight current page (not clickable)
-            currentLink.textContent = currentPage;
-            container.appendChild(currentLink);
-            container.appendChild(document.createTextNode(' ')); // Space
-
-            // Add "Last Page" (only if not already the current page)
-            if (currentPage !== totalPages) {
-                var lastLower = (totalPages - 1) * productsPerPage + 1;
-                var lastUpper = totalProducts;
-                container.appendChild(createLink(totalPages, lastLower, lastUpper)); // Last page link
-                container.appendChild(document.createTextNode(' ')); // Space
-            }
-
-            // Add arrow for "Next Page" only if not on the last page
-            if (currentPage < totalPages) {
-                var nextPage = currentPage + 1;
-                console.log(nextPage);
-                var nextLower = (nextPage - 1) * productsPerPage + 1;
-                console.log(nextLower);
-                var nextUpper = Math.min(nextPage * productsPerPage, totalProducts);
-                console.log(nextUpper);
-
-                // Create an arrow element for the next page
-                var arrow = document.createElement('a'); // Create <a> for the arrow
-                arrow.href = '?lower=' + nextLower + '&upper=' + nextUpper; // Set href with next page params
-                arrow.className = 'icon'; // Set class to apply arrow styles
-
-                // Create the span inside the <a> for the arrow icon
-                var arrowSpan = document.createElement('span');
-                arrowSpan.className = 'arrow_right'; // Use the CSS class for the arrow icon
-                arrow.appendChild(arrowSpan); // Append the span to the <a>
-
-                // Append the arrow to the container
-                container.appendChild(arrow);
+            if (alertMessage) {
+                console.log(alertMessage);
+                alert(alertMessage); // Display the alert box
             }
         }
 
-        // Example usage: 120 products per page, 1000 total products, and current page is 5
-        // generatePagination(1000, 120, 1);
-
-
-        // Example usage: 120 products per page, 1000 total products, and current page is 5
-        // generatePagination(1000, 120, 5);
+       
     </script>
 
     <!-- Page Preloder -->
@@ -211,13 +140,12 @@
                                 <li><a href="./about.html">About</a></li>
                                 <li class="active"><a href="#">Products</a>
                                     <ul class="dropdown">
-                                        <li class="active"><a href="./products-list.html">Product List</a></li>
-                                        <li><a href="./property-comparison.html">Product Comparison</a></li>
-                                        <li><a href="./category.html">Product Category</a></li>
+                                        <li class="active"><a href="./products-list.php">Product List</a></li>
+                                        <li><a href="./category.php">Product Category</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./brands.html">Brands</a></li>
-                                <li><a href="./blog.html">FAQ's</a></li>
+                                <li><a href="./brands.php">Brands</a></li>
+                                <li><a href="./faq.php">FAQ's</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
                             </ul>
                         </nav>
@@ -248,7 +176,7 @@
                         <h4>Products</h4>
                         <div class="bt-option">
                             <a href="./index.php"><i class="fa fa-home"></i> Home</a>
-                            <a href="./brands.html">Products</a>
+                            <a href="./brands.php">Products</a>
                             <span>Lists</span>
                         </div>
                     </div>
@@ -318,93 +246,101 @@
     <section class="property-section profile-page spad">
         <div class="container">
             <div class="row">
-            <?php
-// Database connection
-$servername = "192.250.235.20";
-$username = "epravidi_osrt_data";
-$password = "UQ!r.gTOz=oo";
-$dbname = "epravidi_osrt";
+            <script>
+                function product_redirect(id) {
+                    window.location.href = './property-details.php?id=' + id;
+                }
+            </script>
+                <?php
+                // Database connection
+                $servername = "192.250.235.20";
+                $username = "epravidi_osrt_data";
+                $password = "UQ!r.gTOz=oo";
+                $dbname = "epravidi_osrt";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+                $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
 
-// Get page number from URL, default to 1 if not provided
-$page_no = isset($_GET['page_no']) ? (int)$_GET['page_no'] : 1;
-$products_per_page = 9; // Display 9 products per page  
+                // Get page number from URL, default to 1 if not provided
+                $page_no = isset($_GET['page_no']) ? (int) $_GET['page_no'] : 1;
+                if ($page_no < 1) {
+                    $page_no = 1;
+                }
+                $products_per_page = 9; // Display 9 products per page  
+                
+                // Calculate the ID range for the current page
+                $start_id = $products_per_page * ($page_no - 1) + 1;
+                $end_id = ($start_id + $products_per_page) - 1;
 
-// Calculate the ID range for the current page
-            $start_id = $products_per_page * ($page_no -1) + 1 ;
-            $end_id = ($start_id + $products_per_page) - 1;
-
-// SQL Query to fetch product data within the calculated ID range
-$sql = "SELECT price, product_id, product_code, color, brand, material, dimensions, product_name, image, category, stock 
+                // SQL Query to fetch product data within the calculated ID range
+                $sql = "SELECT price, product_id, product_code, color, brand, material, dimensions, product_name, image, category, stock 
         FROM products 
         WHERE product_id BETWEEN ? AND ?";
-  
-// Initialize the prepared statement
-$stmt = $conn->prepare($sql);
 
-// Bind the parameters to the statement (two integers)
-$stmt->bind_param("ii", $start_id, $end_id);      
-$stmt->execute();
-$result = $stmt->get_result();
-// SQL Query to count total products
-$sql_count = "SELECT COUNT(*) as total_products FROM products";
-$result_count = $conn->query($sql_count);
+                // Initialize the prepared statement
+                $stmt = $conn->prepare($sql);
 
-if (!$result_count) {
-    die("Query failed: " . $conn->error);
-}
+                // Bind the parameters to the statement (two integers)
+                $stmt->bind_param("ii", $start_id, $end_id);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                // SQL Query to count total products
+                $sql_count = "SELECT COUNT(*) as total_products FROM products";
+                $result_count = $conn->query($sql_count);
 
-$row_count = $result_count->fetch_assoc();
-$total_products = (int)$row_count['total_products']; // Convert to integer
-echo '<input name="total_products" type="number" id="total_products" readonly value="' . $total_products . '" style="display:none;">';
-if (!$result) {
-    die("Query failed: " . $conn->error);
-}
+                if (!$result_count) {
+                    die("Query failed: " . $conn->error);
+                }
 
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        // Determine the stock status
-        $stock_label = '';
-        $stock_status = '';
+                $row_count = $result_count->fetch_assoc();
+                $total_products = (int) $row_count['total_products']; // Convert to integer
+                echo '<input name="total_products" type="number" id="total_products" readonly value="' . $total_products . '" style="display:none;">';
+                if (!$result) {
+                    die("Query failed: " . $conn->error);
+                }
 
-        if ($row['stock'] > 0) {
-            $stock_label = 'label';
-            $stock_status = 'IN STOCK';
-        } else {
-            $stock_label = 'label c-red';
-            $stock_status = 'NOT IN STOCK';
-        }
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        // Determine the stock status
+                        $stock_label = '';
+                        $stock_status = '';
 
-        // Display each product item
-        echo '<div class="col-lg-4 col-md-6 mix all house" onclick="product_redirect(' . $row["product_id"] . ')" style="cursor:pointer;">';
-        echo '<div class="property-item">';
-        echo '<div class="pi-pic set-bg" data-setbg="https://www.panel-osrt.epravidi.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">';
-        echo '<div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>';
-        echo '</div>';
-        echo '<div class="pi-text">';
-        echo '<a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>';
-        echo '<div class="pt-price">Rs. ' . htmlspecialchars($row["price"]) . '<span>/MRP</span></div>';
-        echo '<h5><a href="#">' . htmlspecialchars($row["product_name"]) . '</a></h5>';
-        echo '<p>Item Code: ' . htmlspecialchars($row["product_code"]) . '<br>';
-        echo 'Color: ' . htmlspecialchars($row["color"]) . ', Brand: ' . htmlspecialchars($row["brand"]) . ', Material: ' . htmlspecialchars($row["material"]) . '</p>';
-        echo '<ul>';
-        echo '<li>' . htmlspecialchars($row["dimensions"]) . '</li>';
-        echo '<li>';
-        echo '<i class="fa fa-object-group"></i>&nbsp;&nbsp;';
-        echo '<i class="fa fa-bathtub"></i>&nbsp;&nbsp;';
-        echo '<i class="fa fa-bed"></i>&nbsp;&nbsp;';
-        echo '</li>';
-        echo '</ul>';
-        echo '</div>';
-        echo '</div>';
-        echo '</div>';
-                    echo "<script>
+                        if ($row['stock'] > 0) {
+                            $stock_label = 'label';
+                            $stock_status = 'IN STOCK';
+                        } else {
+                            $stock_label = 'label c-red';
+                            $stock_status = 'NOT IN STOCK';
+                        }
+
+                        // Display each product item
+                        echo '<div class="col-lg-4 col-md-6 mix all house" onclick="product_redirect(' . $row["product_id"] . ')" style="cursor:pointer;">';
+                        echo '<div class="property-item">';
+                        echo '<div class="pi-pic set-bg" data-setbg="https://www.panel-osrt.epravidi.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">';
+                        echo '<div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>';
+                        echo '</div>';
+                        echo '<div class="pi-text">';
+                        echo '<a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>';
+                        echo '<div class="pt-price">Rs. ' . htmlspecialchars($row["price"]) . '<span>/MRP</span></div>';
+                        echo '<h5><a href="#">' . htmlspecialchars($row["product_name"]) . '</a></h5>';
+                        echo '<p>Item Code: ' . htmlspecialchars($row["product_code"]) . '<br>';
+                        echo 'Color: ' . htmlspecialchars($row["color"]) . ', Brand: ' . htmlspecialchars($row["brand"]) . ', Material: ' . htmlspecialchars($row["material"]) . '</p>';
+                        echo '<ul>';
+                        echo '<li>' . htmlspecialchars($row["dimensions"]) . '</li>';
+                        echo '<li>';
+                        echo '<i class="fa fa-object-group"></i>&nbsp;&nbsp;';
+                        echo '<i class="fa fa-bathtub"></i>&nbsp;&nbsp;';
+                        echo '<i class="fa fa-bed"></i>&nbsp;&nbsp;';
+                        echo '</li>';
+                        echo '</ul>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo "<script>
 
         let pageNo =  getQueryParam('page_no');
         console.log('pagination is working');
@@ -416,23 +352,41 @@ if ($result->num_rows > 0) {
         generatePagination(pageNo);
     }
         </script>";
-    }
-} else {
-    echo "No products found in the database";
-}
+                    }
+                } else {
+                    echo "No products found in the database";
+                }
 
-// Close the database connection
-$conn->close();
-?>
+                // Close the database connection
+                $conn->close();
+                ?>
 
 
                 <div class="col-lg-12">
-                    <div class="property-pagination">
-                        <!-- <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#" class="icon"><span class="arrow_right"></span></a> -->
-                    </div>
+
+                    <?php echo '<div class="property-pagination">';
+                    $last_page = ceil($total_products / 9);
+                    if ($page_no > 1 ) {
+                        echo '<a href="./products-list.php?page_no=' . $page_no - 1 . '" class="icon"><span class="arrow_left"></span></a>';
+                    }
+                    if ($page_no != 1  && $page_no != 2) {
+                        echo ' <a href="./products-list.php?page_no=1">1</a>';
+                    }
+                    if ($last_page > 1 && $page_no > 1) {
+                        echo '<a href="./products-list.php?page_no=' . $page_no - 1 . '">' . $page_no - 1 . '</a>';
+                    }
+                    echo '<a href="./products-list.php?page_no=' . $page_no . '">' . $page_no . '</a>';
+                    if($page_no < $last_page-1){
+                        echo '<a href="./products-list.php?page_no=' . $page_no + 1 . '">' . $page_no + 1 . '</a>';
+                    }
+                    if ($page_no < $last_page) {
+                        echo '<a href="./products-list.php?page_no=' . $last_page . '">' . $last_page . '</a>';
+                        echo '<a href="./products-list.php?page_no=' . $page_no + 1 . '" class="icon"><span class="arrow_right"></span></a>';
+                    }
+
+
+                    echo '</div>';
+                    ?>
                 </div>
             </div>
         </div>
@@ -450,7 +404,8 @@ $conn->close();
                                 <img src="img/f-logo.png" alt="">
                             </a>
                         </div>
-                        <p>Be sure to follow us on our social media platforms. Stay informed about industry trends, new products, and expert tips to keep your projects on the cutting edge.</p>
+                        <p>Be sure to follow us on our social media platforms. Stay informed about industry trends, new
+                            products, and expert tips to keep your projects on the cutting edge.</p>
                         <div class="fs-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -472,14 +427,14 @@ $conn->close();
                     </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">
-                    <div class="fs-widget">
+                   <div class="fs-widget">
                         <h5>Links</h5>
                         <ul>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Products</a></li>
-                            <li><a href="#">Product Inquiry</a></li>
-                            <li><a href="#">Brands</a></li>
-                            <li><a href="#">FAQ's</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="./products-list.php">Products</a></li>
+                            <li><a href="./contact.html">Product Inquiry</a></li>
+                            <li><a href="./brands.php">Brands</a></li>
+                            <li><a href="./faq.php">FAQ's</a></li>
                         </ul>
                     </div>
                 </div>
@@ -487,8 +442,8 @@ $conn->close();
                     <div class="fs-widget">
                         <h5>Newsletter</h5>
                         <p>Subscribe to receive inspiration, ideas, and news in your inbox.</p>
-                        <form action="#" class="subscribe-form">
-                            <input type="text" placeholder="Email">
+                        <form action="newsletter.php" class="subscribe-form" method="POST">
+                            <input type="text" placeholder="Email" name="email">
                             <button type="submit" class="site-btn">Subscribe</button>
                         </form>
                     </div>
@@ -496,9 +451,11 @@ $conn->close();
             </div>
             <div class="copyright-text">
 
-                Copyright &copy;<script>
+                Copyright &copy;
+                <script>
                     document.write(new Date().getFullYear());
-                </script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
+                </script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com"
+                    target="_blank">E-pravidi Pvt. Ltd.</a>
                 </p>
             </div>
         </div>

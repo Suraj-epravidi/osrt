@@ -8,22 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OSR traders</title>
-
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
+    <link="hhrefttps: //fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+        <!-- Css Styles -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+        <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+        <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+        <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        
 </head>
 
 <body>
@@ -31,7 +32,7 @@
     <div id="preloder">
         <div class="loader"></div>
     </div> -->
- 
+
     <!-- Offcanvas Menu Wrapper Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
@@ -61,10 +62,10 @@
     <!-- Offcanvas Menu Wrapper End -->
     <script>
         // JavaScript to handle activating the sticky navbar after scrolling 20% of the page
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             var navbar = document.getElementById("stickyNav");
 
-            window.addEventListener("scroll", function() {
+            window.addEventListener("scroll", function () {
                 var scrollPosition = window.scrollY;
                 var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
                 var scrollPercentage = (scrollPosition / pageHeight) * 100;
@@ -119,13 +120,12 @@
                                 <li><a href="./about.html">About</a></li>
                                 <li><a href="#">Products</a>
                                     <ul class="dropdown">
-                                        <li><a href="./products-list.html">Product List</a></li>
-                                        <li><a href="./property-comparison.html">Product Comparison</a></li>
-                                        <li><a href="./category.html">Product Category</a></li>
+                                        <li><a href="./products-list.php">Product List</a></li>
+                                        <li><a href="./category.php">Product Category</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./brands.html">Brands</a></li>
-                                <li><a href="./blog.html">FAQ's</a></li>
+                                <li><a href="./brands.php">Brands</a></li>
+                                <li><a href="./faq.php">FAQ's</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
                             </ul>
                         </nav>
@@ -146,47 +146,79 @@
     <!-- Header End -->
 
     <div class="video-wrapper">
+        <div class="content-wrapper">
+            <h2 class="video-title">High Quality Products At Affordable Price</h2>
 
-        <h2 class="video-title">High Quality Products At Affordable Price</h2>
-
-        <!-- Buttons below the text, left-aligned -->
-        <div class="button-wrapper">
-            <button class="video-button">ABOUT US</button>
-            <button class="video-button">CONTACT US</button>
+            <!-- Buttons below the text, left-aligned -->
+            <div class="button-wrapper">
+                <button class="video-button">ABOUT US</button>
+                <button class="video-button">CONTACT US</button>
+            </div>
         </div>
-
         <div class="overlay"></div>
 
         <video autoplay loop muted>
-            <source src="video_osrt.mp4" type="video/mp4" width="100%" style="display: block;">
+            <source src="osrtfinal.mp4" type="video/mp4" width="100%" style="display: block;">
         </video>
     </div>
 
     <style>
         .video-wrapper {
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 76vh;
+            overflow: hidden;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Aligns the button-wrapper with the start of the text */
+            text-align: left; /* Aligns text inside content-wrapper */
+            gap: 0.5em; /* Adds minimal space between title and buttons */
         }
 
         .video-title {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             color: white;
-            z-index: 2;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             pointer-events: none;
+            font-size: 2em;
+            margin: 0;
         }
 
         .button-wrapper {
-            position: absolute;
-            top: 54%;
-            left: 50%;
-            transform: translateX(-110%);
-            z-index: 10;
             display: flex;
-            gap: 20px;
+            gap: 1em;
         }
+
+
+
+
 
         .video-button {
             background-color: transparent;
@@ -204,51 +236,40 @@
             color: black;
         }
 
-        .overlay {
+       
+
+        video {
+            display: block;
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-            /* 30% opacity black */
-            z-index: 1;
-        }
-
-        video {
-            width: 100%;
-            display: block;
         }
 
         /* Media Query for screens up to 840px */
-        @media (max-width: 464px) {
-            .video-title {
-                /* Adjust font size for smaller screens */
+        @media (max-width: 768px) {
+            /* .video-title {
+               
                 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-                /* Less shadow */
-            }
+                top: 30%;
+            } */
 
             .button-wrapper {
-                position: absolute;
-
-                top: 67%;
-                /* Adjust as needed */
-                left: 50%;
-                transform: translate(-50%, -50%);
-
-                display: block;
-                /* Stack buttons vertically if needed */
-                z-index: 10;
+                flex-direction: column;
             }
 
-            .video-button {
+            /* .video-button {
                 width: 100%;
-                /* Full width for buttons */
                 margin-bottom: 10px;
-                /* Space between buttons */
+                
                 text-align: center;
-                /* Center text inside buttons */
+               
+            } */
+            .content-wrapper {
+                padding: 5vw;
             }
+
 
         }
     </style>
@@ -256,6 +277,47 @@
 
 
     <!-- Search Section Begin -->
+    <?php
+    function connectToDatabase()
+    {
+        $servername = "192.250.235.20";
+        $username = "epravidi_osrt_data";
+        $password = "UQ!r.gTOz=oo";
+        $dbname = "epravidi_osrt";
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        return $conn;
+    }
+    // Ensure database connection
+    $conn = connectToDatabase();
+
+    // Fetch distinct values for each dropdown
+    function fetchDistinctValues($conn, $column)
+    {
+        $sql = "SELECT DISTINCT $column FROM products ORDER BY $column";
+        $result = $conn->query($sql);
+
+        $values = [];
+        if ($result && $result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $values[] = $row[$column];
+            }
+        }
+        return $values;
+    }
+
+    // Get dropdown data
+    $materials = fetchDistinctValues($conn, 'material');
+    $colors = fetchDistinctValues($conn, 'color');
+    $brands = fetchDistinctValues($conn, 'brand');
+    $types = fetchDistinctValues($conn, 'category');
+
+    // Close the database connection after fetching all values
+    $conn->close();
+    ?>
+
     <section class="search-section spad">
         <div class="container">
             <div class="row">
@@ -282,34 +344,26 @@
                 </div>
             </div>
             <div class="search-form-content">
-                <form action="process.php" method="POST" class="filter-form">
+                <form action="result.php" method="POST" class="filter-form">
                     <select class="sm-width" name="materials">
                         <option value="">Materials</option>
-                        <option value="office">Office</option>
-                        <option value="house">House</option>
-                        <option value="apartment">Apartment</option>
-                        <option value="commercial">Commercial</option>
+                        <?php foreach ($materials as $material) {
+                            echo "<option value='" . htmlspecialchars($material) . "'>" . htmlspecialchars($material) . "</option>";
+                        } ?>
                     </select>
+
                     <select class="sm-width" name="general_color">
                         <option value="">General Color</option>
-                        <option value="black">Black</option>
-                        <option value="white">White</option>
-                        <option value="cream">Cream</option>
-                        <option value="red">Red</option>
-                        <option value="pink">Pink</option>
-                        <option value="green">Green</option>
-                        <option value="blue">Blue</option>
-                        <option value="torquise">Torquise</option>
-                        <option value="purple">Purple</option>
+                        <?php foreach ($colors as $color) {
+                            echo "<option value='" . htmlspecialchars($color) . "'>" . htmlspecialchars($color) . "</option>";
+                        } ?>
                     </select>
+
                     <select class="sm-width" name="brand">
                         <option value="">Brand</option>
-                        <option value="roca">Roca</option>
-                        <option value="parryware">Parryware</option>
-                        <option value="somany">Somany</option>
-                        <option value="asianpaints">Asianpaints</option>
-                        <option value="philips">Philips</option>
-                        <option value="schneider">Schneider</option>
+                        <?php foreach ($brands as $brand) {
+                            echo "<option value='" . htmlspecialchars($brand) . "'>" . htmlspecialchars($brand) . "</option>";
+                        } ?>
                     </select>
                     <select class="sm-width" name="room_type">
                         <option value="">Room Type</option>
@@ -319,14 +373,14 @@
                         <option value="bathroom">Bathroom</option>
                         <option value="washrooms">Washrooms</option>
                     </select>
+
                     <select class="sm-width" name="product_type">
                         <option value="">Type of Product</option>
-                        <option value="tiles">Tiles</option>
-                        <option value="marble">Marble</option>
-                        <option value="bathware">Bathware</option>
-                        <option value="electricals">Electricals</option>
-                        <option value="raw_material">Raw material</option>
+                        <?php foreach ($types as $type) {
+                            echo "<option value='" . htmlspecialchars($type) . "'>" . htmlspecialchars($type) . "</option>";
+                        } ?>
                     </select>
+
                     <select class="sm-width" name="no_of_products">
                         <option value="">No Of Products</option>
                         <option value="1-100">1-100</option>
@@ -351,9 +405,9 @@
                     <button type="submit" class="search-btn sm-width">Search</button>
                 </form>
             </div>
-
         </div>
     </section>
+
     <!-- Search Section End -->
 
     <!-- Property Section Begin -->
@@ -368,19 +422,29 @@
                 <div class="col-lg-7">
                     <div class="property-controls">
                         <ul>
-                            <li data-filter="all">All</li>
-                            <li data-filter=".apart">Tiles</li>
-                            <li data-filter=".house">Bathware</li>
-                            <li data-filter=".office">Electricals</li>
-                            <li data-filter=".hotel">Commode</li>
-                            <li data-filter=".restaurent">Vanity Basin</li>
+                            <li data-filter="all" onclick="pageRedirect(this)">All</li>
+                            <li data-filter=".apart" onclick="pageRedirect(this)">Tiles</li>
+                            <li data-filter=".house"onclick="pageRedirect(this)">Bathware</li>
+                            <li data-filter=".office"onclick="pageRedirect(this)">Electricals</li>
+                            <li data-filter=".hotel"onclick="pageRedirect(this)">Commode</li>
+                            <li data-filter=".restaurent"onclick="pageRedirect(this)">Vanity Basin</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <script>
-                function product_redirect(id){
-                    window.location.href='./property-details.php?id='+id;
+                function pageRedirect(pageLocation){
+                   url=pageLocation.innerText;
+                    if(url=="All"){
+                        window.location.href='./result.php?productType';
+                    }
+                    else
+                    { 
+                         window.location.href='./result.php?productType=' + url;
+                    }
+                }
+                function product_redirect(id) {
+                    window.location.href = './property-details.php?id=' + id;
                 }
             </script>
             <div class="row">
@@ -398,11 +462,11 @@
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 } else {
-                    
+
                 }
 
                 // SQL Query to fetch product data
-                $sql = "SELECT price, product_id, product_code, color, brand, material, dimensions, product_name, image, category, stock FROM products";
+                $sql = "SELECT price, product_id, product_code, color, brand, material, dimensions, product_name, image, category, stock FROM products LIMIT 9 ";
                 $result = $conn->query($sql);
 
                 if (!$result) {
@@ -410,7 +474,7 @@
                 }
 
                 if ($result->num_rows > 0) {
-                   
+
                     while ($row = $result->fetch_assoc()) {
                         // Determine the stock status
                         $stock_label = '';
@@ -427,7 +491,7 @@
                         // Display each property item 
                         echo '<div class="col-lg-4 col-md-6 mix all house" onclick="product_redirect(' . $row["product_id"] . ')" style="cursor:pointer;">';
                         echo '<div class="property-item">';
-                        echo '<div class="pi-pic set-bg" data-setbg="https://www.panel-osrt.epravidi.com/pages/product_image/'.htmlspecialchars($row["image"]).'">';
+                        echo '<div class="pi-pic set-bg" data-setbg="https://www.panel-osrt.epravidi.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">';
                         echo '<div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>';
                         echo '</div>';
                         echo '<div class="pi-text">';
@@ -461,7 +525,7 @@
         </div>
     </section>
     <!-- Property Section End -->
-                
+
     <!-- Chooseus Section Begin -->
     <section class="chooseus-section spad set-bg" data-setbg="img/chooseus/chooseus-bg.png">
         <div class="container">
@@ -471,7 +535,10 @@
                         <div class="section-title">
                             <h4>Why choose us</h4>
                         </div>
-                        <p>OSRT is a leading trading company specializing in high-quality construction equipment, materials, bathware, and hardware. With a commitment to excellence and innovation, OSRT caters to both residential and commercial projects, offering a wide range of products to meet diverse needs.</p>
+                        <p>OSRT is a leading trading company specializing in high-quality construction equipment,
+                            materials, bathware, and hardware. With a commitment to excellence and innovation, OSRT
+                            caters to both residential and commercial projects, offering a wide range of products to
+                            meet diverse needs.</p>
                     </div>
                     <div class="chooseus-features">
                         <div class="cf-item">
@@ -653,17 +720,18 @@
             </div>
         </div>
         <div class="cs-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4173.916163515737!2d85.32849037479467!3d27.653187787351264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1780d7621ea1%3A0x8b58e862052fa651!2sOSR%20TRADERS%20Pvt.Ltd.!5e0!3m2!1sen!2snp!4v1726069735507!5m2!1sen!2snp"
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4173.916163515737!2d85.32849037479467!3d27.653187787351264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1780d7621ea1%3A0x8b58e862052fa651!2sOSR%20TRADERS%20Pvt.Ltd.!5e0!3m2!1sen!2snp!4v1726069735507!5m2!1sen!2snp"
                 height="450" style="border:0;" allowfullscreen="">
             </iframe>
         </div>
     </section>
     <!-- Contact Section End -->
-     <!-- chatbot -->
-                 
+    <!-- chatbot -->
+
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2024/10/25/06/20241025061942-VB7QGSPE.js"></script>
-    
+    <script src="https://files.bpcontent.cloud/2024/10/25/06/20241025061942-VB7QGSPE.js"></script>
+
 
     <!-- Footer Section Begin -->
     <footer class="footer-section">
@@ -676,7 +744,8 @@
                                 <img src="img/f-logo.png" alt="">
                             </a>
                         </div>
-                        <p>Be sure to follow us on our social media platforms. Stay informed about industry trends, new products, and expert tips to keep your projects on the cutting edge.</p>
+                        <p>Be sure to follow us on our social media platforms. Stay informed about industry trends, new
+                            products, and expert tips to keep your projects on the cutting edge.</p>
                         <div class="fs-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -698,14 +767,14 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">
-                    <div class="fs-widget">
+                   <div class="fs-widget">
                         <h5>Links</h5>
                         <ul>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Products</a></li>
-                            <li><a href="#">Product Inquiry</a></li>
-                            <li><a href="#">Brands</a></li>
-                            <li><a href="#">FAQ's</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="./products-list.php">Products</a></li>
+                            <li><a href="./contact.html">Product Inquiry</a></li>
+                            <li><a href="./brands.php">Brands</a></li>
+                            <li><a href="./faq.php">FAQ's</a></li>
                         </ul>
                     </div>
                 </div>
@@ -713,8 +782,8 @@
                     <div class="fs-widget">
                         <h5>Newsletter</h5>
                         <p>Subscribe to receive inspiration, ideas, and news in your inbox.</p>
-                        <form action="#" class="subscribe-form">
-                            <input type="text" placeholder="Email">
+                        <form action="newsletter.php" class="subscribe-form" method="POST">
+                            <input type="text" placeholder="Email" name="email">
                             <button type="submit" class="site-btn">Subscribe</button>
                         </form>
                     </div>
@@ -722,9 +791,11 @@
             </div>
             <div class="copyright-text">
 
-                Copyright &copy;<script>
+                Copyright &copy;
+                <script>
                     document.write(new Date().getFullYear());
-                </script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
+                </script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com"
+                    target="_blank">E-pravidi Pvt. Ltd.</a>
                 </p>
             </div>
         </div>
@@ -744,22 +815,22 @@
     <script src="js/image-uploader.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-    // Function to get URL parameters
-    function getQueryParam(param) {
-      let params = new URLSearchParams(window.location.search);
-      return params.get(param);
-    }
+        // Function to get URL parameters
+        function getQueryParam(param) {
+            let params = new URLSearchParams(window.location.search);
+            return params.get(param);
+        }
 
-    // Function to show alert on page load if alert_message exists
+        // Function to show alert on page load if alert_message exists
 
-    window.onload = function() {
-      let alertMessage = getQueryParam('alert_message');
-      if (alertMessage) {
-        console.log(alertMessage);
-        alert(alertMessage); // Display the alert box
-      }
-    }
-  </script>
+        window.onload = function () {
+            let alertMessage = getQueryParam('alert_message');
+            if (alertMessage) {
+                console.log(alertMessage);
+                alert(alertMessage); // Display the alert box
+            }
+        }
+    </script>
 </body>
 
 </html>

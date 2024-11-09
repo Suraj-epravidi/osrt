@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
             <span class="icon_close"></span>
         </div>
         <div class="logo">
-            <a href="./index.html">
+            <a href="./index.php">
                 <img src="img/logo.png" alt="">
             </a>
         </div>
@@ -120,13 +121,12 @@
                                 <li><a href="./about.html">About</a></li>
                                 <li class="active"><a href="#">Products</a>
                                     <ul class="dropdown">
-                                        <li><a href="./products-list.html">Product List</a></li>
-                                        <li><a href="./property-comparison.html">Product Comparison</a></li>
-                                        <li><a href="./category.html">Product Category</a></li>
+                                        <li><a href="./products-list.php">Product List</a></li>
+                                        <li><a href="./category.php">Product Category</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./brands.html">Brands</a></li>
-                                <li><a href="./blog.html">FAQ's</a></li>
+                                <li><a href="./brands.php">Brands</a></li>
+                                <li><a href="./faq.php">FAQ's</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
                             </ul>
                         </nav>
@@ -391,14 +391,14 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">
-                    <div class="fs-widget">
+                   <div class="fs-widget">
                         <h5>Links</h5>
                         <ul>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Products</a></li>
-                            <li><a href="#">Product Inquiry</a></li>
-                            <li><a href="#">Brands</a></li>
-                            <li><a href="#">FAQ's</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="./products-list.php">Products</a></li>
+                            <li><a href="./contact.html">Product Inquiry</a></li>
+                            <li><a href="./brands.php">Brands</a></li>
+                            <li><a href="./faq.php">FAQ's</a></li>
                         </ul>
                     </div>
                 </div>
@@ -406,8 +406,8 @@
                     <div class="fs-widget">
                         <h5>Newsletter</h5>
                         <p>Subscribe to receive inspiration, ideas, and news in your inbox.</p>
-                        <form action="#" class="subscribe-form">
-                            <input type="text" placeholder="Email">
+                        <form action="newsletter.php" class="subscribe-form" method="POST">
+                            <input type="text" placeholder="Email" name="email">
                             <button type="submit" class="site-btn">Subscribe</button>
                         </form>
                     </div>

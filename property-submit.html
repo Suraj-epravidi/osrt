@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/image-uploader.min.css" type="text/css" />
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   </head>
 
   <body>
@@ -101,13 +102,12 @@
                                 <li><a href="./about.html">About</a></li>
                                 <li class="active"><a href="#">Products</a>
                                     <ul class="dropdown">
-                                        <li><a href="./products-list.html">Product List</a></li>
-                                        <li><a href="./property-comparison.html">Product Comparison</a></li>
+                                        <li><a href="./products-list.php">Product List</a></li>
                                         <li><a href="./property-submit.html">Product Inquiry</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./brands.html">Brands</a></li>
-                                <li><a href="./blog.html">FAQ's</a></li>
+                                <li><a href="./brands.php">Brands</a></li>
+                                <li><a href="./faq.php">FAQ's</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
                             </ul>
                         </nav>
@@ -319,10 +319,10 @@
             <div class="fs-widget">
               <h5>Newsletter</h5>
               <p>Deserunt mollit anim id est laborum.</p>
-              <form action="#" class="subscribe-form">
-                <input type="text" placeholder="Email" />
-                <button type="submit" class="site-btn">Subscribe</button>
-              </form>
+              <form action="newsletter.php" class="subscribe-form" method="POST">
+                            <input type="text" placeholder="Email" name="email">
+                            <button type="submit" class="site-btn">Subscribe</button>
+                        </form>
             </div>
           </div>
         </div>
