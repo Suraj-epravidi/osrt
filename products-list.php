@@ -279,7 +279,19 @@
                     <div class="col-lg-4">
                         <div class="profile-agent-widget">
                             <ul>
-                                <li>Product <span>215</span></li>
+                                <li>Product <span>
+                                    <?php
+                                    $sql_products = "SELECT COUNT(*) AS product_count FROM products";
+                                    $result_products = $conn->query($sql_products);
+                                    
+                                    $product_count = 0;
+                                    if ($result_products->num_rows > 0) {
+                                        $row = $result_products->fetch_assoc();
+                                        $product_count = $row['product_count'];
+                                    }
+                                    echo $product_count;
+                                    
+                                    ?></span></li>
                                 <li>Email <span>info@osrtraders.com.np</span></li>
                                 <li>Phone <span>977-01-5554421</span></li>
                             </ul>
