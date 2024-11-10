@@ -172,8 +172,8 @@ ol {
 }
 .pi-pic {
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background-size: contain !important;
+  background-position: center !important;
 }
 
 .spad {
