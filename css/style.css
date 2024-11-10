@@ -879,8 +879,8 @@ option {
   margin-bottom: 40px;
 }
 .property-item .pi-pic {
-  /* background-size:contain;
-  background-position: center; */
+  background-size:contain;
+  background-position: center;
   height: 240px;
   position: relative;
   margin-bottom: 25px;

@@ -418,8 +418,7 @@ include 'visitor.php';
                                 <img src="img/f-logo.png" alt="">
                             </a>
                         </div>
-                        <p>Be sure to follow us on our social media platforms. Stay informed about industry trends, new
-                            products, and expert tips to keep your projects on the cutting edge.</p>
+                        <p>Be sure to follow us on our social media platforms. Stay informed about industry trends, new products, and expert tips to keep your projects on the cutting edge.</p>
                         <div class="fs-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -464,13 +463,9 @@ include 'visitor.php';
                 </div>
             </div>
             <div class="copyright-text">
-
-                Copyright &copy;
-                <script>
-                    document.write(new Date().getFullYear());
-                </script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com"
-                    target="_blank">E-pravidi Pvt. Ltd.</a>
-                </p>
+                
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
+  </p>
             </div>
         </div>
     </footer>
