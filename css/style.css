@@ -170,6 +170,11 @@ ol {
   background-size: cover;
   background-position: top center;
 }
+.set-bg-product {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 
 .spad {
   padding-top: 100px;

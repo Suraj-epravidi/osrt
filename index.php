@@ -446,7 +446,7 @@ include 'visitor.php';
                     }
                 }
                 function product_redirect(id) {
-                    window.location.href = './property-details.php?id=' + id;
+                    window.location.href = './product-details.php?id=' + id;
                 }
             </script>
             <div class="row">
@@ -493,7 +493,7 @@ include 'visitor.php';
                         // Display each property item 
                         echo '<div class="col-lg-4 col-md-6 mix all house" onclick="product_redirect(' . $row["product_id"] . ')" style="cursor:pointer;">';
                         echo '<div class="property-item">';
-                        echo '<div class="pi-pic set-bg" data-setbg="https://www.panel-osrt.epravidi.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">';
+                        echo '<div class="pi-pic set-bg-product" data-setbg="https://www.panel-osrt.epravidi.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">';
                         echo '<div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>';
                         echo '</div>';
                         echo '<div class="pi-text">';
