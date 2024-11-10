@@ -878,7 +878,10 @@ option {
 
 .property-item {
   margin-bottom: 40px;
+  background-position: center;
+  background-size: contain;
 }
+
 .property-item .pi-pic {
   height: 240px;
   position: relative;
