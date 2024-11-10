@@ -170,12 +170,6 @@ ol {
   background-size: cover;
   background-position: top center;
 }
-.pi-pic {
-  background-repeat: no-repeat;
-  background-size: contain !important;
-  background-position: center !important;
-}
-
 .spad {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -885,6 +879,8 @@ option {
   margin-bottom: 40px;
 }
 .property-item .pi-pic {
+  background-size:contain;
+  background-position: center;
   height: 240px;
   position: relative;
   margin-bottom: 25px;
