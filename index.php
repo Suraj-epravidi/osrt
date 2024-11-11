@@ -545,7 +545,7 @@ include 'visitor.php';
                     <div class="chooseus-features">
                         <div class="cf-item">
                             <div class="cf-pic">
-                                <img src="img/chooseus/chooseus-icon-1.png" alt="">
+                                <img src="img/chooseus/chooseus-icon-1.png" class="cfImg" alt="">
                             </div>
                             <div class="cf-text">
                                 <h5>Home Delivery</h5>
@@ -554,7 +554,7 @@ include 'visitor.php';
                         </div>
                         <div class="cf-item">
                             <div class="cf-pic">
-                                <img src="img/chooseus/chooseus-icon-2.png" alt="">
+                                <img src="img/chooseus/chooseus-icon-2.png"  class="cfImg" alt="">
                             </div>
                             <div class="cf-text">
                                 <h5>Sales & Discounts</h5>
@@ -563,7 +563,7 @@ include 'visitor.php';
                         </div>
                         <div class="cf-item">
                             <div class="cf-pic">
-                                <img src="img/chooseus/chooseus-icon-3.png" alt="">
+                                <img src="img/chooseus/chooseus-icon-3.png"  class="cfImg" alt="">
                             </div>
                             <div class="cf-text">
                                 <h5>Quality Assurance</h5>
@@ -572,7 +572,7 @@ include 'visitor.php';
                         </div>
                         <div class="cf-item">
                             <div class="cf-pic">
-                                <img src="img/chooseus/chooseus-icon-4.png" alt="">
+                                <img src="img/chooseus/chooseus-icon-4.png" class="cfImg" alt="">
                             </div>
                             <div class="cf-text">
                                 <h5>Customer Satisfaction</h5>
