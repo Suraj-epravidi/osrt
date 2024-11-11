@@ -35,20 +35,19 @@ body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: block;
   overflow: auto;
-  width:5px;
+  width: 5px;
   padding: 1em;
   margin: 1em auto;
   outline: 2px solid #fff;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: #000;
-  border-radius:5px;
+  border-radius: 5px;
 }
-
 
 h1,
 h2,
@@ -167,9 +166,10 @@ ol {
 
 .set-bg {
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
+  background-position: center;
+  background-size: contain;
 }
+
 .spad {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -878,9 +878,8 @@ option {
 .property-item {
   margin-bottom: 40px;
 }
+
 .property-item .pi-pic {
-  background-size:contain;
-  background-position: center;
   height: 240px;
   position: relative;
   margin-bottom: 25px;
@@ -1580,7 +1579,7 @@ option {
   margin-bottom: 25px;
 }
 .fs-about .fs-social a {
-  display: inline-block;
+  display: flex;
   font-size: 15px;
   color: #ffffff;
   height: 40px;
@@ -1588,6 +1587,8 @@ option {
   background: rgba(225, 225, 225, 0.1);
   line-height: 40px;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   margin-right: 4px;
 }
