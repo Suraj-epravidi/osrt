@@ -4268,7 +4268,9 @@ li .richText-btn[data-command="toggleCode"] {
     height: 35px;
     width: 35px;
     border: 1px solid #111111;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     line-height: 35px;
     text-align: center;
     cursor: pointer;
@@ -4375,7 +4377,9 @@ li .richText-btn[data-command="toggleCode"] {
     text-align: center;
     border: 1px solid #111111;
     border-radius: 50%;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 6px;
   }
 }
