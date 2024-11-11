@@ -4234,7 +4234,9 @@ li .richText-btn[data-command="toggleCode"] {
     position: absolute;
     right: 0;
     top: 26px;
-    display: block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
   .canvas-open span {
     font-weight: 600;
