@@ -1578,6 +1578,9 @@ option {
   opacity: 0.7;
   margin-bottom: 25px;
 }
+.fs-social{
+  display: flex;
+}
 .fs-about .fs-social a {
   display: flex;
   font-size: 15px;
