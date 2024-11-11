@@ -1508,7 +1508,7 @@ option {
   align-items: center;
   justify-content: center;
 }
-.cfImg{
+img.cfImg{
   margin-top:20%;
 }
 .contact-info .ci-item .ci-text {
