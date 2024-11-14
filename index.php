@@ -35,7 +35,25 @@ include 'visitor.php';
         <div class="loader"></div>
     </div> -->
 
+    <!-- Home Overlay -->
+    <div class="home-overlay" id="homeOverlay">
+    <div class="home-overlay-content">
+        <!-- Close Button -->
+        <button class="home-overlay-close" onclick="closeHomeOverlay()">×</button>
+        <!-- Responsive Image -->
+        <img src="path/to/desktop-image.jpg" alt="Welcome" class="home-overlay-image" />
+    </div>
+    </div>
+
+    <script>
+    // Close overlay function
+    function closeHomeOverlay() {
+        document.getElementById("homeOverlay").style.display = "none";
+    }
+    </script>
+
     <!-- Offcanvas Menu Wrapper Begin -->
+     
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
         <div class="canvas-close">
