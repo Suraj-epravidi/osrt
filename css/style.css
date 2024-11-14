@@ -527,14 +527,14 @@ ol {
 @media (min-width: 768px) {
   /* Desktop image */
   .home-overlay-image {
-    content: url('path/to/desktop-image.jpg');
+    content: url('./img/About-us.png');
   }
 }
 
 @media (max-width: 767px) {
   /* Mobile image */
   .home-overlay-image {
-    content: url('path/to/mobile-image.jpg');
+    content: url('./img/About-us.png');
   }
 }
 
