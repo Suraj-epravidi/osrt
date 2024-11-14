@@ -35,20 +35,24 @@ include 'visitor.php';
         <div class="loader"></div>
     </div> -->
 
-    <!-- Home Overlay -->
     <div id="home-overlay">
-    <!-- Close button -->
-    <button class="close-btn" onclick="closeOverlay()">✖</button>
-    <!-- Image to display -->
-    <img src="your-image-path.jpg" alt="Welcome Image">
+        <!-- Close button -->
+        <button class="close-btn" onclick="closeOverlay()">✖</button>
+        <!-- Image to display with srcset for responsive behavior -->
+        <img 
+            src="image-desktop.jpg" 
+            srcset="image-mobile.jpg 600w, image-tablet.jpg 900w, image-desktop.jpg 1200w" 
+            sizes="(max-width: 600px) 100vw, (max-width: 900px) 90vw, 80vw"
+            alt="Welcome Image">
     </div>
 
-    <script>
-        // Function to close overlay
-        function closeOverlay() {
-            document.getElementById('home-overlay').style.display = 'none';
-        }
-    </script>
+
+        <script>
+            // Function to close overlay
+            function closeOverlay() {
+                document.getElementById('home-overlay').style.display = 'none';
+            }
+        </script>
 
     <!-- Offcanvas Menu Wrapper Begin -->
      
