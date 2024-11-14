@@ -474,70 +474,55 @@ ol {
 /*---------------------
   Home Overlay
 -----------------------*/
-/* Overlay Styling */
-.home-overlay {
+/* Overlay container */
+#home-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-  z-index: 9999; /* Ensures overlay is on top */
+  z-index: 1000; /* Ensure it's on top */
 }
 
-/* Overlay Content */
-.home-overlay-content {
-  position: relative;
-  max-width: 90%;
-  max-height: 90%;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Image styling */
+#home-overlay img {
+  max-width: 90%; /* Responsively fit the screen */
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
-/* Image Styling */
-.home-overlay-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Close Button */
-.home-overlay-close {
+/* Close button styling */
+#home-overlay .close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   font-size: 24px;
-  background: none;
-  border: none;
-  color: #333;
+  color: white;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
-/* Responsive Image Handling */
-@media (min-width: 768px) {
-  /* Desktop image */
-  .home-overlay-image {
-    content: url('./img/About-us.png');
+/* Responsive images */
+@media (max-width: 768px) {
+  #home-overlay img {
+      max-width: 80%; /* Smaller width on mobile */
+      max-height: 70%;
   }
 }
 
-@media (max-width: 767px) {
-  /* Mobile image */
-  .home-overlay-image {
-    content: url('./img/About-us.png');
+@media (max-width: 480px) {
+  #home-overlay img {
+      max-width: 70%; /* Even smaller on very small screens */
+      max-height: 60%;
   }
 }
-
 
 /*---------------------
   Hero
