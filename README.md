@@ -13,4 +13,4 @@ CHECKING 5
 
 Latest Check
 
-Check 10
+Check 7
