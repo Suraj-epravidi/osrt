@@ -33,7 +33,7 @@ function handleContactForm($conn) {
 
         // Execute the statement
         if ($stmt->execute()) {
-            header("Location: ./index.php?alert_message=Thank you for your message. We will get back to you shortly!");
+            header("Location: ./index?alert_message=Thank you for your message. We will get back to you shortly!");
         } else {
             echo "Error: " . $stmt->error;
         }

@@ -21,7 +21,7 @@ try {
             $stmt->bindParam(':email', $email);
 
             if ($stmt->execute()) {
-                header("Location: ./index.php?alert_message=Thank you for subscribing.");
+                header("Location: ./index?alert_message=Thank you for subscribing.");
             } else {
                 echo "Error saving email.";
             }

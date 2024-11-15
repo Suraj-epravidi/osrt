@@ -155,7 +155,7 @@ include 'visitor.php';
             <span class="icon_close"></span>
         </div>
         <div class="logo">
-            <a href="./index.php">
+            <a href="./index">
                 <img src="img/logo.png" alt="">
             </a>
         </div>
@@ -183,7 +183,7 @@ include 'visitor.php';
                 <div class="row">
                     <div class="col-lg-2">
                         <div class="logo">
-                            <a href="./index.php"><img src="img/logo.png" alt=""></a>
+                            <a href="./index"><img src="img/logo.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-10">
@@ -207,8 +207,8 @@ include 'visitor.php';
                     <div class="col-lg-9">
                         <nav class="nav-menu">
                             <ul>
-                                <li><a href="./index.php">Home</a></li>
-                                <li><a href="./about.html">About</a></li>
+                                <li><a href="./index">Home</a></li>
+                                <li><a href="./about">About</a></li>
                                 <li   class="active"><a href="#" >Products</a>
                                     <ul class="dropdown">
                                         <li><a href="./products-list.php">Product List</a></li>
@@ -244,7 +244,7 @@ include 'visitor.php';
                     <div class="breadcrumb-text">
                         <h4>Product Categories</h4>
                         <div class="bt-option">
-                            <a href="./index.php"><i class="fa fa-home"></i> Home</a>
+                            <a href="./index"><i class="fa fa-home"></i> Home</a>
                             <a>Products</a>
                             <span>Product Category</span>
                         </div>
