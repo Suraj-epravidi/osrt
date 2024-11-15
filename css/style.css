@@ -490,7 +490,7 @@ ol {
 
 /* Image styling */
 #home-overlay img {
-  max-width: 90%; /* Responsively fit the screen */
+  width: 80%; /* Responsively fit the screen */
   max-height: 80%;
   object-fit: contain;
   border-radius: 8px;

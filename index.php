@@ -34,7 +34,7 @@ include 'visitor.php';
     <div id="preloder">
         <div class="loader"></div>
     </div> -->
-
+    
     <div id="home-overlay">
         <!-- Close button -->
         <button class="close-btn" onclick="closeOverlay()">✖</button>
