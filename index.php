@@ -40,7 +40,7 @@ include 'visitor.php';
         <button class="close-btn" onclick="closeOverlay()">✖</button>
         <!-- Image to display with srcset for responsive behavior -->
         <img 
-            src="uploads/welcome-image.jpg" 
+            src="./uploads/welcome-image.jpg" 
             srcset="img/about-phone.jpeg.jpg 600w, img/about-phone.jpeg 900w, ./uploads/welcome-image.jpg 1200w" 
             sizes="(max-width: 600px) 100vw, (max-width: 900px) 90vw, 80vw"
             alt="Welcome Image">
