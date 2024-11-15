@@ -139,7 +139,7 @@ include 'visitor.php';
                         <nav class="nav-menu">
                             <ul>
                                 <li><a href="./index">Home</a></li>
-                                <li><a href="about.php">About</a></li>
+                                <li><a href="./about">About</a></li>
                                 <li class="active"><a href="#">Products</a>
                                     <ul class="dropdown">
                                         <li class="active"><a href="./products-list.php">Product List</a></li>
