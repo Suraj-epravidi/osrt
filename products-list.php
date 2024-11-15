@@ -146,7 +146,7 @@ include 'visitor.php';
                                         <li><a href="./category.php">Product Category</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./brands.php">Brands</a></li>
+                                <li><a href="./brands">Brands</a></li>
                                 <li><a href="./faq.php">FAQ's</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
                             </ul>
@@ -178,7 +178,7 @@ include 'visitor.php';
                         <h4>Products</h4>
                         <div class="bt-option">
                             <a href="./index"><i class="fa fa-home"></i> Home</a>
-                            <a href="./brands.php">Products</a>
+                            <a href="./brands">Products</a>
                             <span>Lists</span>
                         </div>
                     </div>
@@ -446,7 +446,7 @@ include 'visitor.php';
                             <li><a href="./contact.html">Contact</a></li>
                             <li><a href="./products-list.php">Products</a></li>
                             <li><a href="./contact.html">Product Inquiry</a></li>
-                            <li><a href="./brands.php">Brands</a></li>
+                            <li><a href="./brands">Brands</a></li>
                             <li><a href="./faq.php">FAQ's</a></li>
                         </ul>
                     </div>
