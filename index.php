@@ -40,8 +40,8 @@ include 'visitor.php';
         <button class="close-btn" onclick="closeOverlay()">✖</button>
         <!-- Image to display with srcset for responsive behavior -->
         <img 
-            src="./img/about.jpeg" 
-            srcset="img/about-phone.jpeg.jpg 600w, img/about-phone.jpeg 900w, ./img/about.jpeg 1200w" 
+            src="uploads/welcome-image.jpeg" 
+            srcset="img/about-phone.jpeg.jpg 600w, img/about-phone.jpeg 900w, ./upload/welcome-image.jpeg 1200w" 
             sizes="(max-width: 600px) 100vw, (max-width: 900px) 90vw, 80vw"
             alt="Welcome Image">
     </div>
@@ -180,7 +180,7 @@ include 'visitor.php';
         <div class="overlay"></div>
 
         <video autoplay loop muted>
-            <source src="osrtfinal.mp4" type="video/mp4" width="100%" style="display: block;">
+            <source src="uploads/homepage-video.mp4" type="video/mp4" width="100%" style="display: block;">
         </video>
     </div>
 
