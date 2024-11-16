@@ -42,7 +42,7 @@ include 'visitor';
         <img 
             src="./uploads/welcome-image.jpg" 
             srcset="./uploads/welcome-image-responsive.jpg 600w, ./uploads/welcome-image-responsive.jpg 900w, ./uploads/welcome-image.jpg 1200w" 
-            sizes="(max-width: 600px) 100vw, (max-width: 900px) 90vw, 80vw"
+            sizes="(max-width: 600px) 100vw, (max-width: 900px) 90vw, (min-width: 900px) 80vw"
             alt="Welcome Image">
     </div>
 
