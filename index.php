@@ -623,57 +623,47 @@ include 'visitor.php';
 
                     <a href="#" class="lc-item">
                         <div class="lc-item-inner">
-                            <img src="img/logo-carousel/lc-1.png" alt="">
+                            <img src="img/logo-carousel/asianpaints.jpeg" alt="">
                         </div>
                     </a>
                     <a href="#" class="lc-item">
                         <div class="lc-item-inner">
-                            <img src="img/logo-carousel/lc-2.png" alt="">
+                            <img src="img/logo-carousel/EMTOP.jpeg" alt="">
                         </div>
                     </a>
                     <a href="#" class="lc-item">
                         <div class="lc-item-inner">
-                            <img src="img/logo-carousel/lc-3.png" alt="">
+                            <img src="img/logo-carousel/jaguarworld.jpeg" alt="">
                         </div>
                     </a>
                     <a href="#" class="lc-item">
                         <div class="lc-item-inner">
-                            <img src="img/logo-carousel/lc-4.png" alt="">
+                            <img src="img/logo-carousel/Parryware.jpeg" alt="">
                         </div>
                     </a>
                     <a href="#" class="lc-item">
                         <div class="lc-item-inner">
-                            <img src="img/logo-carousel/lc-5.png" alt="">
+                            <img src="img/logo-carousel/Pioneer-Cable.jpeg" alt="">
                         </div>
                     </a>
                     <a href="#" class="lc-item">
                         <div class="lc-item-inner">
-                            <img src="img/logo-carousel/lc-6.png" alt="">
+                            <img src="img/logo-carousel/RATHI-FRLS-CABLE.jpeg" alt="">
                         </div>
                     </a>
                     <a href="#" class="lc-item">
                         <div class="lc-item-inner">
-                            <img src="img/logo-carousel/lc-6.png" alt="">
+                            <img src="img/logo-carousel/Roca.jpeg" alt="">
                         </div>
                     </a>
                     <a href="#" class="lc-item">
                         <div class="lc-item-inner">
-                            <img src="img/logo-carousel/lc-6.png" alt="">
+                            <img src="img/logo-carousel/Schneider.jpeg" alt="">
                         </div>
                     </a>
                     <a href="#" class="lc-item">
                         <div class="lc-item-inner">
-                            <img src="img/logo-carousel/lc-6.png" alt="">
-                        </div>
-                    </a>
-                    <a href="#" class="lc-item">
-                        <div class="lc-item-inner">
-                            <img src="img/logo-carousel/lc-6.png" alt="">
-                        </div>
-                    </a>
-                    <a href="#" class="lc-item">
-                        <div class="lc-item-inner">
-                            <img src="img/logo-carousel/lc-7.png" alt="">
+                            <img src="img/logo-carousel/Somany.jpeg" alt="">
                         </div>
                     </a>
                 </div>
