@@ -282,7 +282,7 @@ include 'visitor.php';
         if ($result && $result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 // Category display
-                echo '<div class="cs-item set-bg" data-setbg="https://panel-osrt.epravidi.com/pages/category/' . htmlspecialchars($row["category_image"]) . '">';
+                echo '<div class="cs-item set-bg" data-setbg="https://osrtpanel.epravidi.com/pages/category/' . htmlspecialchars($row["category_image"]) . '">';
                 echo '<div class="cs-text">';
                 echo '<h5>' . htmlspecialchars($row["category_name"]) . '</h5>';
                 echo '<span>' . htmlspecialchars($row["product_count"]) . ' Products</span>';

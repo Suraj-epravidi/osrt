@@ -340,7 +340,7 @@ include 'visitor.php';
                                     <h4>Product Image</h4>
                                 </div>
                                 <div class="sf-slider owl-carousel">
-                                   <div class="sf-item set-bg" data-setbg="<?php echo'https://panel-osrt.epravidi.com/pages/product_image/' . htmlspecialchars($product['image']); ?>">
+                                   <div class="sf-item set-bg" data-setbg="<?php echo'https://osrtpanel.epravidi.com/pages/product_image/' . htmlspecialchars($product['image']); ?>">
 
                                     </div>
 
