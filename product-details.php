@@ -1,5 +1,5 @@
 <?php 
-include 'visitor.php';
+include 'visitor';
 ?>
 <html lang="zxx">
 
@@ -128,7 +128,7 @@ include 'visitor.php';
                                     </ul>
                                 </li>
                                 <li><a href="./brands">Brands</a></li>
-                                <li><a href="./faq.php">FAQ's</a></li>
+                                <li><a href="./faq">FAQ's</a></li>
                                 <li><a href="./contact">Contact</a></li>
                             </ul>
                         </nav>
@@ -317,7 +317,7 @@ include 'visitor.php';
 
                         <div class="pd-widget">
                             <h4>Inquiry on product</h4>
-                            <form action="process_contact.php" class="review-form" method = "post">
+                            <form action="process_contact" class="review-form" method = "post">
                                 <div class="group-input">
                                     <input  name = "name" type="text" placeholder="Name" required>
                                     <input type="text" name = "email" placeholder="Email" required>
@@ -400,7 +400,7 @@ include 'visitor.php';
                             <li><a href="./products-list">Products</a></li>
                             <li><a href="./contact">Product Inquiry</a></li>
                             <li><a href="./brands">Brands</a></li>
-                            <li><a href="./faq.php">FAQ's</a></li>
+                            <li><a href="./faq">FAQ's</a></li>
                         </ul>
                     </div>
                 </div>
@@ -408,7 +408,7 @@ include 'visitor.php';
                     <div class="fs-widget">
                         <h5>Newsletter</h5>
                         <p>Subscribe to receive inspiration, ideas, and news in your inbox.</p>
-                        <form action="newsletter.php" class="subscribe-form" method="POST">
+                        <form action="newsletter" class="subscribe-form" method="POST">
                             <input type="text" placeholder="Email" name="email">
                             <button type="submit" class="site-btn">Subscribe</button>
                         </form>
