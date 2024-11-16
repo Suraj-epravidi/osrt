@@ -40,10 +40,30 @@ include 'visitor.php';
         <button class="close-btn" onclick="closeOverlay()">✖</button>
         <!-- Image to display with srcset for responsive behavior -->
         <img 
-            src="./uploads/welcome-image.jpg" 
-            srcset="./uploads/welcome-image-responsive.jpg 600w, ./uploads/welcome-image-responsive.jpg 900w, ./uploads/welcome-image.jpg 1200w" 
-            sizes="(max-width: 600px) 100vw, (max-width: 900px) 90vw, 80vw"
-            alt="Welcome Image">
+        id="responsive-image"
+        src="./uploads/welcome-image.jpg" 
+        alt="Welcome Image">
+    
+    <script>
+        const image = document.getElementById('responsive-image');
+
+        // Function to update the image source based on screen size
+        function updateImageSource() {
+            if (window.matchMedia('(max-width: 600px)').matches) {
+                image.src = './uploads/welcome-image-responsive.jpg'; // Small image for screens <= 600px
+            } else if (window.matchMedia('(max-width: 900px)').matches) {
+                image.src = './uploads/welcome-image-responsive.jpg'; // Medium image for screens <= 900px
+            } else {
+                image.src = './uploads/welcome-image.jpg'; // Large image for screens > 900px
+            }
+        }
+
+        // Initial call to set the correct image on page load
+        updateImageSource();
+
+        // Add event listener to update the image on window resize
+        window.addEventListener('resize', updateImageSource);
+    </script>>
     </div>
 
 
