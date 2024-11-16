@@ -142,13 +142,13 @@ include 'visitor.php';
                                 <li><a href="./about">About</a></li>
                                 <li class="active"><a href="#">Products</a>
                                     <ul class="dropdown">
-                                        <li class="active"><a href="./products-list.php">Product List</a></li>
-                                        <li><a href="./category.php">Product Category</a></li>
+                                        <li class="active"><a href="./products-list">Product List</a></li>
+                                        <li><a href="./category">Product Category</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="./brands">Brands</a></li>
                                 <li><a href="./faq.php">FAQ's</a></li>
-                                <li><a href="./contact.html">Contact</a></li>
+                                <li><a href="./contact">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -381,21 +381,21 @@ include 'visitor.php';
                     <?php echo '<div class="property-pagination">';
                     $last_page = ceil($total_products / 9);
                     if ($page_no > 1 ) {
-                        echo '<a href="./products-list.php?page_no=' . $page_no - 1 . '" class="icon"><span class="arrow_left"></span></a>';
+                        echo '<a href="./products-list?page_no=' . $page_no - 1 . '" class="icon"><span class="arrow_left"></span></a>';
                     }
                     if ($page_no != 1  && $page_no != 2) {
-                        echo ' <a href="./products-list.php?page_no=1">1</a>';
+                        echo ' <a href="./products-list?page_no=1">1</a>';
                     }
                     if ($last_page > 1 && $page_no > 1) {
-                        echo '<a href="./products-list.php?page_no=' . $page_no - 1 . '">' . $page_no - 1 . '</a>';
+                        echo '<a href="./products-list?page_no=' . $page_no - 1 . '">' . $page_no - 1 . '</a>';
                     }
-                    echo '<a href="./products-list.php?page_no=' . $page_no . '">' . $page_no . '</a>';
+                    echo '<a href="./products-list?page_no=' . $page_no . '">' . $page_no . '</a>';
                     if($page_no < $last_page-1){
-                        echo '<a href="./products-list.php?page_no=' . $page_no + 1 . '">' . $page_no + 1 . '</a>';
+                        echo '<a href="./products-list?page_no=' . $page_no + 1 . '">' . $page_no + 1 . '</a>';
                     }
                     if ($page_no < $last_page) {
-                        echo '<a href="./products-list.php?page_no=' . $last_page . '">' . $last_page . '</a>';
-                        echo '<a href="./products-list.php?page_no=' . $page_no + 1 . '" class="icon"><span class="arrow_right"></span></a>';
+                        echo '<a href="./products-list?page_no=' . $last_page . '">' . $last_page . '</a>';
+                        echo '<a href="./products-list?page_no=' . $page_no + 1 . '" class="icon"><span class="arrow_right"></span></a>';
                     }
 
 
@@ -443,9 +443,9 @@ include 'visitor.php';
                    <div class="fs-widget">
                         <h5>Links</h5>
                         <ul>
-                            <li><a href="./contact.html">Contact</a></li>
-                            <li><a href="./products-list.php">Products</a></li>
-                            <li><a href="./contact.html">Product Inquiry</a></li>
+                            <li><a href="./contact">Contact</a></li>
+                            <li><a href="./products-list">Products</a></li>
+                            <li><a href="./contact">Product Inquiry</a></li>
                             <li><a href="./brands">Brands</a></li>
                             <li><a href="./faq.php">FAQ's</a></li>
                         </ul>

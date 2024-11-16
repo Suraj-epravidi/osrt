@@ -142,13 +142,13 @@ include 'visitor.php';
                                 <li><a href="./about">About</a></li>
                                 <li><a href="#">Products</a>
                                     <ul class="dropdown">
-                                        <li><a href="./products-list.php">Product List</a></li>
-                                        <li><a href="./category.php">Product Category</a></li>
+                                        <li><a href="./products-list">Product List</a></li>
+                                        <li><a href="./category">Product Category</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="./brands">Brands</a></li>
                                 <li><a href="./faq.php">FAQ's</a></li>
-                                <li><a href="./contact.html">Contact</a></li>
+                                <li><a href="./contact">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -366,7 +366,7 @@ include 'visitor.php';
                 </div>
             </div>
             <div class="search-form-content">
-                <form action="result.php" method="POST" class="filter-form">
+                <form action="result" method="POST" class="filter-form">
                     <select class="sm-width" name="materials">
                         <option value="">Materials</option>
                         <?php foreach ($materials as $material) {
@@ -458,11 +458,11 @@ include 'visitor.php';
                 function pageRedirect(pageLocation){
                    url=pageLocation.innerText;
                     if(url=="All"){
-                        window.location.href='./result.php?productType';
+                        window.location.href='./result?productType';
                     }
                     else
                     { 
-                         window.location.href='./result.php?productType=' + url;
+                         window.location.href='./result?productType=' + url;
                     }
                 }
                 function product_redirect(id) {
@@ -782,9 +782,9 @@ include 'visitor.php';
                    <div class="fs-widget">
                         <h5>Links</h5>
                         <ul>
-                            <li><a href="./contact.html">Contact</a></li>
-                            <li><a href="./products-list.php">Products</a></li>
-                            <li><a href="./contact.html">Product Inquiry</a></li>
+                            <li><a href="./contact">Contact</a></li>
+                            <li><a href="./products-list">Products</a></li>
+                            <li><a href="./contact">Product Inquiry</a></li>
                             <li><a href="./brands">Brands</a></li>
                             <li><a href="./faq.php">FAQ's</a></li>
                         </ul>
