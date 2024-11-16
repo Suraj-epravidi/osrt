@@ -1639,7 +1639,7 @@ img.cfImg{
 }
 
 .fs-about .fs-social a {
-  display: inline-block;
+  display: inline-flex;
   font-size: 15px;
   color: #ffffff;
   height: 40px;
