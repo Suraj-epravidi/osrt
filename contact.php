@@ -126,7 +126,7 @@
                                         </ul>
                                     </li>
                                     <li><a href="./brands">Brands</a></li>
-                                    <li><a href="./faq.php">FAQ's</a></li>
+                                    <li><a href="./faq">FAQ's</a></li>
                                     <li  class="active"><a href="./contact">Contact</a></li>
                                 </ul>
                             </nav>
@@ -174,7 +174,7 @@
                             <h4>Contact form</h4>
                             <p> Feel free to contact us regarding any sort of queries<br /></p>
                         </div>
-                        <form action="process_contact.php" method="POST" class="cc-form">
+                        <form action="process_contact" method="POST" class="cc-form">
                             <div class="group-input">
                                 <input type="text" name="name" placeholder="Name" required>
                                 <input type="email" name="email" placeholder="Email" required>
@@ -280,7 +280,7 @@
                             <li><a href="./products-list">Products</a></li>
                             <li><a href="./contact">Product Inquiry</a></li>
                             <li><a href="./brands">Brands</a></li>
-                            <li><a href="./faq.php">FAQ's</a></li>
+                            <li><a href="./faq">FAQ's</a></li>
                         </ul>
                     </div>
                 </div>
@@ -288,7 +288,7 @@
                     <div class="fs-widget">
                         <h5>Newsletter</h5>
                         <p>Subscribe to receive inspiration, ideas, and news in your inbox.</p>
-                        <form action="newsletter.php" class="subscribe-form" method="POST">
+                        <form action="newsletter" class="subscribe-form" method="POST">
                             <input type="text" placeholder="Email" name="email">
                             <button type="submit" class="site-btn">Subscribe</button>
                         </form>

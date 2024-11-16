@@ -1,5 +1,5 @@
 <?php 
-include 'visitor.php';
+include 'visitor';
 ?>
 <html lang="zxx">
 
@@ -217,7 +217,7 @@ include 'visitor.php';
                                     </ul>
                                 </li>
                                 <li><a href="./brands">Brands</a></li>
-                                <li><a href="./faq.php">FAQ's</a></li>
+                                <li><a href="./faq">FAQ's</a></li>
                                 <li><a href="./contact">Contact</a></li>
                             </ul>
                         </nav>
@@ -405,7 +405,7 @@ include 'visitor.php';
                             <li><a href="./products-list">Products</a></li>
                             <li><a href="./contact">Product Inquiry</a></li>
                             <li><a href="./brands">Brands</a></li>
-                            <li><a href="./faq.php">FAQ's</a></li>
+                            <li><a href="./faq">FAQ's</a></li>
                         </ul>
                     </div>
                 </div>
@@ -413,7 +413,7 @@ include 'visitor.php';
                     <div class="fs-widget">
                         <h5>Newsletter</h5>
                         <p>Subscribe to receive inspiration, ideas, and news in your inbox.</p>
-                        <form action="newsletter.php" class="subscribe-form" method="POST">
+                        <form action="newsletter" class="subscribe-form" method="POST">
                             <input type="text" placeholder="Email" name="email">
                             <button type="submit" class="site-btn">Subscribe</button>
                         </form>
