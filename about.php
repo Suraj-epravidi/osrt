@@ -50,7 +50,7 @@
                 <li><i class="icon_mail_alt"></i> info@osrtraders.com.np</li>
                 <li><i class="fa fa-mobile-phone"></i> 977-01-5554421 </li>
             </ul>
-            <a href="#" class="hw-btn">Visit Us Today</a>
+            <a href="https://osrt.epravidi.com/contact#osrt-contact-form" class="hw-btn">Visit Us Today</a>
         </div>
         <div class="om-social">
             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -102,7 +102,7 @@
                                     <li><i class="icon_mail_alt"></i> info@osrtraders.com.np</li>
                                     <li><i class="fa fa-mobile-phone"></i> 977-01-5554421</span></li>
                                 </ul>
-                                <a href="#" class="hw-btn">Visit Us Today</a>
+                                <a href="https://osrt.epravidi.com/contact#osrt-contact-form" class="hw-btn">Visit Us Today</a>
                             </div>
                         </div>
                     </div>
