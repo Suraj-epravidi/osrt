@@ -100,6 +100,9 @@ if (checkCookie(cookieName)) {
     console.log("Cookie found!");
    closeOverlay();
 } 
+else{
+    console.log("Cookie not found!");
+}
 });
     </script>
     <!-- Offcanvas Menu Wrapper Begin -->
