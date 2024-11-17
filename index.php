@@ -12,7 +12,6 @@ setcookie($cookie_name, $cookie_value, $expiry_time, "/");
 ?>
 
 <html lang="zxx">
-
 <head>
 
     <meta charset="UTF-8">
@@ -96,15 +95,13 @@ setcookie($cookie_name, $cookie_value, $expiry_time, "/");
 
 // Example usage
 const cookieName = "osrt_user";
-document.addEventListener('load', function(){
+document.addEventListener('DOMContentLoaded', function(){
 if (checkCookie(cookieName)) {
-    console.log("Cookie found");
-   closeOverlay();
+    console.log("Cookie found!");
 } 
 else{
-    console.log("Cookie not found");
+    document.getElementById('home-overlay').style.display = 'flex';
 }
-
 });
     </script>
     <!-- Offcanvas Menu Wrapper Begin -->

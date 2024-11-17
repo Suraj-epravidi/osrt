@@ -482,7 +482,7 @@ ol {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: 999; /* Ensure it's on top */
