@@ -12,6 +12,7 @@ setcookie($cookie_name, $cookie_value, $expiry_time, "/");
 ?>
 
 <html lang="zxx">
+
 <head>
 
     <meta charset="UTF-8">
@@ -38,7 +39,27 @@ setcookie($cookie_name, $cookie_value, $expiry_time, "/");
         <link rel="stylesheet" href="css/style.css" type="text/css">
         
 </head>
+  <script>
+        function checkCookie(cookieName) {
+    // Get all cookies as a single string
+    const cookies = document.cookie;
+    
+    // Check if the cookie name exists in the string
+    return cookies.split('; ').some(cookie => cookie.startsWith(`${cookieName}=`));
+}
 
+// Example usage
+const cookieName = "osrt_user";
+document.addEventListener('load', function(){
+if (checkCookie(cookieName)) {
+    console.log("Cookie found!");
+   closeOverlay();
+} 
+else{
+    console.log("Cookie not found!");
+}
+});
+    </script>
 <body>
 
     <!-- Page Preloder
@@ -84,27 +105,7 @@ setcookie($cookie_name, $cookie_value, $expiry_time, "/");
                 document.getElementById('home-overlay').style.display = 'none';
             }
         </script>
-    <script>
-        function checkCookie(cookieName) {
-    // Get all cookies as a single string
-    const cookies = document.cookie;
-    
-    // Check if the cookie name exists in the string
-    return cookies.split('; ').some(cookie => cookie.startsWith(`${cookieName}=`));
-}
-
-// Example usage
-const cookieName = "osrt_user";
-document.addEventListener('DOMContentLoaded', function(){
-if (checkCookie(cookieName)) {
-    console.log("Cookie found!");
-   closeOverlay();
-} 
-else{
-    console.log("Cookie not found!");
-}
-});
-    </script>
+  
     <!-- Offcanvas Menu Wrapper Begin -->
      
     <div class="offcanvas-menu-overlay"></div>
