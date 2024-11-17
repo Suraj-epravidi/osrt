@@ -51,7 +51,7 @@ setcookie($cookie_name, $cookie_value, $expiry_time, "/");
 
 // Example usage
 const cookieName = "user_osrt";
-document.addEventListener('onload', function(){
+document.addEventListener('DOMContentLoaded', function(){
 if (checkCookie(cookieName)) {
    closeOverlay();
 } 
