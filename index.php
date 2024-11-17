@@ -1,6 +1,21 @@
 <?php 
 include 'visitor.php';
+// Set the cookie name and value
+$cookie_name = "osrt_user";
+$cookie_value = "osrt_valuableUsers";
+
+// Set the expiry time to 30 minutes from now
+$expiry_time = time() + (30 * 60); // Current time + 30 minutes
+
+// Set the cookie
+setcookie($cookie_name, $cookie_value, $expiry_time, "/");
+if (isset($_COOKIE[$cookie_name])) {
+    echo "<script>
+    document.getElementById('home-overlay').style.display='none';
+    </script>";
+}
 ?>
+
 <html lang="zxx">
 
 <head>
