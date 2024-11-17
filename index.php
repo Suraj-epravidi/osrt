@@ -98,8 +98,12 @@ setcookie($cookie_name, $cookie_value, $expiry_time, "/");
 const cookieName = "osrt_user";
 document.addEventListener('load', function(){
 if (checkCookie(cookieName)) {
+    console.log("Cookie found");
    closeOverlay();
 } 
+else{
+    console.log("Cookie not found");
+}
 
 });
     </script>
