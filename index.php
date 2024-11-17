@@ -1,14 +1,6 @@
 <?php 
 include 'visitor.php';
-// Set the cookie name and value
-$cookie_name = "osrt_user";
-$cookie_value = "osrt_valuableUsers";
 
-// Set the expiry time to 30 minutes from now
-$expiry_time = time() + (30 * 60); // Current time + 30 minutes
-
-// Set the cookie
-setcookie($cookie_name, $cookie_value, $expiry_time, "/");
 ?>
 
 <html lang="zxx">
@@ -102,6 +94,9 @@ if (checkCookie(cookieName)) {
 else{
     console.log("Cookie not found");
     document.getElementById('home-overlay').style.display = 'flex';
+    const date = new Date();
+date.setTime(date.getTime() + (30 * 60 * 1000)); // 30 minutes in milliseconds
+document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
 }
 });
     </script>
