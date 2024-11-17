@@ -9,16 +9,11 @@ $expiry_time = time() + (30 * 60); // Current time + 30 minutes
 
 // Set the cookie
 setcookie($cookie_name, $cookie_value, $expiry_time, "/");
-if (isset($_COOKIE[$cookie_name])) {
-    echo "<script>
-    document.getElementById('home-overlay').style.display='none';
-    </script>";
-}
 ?>
 
 <html lang="zxx">
-
 <head>
+
     <meta charset="UTF-8">
     <meta name="description" content="OSR traders">
     <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders NEPAL, Khumaltar">
@@ -45,6 +40,23 @@ if (isset($_COOKIE[$cookie_name])) {
 </head>
 
 <body>
+    <script>
+        function checkCookie(cookieName) {
+    // Get all cookies as a single string
+    const cookies = document.cookie;
+    
+    // Check if the cookie name exists in the string
+    return cookies.split('; ').some(cookie => cookie.startsWith(`${cookieName}=`));
+}
+
+// Example usage
+const cookieName = "user_osrt";
+document.addEventListener('onload', function(){
+if (checkCookie(cookieName)) {
+   closeOverlay();
+} 
+});
+    </script>
     <!-- Page Preloder
     <div id="preloder">
         <div class="loader"></div>
