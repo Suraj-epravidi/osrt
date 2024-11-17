@@ -1,5 +1,5 @@
 <?php 
-include 'visitor';
+include 'visitor.php';
 ?>
 <html lang="zxx">
 <head>
