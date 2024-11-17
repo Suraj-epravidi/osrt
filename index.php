@@ -94,7 +94,7 @@ setcookie($cookie_name, $cookie_value, $expiry_time, "/");
 }
 
 // Example usage
-const cookieName = "user_osrt";
+const cookieName = "osrt_user";
 document.addEventListener('DOMContentLoaded', function(){
 if (checkCookie(cookieName)) {
     console.log("Cookie found!");
