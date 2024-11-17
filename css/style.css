@@ -2810,9 +2810,7 @@ li .richText-btn[data-command="toggleCode"] {
   margin: 0 auto;
   margin-bottom: 25px;
 }
-.as-item .as-pic img {
-  border-radius: 50%;
-}
+
 .as-item .as-pic .rating-point {
   font-size: 16px;
   font-weight: 600;
