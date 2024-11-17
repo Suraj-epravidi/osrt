@@ -100,6 +100,7 @@ if (checkCookie(cookieName)) {
     console.log("Cookie found!");
 } 
 else{
+    console.log("Cookie not found");
     document.getElementById('home-overlay').style.display = 'flex';
 }
 });
