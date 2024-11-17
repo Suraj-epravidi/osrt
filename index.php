@@ -39,24 +39,7 @@ setcookie($cookie_name, $cookie_value, $expiry_time, "/");
         <link rel="stylesheet" href="css/style.css" type="text/css">
         
 </head>
-  <script>
-        function checkCookie(cookieName) {
-    // Get all cookies as a single string
-    const cookies = document.cookie;
-    
-    // Check if the cookie name exists in the string
-    return cookies.split('; ').some(cookie => cookie.startsWith(`${cookieName}=`));
-}
 
-// Example usage
-const cookieName = "osrt_user";
-document.addEventListener('load', function(){
-if (checkCookie(cookieName)) {
-   closeOverlay();
-} 
-
-});
-    </script>
 <body>
 
     <!-- Page Preloder
@@ -102,7 +85,24 @@ if (checkCookie(cookieName)) {
                 document.getElementById('home-overlay').style.display = 'none';
             }
         </script>
-  
+    <script>
+        function checkCookie(cookieName) {
+    // Get all cookies as a single string
+    const cookies = document.cookie;
+    
+    // Check if the cookie name exists in the string
+    return cookies.split('; ').some(cookie => cookie.startsWith(`${cookieName}=`));
+}
+
+// Example usage
+const cookieName = "osrt_user";
+document.addEventListener('load', function(){
+if (checkCookie(cookieName)) {
+   closeOverlay();
+} 
+
+});
+    </script>
     <!-- Offcanvas Menu Wrapper Begin -->
      
     <div class="offcanvas-menu-overlay"></div>
