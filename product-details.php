@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'visitor.php';
 ?>
 <html lang="zxx">
@@ -209,22 +209,21 @@ include 'visitor.php';
         </section>
 
         <div class="container">
-            <div class="row">
+            <div class="product-details">
                 <div class="col-lg-8">
                     <div class="pd-text">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="pd-title">  
+                                <div class="pd-title">
                                     <div class="label <?php if ($product['stock'] < 0) {
-                                        echo "bg-danger";
-                                    }?>  .bg-danger"> <?php if ($product['stock'] < 0) {
-                                        echo "Out of stock";
-                                    }
-                                        else{
-                                            echo "In Stock";
-                                        }?>           </div>
+                                                            echo "bg-danger";
+                                                        } ?>  .bg-danger"> <?php if ($product['stock'] < 0) {
+                                                                                echo "Out of stock";
+                                                                            } else {
+                                                                                echo "In Stock";
+                                                                            } ?> </div>
                                     <div class="pt-price">Rs.
-                                    <?php echo htmlspecialchars($product['price']); ?>
+                                        <?php echo htmlspecialchars($product['price']); ?>
                                     </div>
                                     <h3><?php echo htmlspecialchars($product['product_name']); ?></h3>
                                 </div>
@@ -287,7 +286,7 @@ include 'visitor.php';
                                     </div>
                                     <div class="tab-pane" id="tabs-2" role="tabpanel">
                                         <div class="tab-desc">
-                                     <?php   echo "<p>Description: " . htmlspecialchars($product['description']) . "</p>" ?>
+                                            <?php echo "<p>Description: " . htmlspecialchars($product['description']) . "</p>" ?>
                                         </div>
                                     </div>
 
@@ -317,11 +316,11 @@ include 'visitor.php';
 
                         <div class="pd-widget">
                             <h4>Inquiry on product</h4>
-                            <form action="process_contact" class="review-form" method = "post">
+                            <form action="process_contact" class="review-form" method="post">
                                 <div class="group-input">
-                                    <input  name = "name" type="text" placeholder="Name" required>
-                                    <input type="text" name = "email" placeholder="Email" required>
-                                    <input type="text" name = "website" placeholder="Website">
+                                    <input name="name" type="text" placeholder="Name" required>
+                                    <input type="text" name="email" placeholder="Email" required>
+                                    <input type="text" name="website" placeholder="Website">
                                 </div>
                                 <textarea placeholder="Messages" name="comment" required></textarea>
 
@@ -340,7 +339,7 @@ include 'visitor.php';
                                     <h4>Product Image</h4>
                                 </div>
                                 <div class="sf-slider owl-carousel">
-                                   <div class="sf-item set-bg" data-setbg="<?php echo'https://osrtpanel.epravidi.com/pages/product_image/' . htmlspecialchars($product['image']); ?>">
+                                    <div class="sf-item set-bg" data-setbg="<?php echo 'https://osrtpanel.epravidi.com/pages/product_image/' . htmlspecialchars($product['image']); ?>">
 
                                     </div>
 
@@ -393,7 +392,7 @@ include 'visitor.php';
                     </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">
-                   <div class="fs-widget">
+                    <div class="fs-widget">
                         <h5>Links</h5>
                         <ul>
                             <li><a href="./contact">Contact</a></li>
