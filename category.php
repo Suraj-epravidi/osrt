@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'visitor.php';
 ?>
 <html lang="zxx">
@@ -31,45 +31,52 @@ include 'visitor.php';
         /* Categories Section Styling */
         @media (max-width: 600px) {
             .cs-item-list {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                align-content: stretch;
+                justify-content: center;
+                /* Ensures space between items */
+                max-width: 100%;
+                /* Allows items to take full width */
+
+            }
+
+            .cs-item {
+                background-size: cover;
+                background-position: center;
+                height: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .categories {
             display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            align-content: stretch;
-            justify-content: center; /* Ensures space between items */
-            max-width: 100%; /* Allows items to take full width */
-            
-        }
-        .cs-item {
-        
-            background-size: cover;
-            background-position: center;
-            height: 250px;
-           display: flex;
             justify-content: center;
+            /* Center-align the image row */
             align-items: center;
-            position: relative;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
         }
-        }
-        .categories { 
-           display: flex;
-           justify-content: center; /* Center-align the image row */
-           align-items: center;
-           
-       }
+
         /* Category List */
         .cs-item-list {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             align-content: stretch;
-            justify-content: center; /* Ensures space between items */
-            width: 90vw; /* Allows items to take full width */
-            
+            justify-content: center;
+            /* Ensures space between items */
+            width: 1400px;
+            /* Allows items to take full width */
+
         }
-    
+
         /* Category Items */
         .cs-item {
             /* 5 items per row (20% width each) */
@@ -85,16 +92,17 @@ include 'visitor.php';
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-    
+
         /* Adjust image size based on space */
         .cs-item img {
             max-width: 100%;
             max-height: 100%;
             min-width: 120px;
-            object-fit: cover; /* Ensures the image fits proportionally */
+            object-fit: cover;
+            /* Ensures the image fits proportionally */
             border-radius: 8px;
         }
-    
+
         /* Category Text */
         .cs-text {
             z-index: 2;
@@ -104,45 +112,43 @@ include 'visitor.php';
             padding: 10px;
             border-radius: 5px;
         }
-    
+
         /* Hover Effect for Category Items */
         .cs-item:hover {
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
             transform: translateY(-5px);
             transition: all 0.7s ease;
         }
-        
-        
     </style>
-    
+
 </head>
 
 <body>
-    <script>// JavaScript to handle activating the sticky navbar after scrolling 20% of the page
-        document.addEventListener("DOMContentLoaded", function () {
+    <script>
+        // JavaScript to handle activating the sticky navbar after scrolling 20% of the page
+        document.addEventListener("DOMContentLoaded", function() {
             var navbar = document.getElementById("stickyNav");
-        
-            window.addEventListener("scroll", function () {
+
+            window.addEventListener("scroll", function() {
                 var scrollPosition = window.scrollY;
                 var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
                 var scrollPercentage = (scrollPosition / pageHeight) * 100;
-        
+
                 if (scrollPercentage > 10) {
                     if (!navbar.classList.contains("fixed-navbar")) {
-          
-                        navbar.classList.add("fixed-navbar");   // Add fixed-navbar class for fade-in effect
+
+                        navbar.classList.add("fixed-navbar"); // Add fixed-navbar class for fade-in effect
                     }
                 } else {
                     if (navbar.classList.contains("fixed-navbar")) {
                         navbar.classList.remove("fixed-navbar"); // Remove fixed-navbar class
-                       
+
                     }
                 }
-             
+
             });
         });
-        
-        </script>
+    </script>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -209,11 +215,11 @@ include 'visitor.php';
                             <ul>
                                 <li><a href="./index">Home</a></li>
                                 <li><a href="./about">About</a></li>
-                                <li   class="active"><a href="#" >Products</a>
+                                <li class="active"><a href="#">Products</a>
                                     <ul class="dropdown">
                                         <li><a href="./products-list">Product List</a></li>
 
-                                        <li  class="active"><a href="./category">Product Category</a></li>
+                                        <li class="active"><a href="./category">Product Category</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="./brands">Brands</a></li>
@@ -228,7 +234,7 @@ include 'visitor.php';
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-youtube-play"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -254,53 +260,54 @@ include 'visitor.php';
         </div>
     </section>
     <!-- Breadcrumb Section End -->
-     <br>
-     <br>
+    <br>
+    <br>
 
     <!-- Categories Section Begin -->
     <section class="categories">
-    <div class="cs-item-list">
-        <?php
-          function connectToDatabase()
-          {
-              $servername = "192.250.235.20";
-              $username = "epravidi_osrt_data";
-              $password = "UQ!r.gTOz=oo";
-              $dbname = "epravidi_osrt";
-              $conn = new mysqli($servername, $username, $password, $dbname);
-              if ($conn->connect_error) {
-                  die("Connection failed: " . $conn->connect_error);
-              }
-              return $conn;
-          }
-        $conn = connectToDatabase();
-        
-        // Query to get categories
-        $sql = "SELECT category_name, category_image, product_count FROM categories"; // Make sure you have product_count in your table
-        $result = $conn->query($sql);
-        
-        if ($result && $result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                // Category display
-                echo '<div class="cs-item set-bg" data-setbg="https://osrtpanel.epravidi.com/pages/category/' . htmlspecialchars($row["category_image"]) . '" onclick=window.location.href="https://osrt.epravidi.com/result?productType='. htmlspecialchars($row["category_name"]) .'">';
-                echo '<div class="cs-text">';
-                echo '<h5>' . htmlspecialchars($row["category_name"]) . '</h5>';
-                echo '<span>' . htmlspecialchars($row["product_count"]) . ' Products</span>';
-                echo '</div>';
-                echo '</div>';
+        <div class="cs-item-list">
+            <?php
+            function connectToDatabase()
+            {
+                $servername = "192.250.235.20";
+                $username = "epravidi_osrt_data";
+                $password = "UQ!r.gTOz=oo";
+                $dbname = "epravidi_osrt";
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+                return $conn;
             }
-        } else {
-            echo "<p>No categories found.</p>";
-        }
-        
-        // Close the connection
-        $conn->close();
-        ?>
-    </div>
-</section>
+            $conn = connectToDatabase();
+
+            // Query to get categories
+            $sql = "SELECT category_name, category_image, product_count FROM categories"; // Make sure you have product_count in your table
+            $result = $conn->query($sql);
+
+            if ($result && $result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    // Category display
+                    echo '<div class="cs-item set-bg" data-setbg="https://osrtpanel.epravidi.com/pages/category/' . htmlspecialchars($row["category_image"]) . '" onclick=window.location.href="https://osrt.epravidi.com/result?productType=' . htmlspecialchars($row["category_name"]) . '">';
+                    echo '<div class="cs-text">';
+                    echo '<h5>' . htmlspecialchars($row["category_name"]) . '</h5>';
+                    echo '<span>' . htmlspecialchars($row["product_count"]) . ' Products</span>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+            } else {
+                echo "<p>No categories found.</p>";
+            }
+
+            // Close the connection
+            $conn->close();
+            ?>
+        </div>
+    </section>
 
     <!-- Categories Section End -->
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+
 <script src="https://files.bpcontent.cloud/2024/11/12/13/20241112133346-PL5ZLF1B.js"></script>
    <!-- Feature Product Section Begin -->
    <script>
@@ -324,47 +331,47 @@ include 'visitor.php';
                     <div class="section-title">
                         <h4>Feature Product</h4>
                     </div>
-                    <ul>
-                        <li onclick="pageRedirect(this)">Tiles</li>
-                        <li onclick="pageRedirect(this)">Shower Head</li>
-                        <li onclick="pageRedirect(this)">Light Switches</li>
-                        <li onclick="pageRedirect(this)">Commode</li>
-                        <li onclick="pageRedirect(this)">Vanity Basin's</li>
-                        <li onclick="pageRedirect(this)">Bathware's</li>
-                    </ul>
-                    <a href="./result?productType">View all Products</a>
-                </div>
-            </div>
-            <div class="col-lg-8 p-0">
-                <div class="fp-slider owl-carousel">
-                    <div class="fp-item set-bg" data-setbg="img/feature-property/fp-1.jpg">
-                        <div class="fp-text">
-                            <h5 class="title">Island Carara</h5>
-                            <p> Item Code .: 1001<br>
-                                Color.: Cream, Brand.: Somany, Material.: Marble</p>
-                            <div class="label">IN STOCK</div>
-                            <h5>Rs 2900<span>/MRP</span></h5>
-                            
-                        </div>
+                        <ul>
+                            <li onclick="pageRedirect(this)">Tiles</li>
+                            <li onclick="pageRedirect(this)">Shower Head</li>
+                            <li onclick="pageRedirect(this)">Light Switches</li>
+                            <li onclick="pageRedirect(this)">Commode</li>
+                            <li onclick="pageRedirect(this)">Vanity Basin's</li>
+                            <li onclick="pageRedirect(this)">Bathware's</li>
+                        </ul>
+                        <a href="./result?productType">View all Products</a>
                     </div>
-                    <div class="fp-item set-bg" data-setbg="img/feature-property/fp-2.jpg">
-                        <div class="fp-text">
-                            <h5 class="title">Island Carara</h5>
-                            <p> Item Code .: 1001<br>
-                                Color.: Cream, Brand.: Somany, Material.: Marble</p>
-                            <div class="label">IN STOCK</div>
-                            <h5>Rs 2900<span>/MRP</span></h5>
-                            
+                </div>
+                <div class="col-lg-8 p-0">
+                    <div class="fp-slider owl-carousel">
+                        <div class="fp-item set-bg" data-setbg="img/feature-property/fp-1.jpg">
+                            <div class="fp-text">
+                                <h5 class="title">Island Carara</h5>
+                                <p> Item Code .: 1001<br>
+                                    Color.: Cream, Brand.: Somany, Material.: Marble</p>
+                                <div class="label">IN STOCK</div>
+                                <h5>Rs 2900<span>/MRP</span></h5>
+
+                            </div>
+                        </div>
+                        <div class="fp-item set-bg" data-setbg="img/feature-property/fp-2.jpg">
+                            <div class="fp-text">
+                                <h5 class="title">Island Carara</h5>
+                                <p> Item Code .: 1001<br>
+                                    Color.: Cream, Brand.: Somany, Material.: Marble</p>
+                                <div class="label">IN STOCK</div>
+                                <h5>Rs 2900<span>/MRP</span></h5>
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Feature Product Section End -->
+    </section>
+    <!-- Feature Product Section End -->
 
-   
+
     <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
@@ -421,9 +428,11 @@ include 'visitor.php';
                 </div>
             </div>
             <div class="copyright-text">
-                
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
-  </p>
+
+                Copyright &copy;<script>
+                    document.write(new Date().getFullYear());
+                </script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
+                </p>
             </div>
         </div>
     </footer>
