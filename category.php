@@ -301,7 +301,7 @@ include 'visitor.php';
 
     <!-- Categories Section End -->
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-    <script src="https://files.bpcontent.cloud/2024/10/25/06/20241025061942-VB7QGSPE.js"></script>
+<script src="https://files.bpcontent.cloud/2024/11/12/13/20241112133346-PL5ZLF1B.js"></script>
    <!-- Feature Product Section Begin -->
    <script>
                 function pageRedirect(pageLocation){
