@@ -395,18 +395,19 @@ document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="change-btn">
+                      <div class="change-btn">
+                        <!-- Search Box  -->
                         <div class="cb-item">
-                            <label for="cb-rent" class="active">
-                                All Product's
-                                <input type="radio" id="cb-rent">
-                            </label>
-                        </div>
-                        <div class="cb-item">
-                            <label for="cb-sale">
-                                In Stock
-                                <input type="radio" id="cb-sale">
-                            </label>
+                            <form class="product-search-box" action="#">
+                                <input type="text" name="query" placeholder="Search products">
+                                <button type="submit"
+                                    style="border: none; padding: 0; margin: 0; height: 47px; width: 50px; background-color: #bb8e29; cursor: pointer;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
+                                        <path
+                                            d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                                    </svg>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
