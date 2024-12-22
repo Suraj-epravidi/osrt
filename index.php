@@ -412,12 +412,6 @@ include 'visitor.php';
                                 </button>
                             </form>
                         </div>
-                        <div class="cb-item">
-                            <label for="cb-sale">
-                                In Stock
-                                <input type="radio" id="cb-sale">
-                            </label>
-                        </div>
                     </div>
                 </div>
             </div>
