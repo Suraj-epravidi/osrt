@@ -307,26 +307,30 @@ include 'visitor.php';
 
     <!-- Categories Section End -->
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-    <script src="https://files.bpcontent.cloud/2024/10/25/06/20241025061942-VB7QGSPE.js"></script>
-    <!-- Feature Product Section Begin -->
-    <script>
-        function pageRedirect(pageLocation) {
-            url = pageLocation.innerText;
-            if (url == "All") {
-                window.location.href = './result?productType';
-            } else {
-                window.location.href = './result?productType=' + url;
-            }
-        }
-    </script>
-    <section class="feature-property-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 p-0">
-                    <div class="feature-property-left">
-                        <div class="section-title">
-                            <h4>Feature Product</h4>
-                        </div>
+
+<script src="https://files.bpcontent.cloud/2024/11/12/13/20241112133346-PL5ZLF1B.js"></script>
+   <!-- Feature Product Section Begin -->
+   <script>
+                function pageRedirect(pageLocation){
+                   url=pageLocation.innerText;
+                    if(url=="All"){
+                        window.location.href='./result?productType';
+                    }
+                    else
+                    { 
+                         window.location.href='./result?productType=' + url;
+                    }
+                }
+
+            </script>
+   <section class="feature-property-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 p-0">
+                <div class="feature-property-left">
+                    <div class="section-title">
+                        <h4>Feature Product</h4>
+                    </div>
                         <ul>
                             <li onclick="pageRedirect(this)">Tiles</li>
                             <li onclick="pageRedirect(this)">Shower Head</li>
