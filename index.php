@@ -398,7 +398,8 @@ include 'visitor.php';
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="change-btn">
+                      <div class="change-btn">
+
                         <!-- Search Box  -->
                         <div class="cb-item">
                             <form class="product-search-box" action="#">
@@ -412,12 +413,7 @@ include 'visitor.php';
                                 </button>
                             </form>
                         </div>
-                        <div class="cb-item">
-                            <label for="cb-sale">
-                                In Stock
-                                <input type="radio" id="cb-sale">
-                            </label>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
