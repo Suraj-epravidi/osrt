@@ -1,9 +1,10 @@
-<?php 
+<?php
 include 'visitor.php';
 
 ?>
 
 <html lang="zxx">
+
 <head>
 
     <meta charset="UTF-8">
@@ -28,7 +29,7 @@ include 'visitor.php';
         <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
         <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
-        
+
 </head>
 
 <body>
@@ -37,71 +38,70 @@ include 'visitor.php';
     <div id="preloder">
         <div class="loader"></div>
     </div> -->
-    
+
     <div id="home-overlay">
         <!-- Close button -->
         <button class="close-btn" onclick="closeOverlay()">✖</button>
         <!-- Image to display with srcset for responsive behavior -->
-        <img 
-        id="responsive-image"
-        src="./uploads/welcome-image.jpg" 
-        alt="Welcome Image">
-    
-    <script>
-        const image = document.getElementById('responsive-image');
+        <img
+            id="responsive-image"
+            src="./uploads/welcome-image.jpg"
+            alt="Welcome Image">
 
-        // Function to update the image source based on screen size
-        function updateImageSource() {
-            if (window.matchMedia('(max-width: 600px)').matches) {
-                image.src = './uploads/welcome-image-responsive.jpg'; // Small image for screens <= 600px
-            } else if (window.matchMedia('(max-width: 900px)').matches) {
-                image.src = './uploads/welcome-image-responsive.jpg'; // Medium image for screens <= 900px
-            } else {
-                image.src = './uploads/welcome-image.jpg'; // Large image for screens > 900px
+        <script>
+            const image = document.getElementById('responsive-image');
+
+            // Function to update the image source based on screen size
+            function updateImageSource() {
+                if (window.matchMedia('(max-width: 600px)').matches) {
+                    image.src = './uploads/welcome-image-responsive.jpg'; // Small image for screens <= 600px
+                } else if (window.matchMedia('(max-width: 900px)').matches) {
+                    image.src = './uploads/welcome-image-responsive.jpg'; // Medium image for screens <= 900px
+                } else {
+                    image.src = './uploads/welcome-image.jpg'; // Large image for screens > 900px
+                }
             }
-        }
 
-        // Initial call to set the correct image on page load
-        updateImageSource();
+            // Initial call to set the correct image on page load
+            updateImageSource();
 
-        // Add event listener to update the image on window resize
-        window.addEventListener('resize', updateImageSource);
-    </script>     
+            // Add event listener to update the image on window resize
+            window.addEventListener('resize', updateImageSource);
+        </script>
     </div>
 
 
-        <script>
-            // Function to close overlay
-            function closeOverlay() {
-                document.getElementById('home-overlay').style.display = 'none';
-            }
-        </script>
+    <script>
+        // Function to close overlay
+        function closeOverlay() {
+            document.getElementById('home-overlay').style.display = 'none';
+        }
+    </script>
     <script>
         function checkCookie(cookieName) {
-    // Get all cookies as a single string
-    const cookies = document.cookie;
-    
-    // Check if the cookie name exists in the string
-    return cookies.split('; ').some(cookie => cookie.startsWith(`${cookieName}=`));
-}
+            // Get all cookies as a single string
+            const cookies = document.cookie;
 
-// Example usage
-const cookieName = "osrt_user";
-document.addEventListener('DOMContentLoaded', function(){
-if (checkCookie(cookieName)) {
-    console.log("Cookie found!");
-} 
-else{
-    console.log("Cookie not found");
-    document.getElementById('home-overlay').style.display = 'flex';
-    const date = new Date();
-date.setTime(date.getTime() + (30 * 60 * 1000)); // 30 minutes in milliseconds
-document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
-}
-});
+            // Check if the cookie name exists in the string
+            return cookies.split('; ').some(cookie => cookie.startsWith(`${cookieName}=`));
+        }
+
+        // Example usage
+        const cookieName = "osrt_user";
+        document.addEventListener('DOMContentLoaded', function() {
+            if (checkCookie(cookieName)) {
+                console.log("Cookie found!");
+            } else {
+                console.log("Cookie not found");
+                document.getElementById('home-overlay').style.display = 'flex';
+                const date = new Date();
+                date.setTime(date.getTime() + (30 * 60 * 1000)); // 30 minutes in milliseconds
+                document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
+            }
+        });
     </script>
     <!-- Offcanvas Menu Wrapper Begin -->
-     
+
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
         <div class="canvas-close">
@@ -130,10 +130,10 @@ document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
     <!-- Offcanvas Menu Wrapper End -->
     <script>
         // JavaScript to handle activating the sticky navbar after scrolling 20% of the page
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             var navbar = document.getElementById("stickyNav");
 
-            window.addEventListener("scroll", function () {
+            window.addEventListener("scroll", function() {
                 var scrollPosition = window.scrollY;
                 var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
                 var scrollPercentage = (scrollPosition / pageHeight) * 100;
@@ -266,9 +266,12 @@ document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
             z-index: 2;
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Aligns the button-wrapper with the start of the text */
-            text-align: left; /* Aligns text inside content-wrapper */
-            gap: 0.5em; /* Adds minimal space between title and buttons */
+            align-items: flex-start;
+            /* Aligns the button-wrapper with the start of the text */
+            text-align: left;
+            /* Aligns text inside content-wrapper */
+            gap: 0.5em;
+            /* Adds minimal space between title and buttons */
         }
 
         .video-title {
@@ -304,7 +307,7 @@ document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
             color: black;
         }
 
-       
+
 
         video {
             display: block;
@@ -396,6 +399,7 @@ document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
                 </div>
                 <div class="col-lg-5">
                       <div class="change-btn">
+
                         <!-- Search Box  -->
                         <div class="cb-item">
                             <form class="product-search-box" action="#">
@@ -409,6 +413,7 @@ document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
                                 </button>
                             </form>
                         </div>
+                       
                     </div>
                 </div>
             </div>
@@ -434,13 +439,9 @@ document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
                             echo "<option value='" . htmlspecialchars($brand) . "'>" . htmlspecialchars($brand) . "</option>";
                         } ?>
                     </select>
-                    <select class="sm-width" name="room_type">
-                        <option value="">Room Type</option>
-                        <option value="office">Office</option>
-                        <option value="kitchen">Kitchen</option>
-                        <option value="bedroom">Bedroom</option>
-                        <option value="bathroom">Bathroom</option>
-                        <option value="washrooms">Washrooms</option>
+                    <select class="sm-width" name="stock_availability">
+                        <option value="">Stock Availability</option>
+                        <option value="office">In Stock</option>
                     </select>
 
                     <select class="sm-width" name="product_type">
@@ -493,25 +494,24 @@ document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
                         <ul>
                             <li data-filter="all" onclick="pageRedirect(this)">All</li>
                             <li data-filter=".apart" onclick="pageRedirect(this)">Tiles</li>
-                            <li data-filter=".house"onclick="pageRedirect(this)">Bathware</li>
-                            <li data-filter=".office"onclick="pageRedirect(this)">Electricals</li>
-                            <li data-filter=".hotel"onclick="pageRedirect(this)">Commode</li>
-                            <li data-filter=".restaurent"onclick="pageRedirect(this)">Vanity Basin</li>
+                            <li data-filter=".house" onclick="pageRedirect(this)">Bathware</li>
+                            <li data-filter=".office" onclick="pageRedirect(this)">Electricals</li>
+                            <li data-filter=".hotel" onclick="pageRedirect(this)">Commode</li>
+                            <li data-filter=".restaurent" onclick="pageRedirect(this)">Vanity Basin</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <script>
-                function pageRedirect(pageLocation){
-                   url=pageLocation.innerText;
-                    if(url=="All"){
-                        window.location.href='./result?productType';
-                    }
-                    else
-                    { 
-                         window.location.href='./result?productType=' + url;
+                function pageRedirect(pageLocation) {
+                    url = pageLocation.innerText;
+                    if (url == "All") {
+                        window.location.href = './result?productType';
+                    } else {
+                        window.location.href = './result?productType=' + url;
                     }
                 }
+
                 function product_redirect(id) {
                     window.location.href = './product-details?id=' + id;
                 }
@@ -531,7 +531,6 @@ document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 } else {
-
                 }
 
                 // SQL Query to fetch product data
@@ -621,7 +620,7 @@ document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
                         </div>
                         <div class="cf-item">
                             <div class="cf-pic">
-                                <img src="img/chooseus/chooseus-icon-2.png"  class="cfImg" alt="">
+                                <img src="img/chooseus/chooseus-icon-2.png" class="cfImg" alt="">
                             </div>
                             <div class="cf-text">
                                 <h5>Sales & Discounts</h5>
@@ -630,7 +629,7 @@ document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
                         </div>
                         <div class="cf-item">
                             <div class="cf-pic">
-                                <img src="img/chooseus/chooseus-icon-3.png"  class="cfImg" alt="">
+                                <img src="img/chooseus/chooseus-icon-3.png" class="cfImg" alt="">
                             </div>
                             <div class="cf-text">
                                 <h5>Quality Assurance</h5>
@@ -826,7 +825,7 @@ document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
                     </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">
-                   <div class="fs-widget">
+                    <div class="fs-widget">
                         <h5>Links</h5>
                         <ul>
                             <li><a href="./contact">Contact</a></li>
@@ -882,7 +881,7 @@ document.cookie = `osrt_user=dark_mode; path=/; expires=${date.toUTCString()}`;
 
         // Function to show alert on page load if alert_message exists
 
-        window.onload = function () {
+        window.onload = function() {
             let alertMessage = getQueryParam('alert_message');
             if (alertMessage) {
                 console.log(alertMessage);
