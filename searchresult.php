@@ -184,78 +184,27 @@ function connectToDatabase() {
 }
 
 // Function to select products based on input
-function getProducts($conn, $materials, $general_color, $brand, $product_type, $price_range) {
+function getProducts($conn, $search) {
+    // Base SQL query
     $sql = "SELECT * FROM products WHERE 1=1";
-    if (!empty($materials)) {
-        $sql .= " AND material = '" . $conn->real_escape_string($materials) . "'";
+
+    // Add condition for search box input
+    if (!empty($search)) {
+        $searchTerm = $conn->real_escape_string($search);
+        $sql .= " AND (name LIKE '%$searchTerm%' OR description LIKE '%$searchTerm%' OR brand LIKE '%$searchTerm%')";
     }
-    if (!empty($general_color)) {
-        $sql .= " AND color = '" . $conn->real_escape_string($general_color) . "'";
-    }
-    if (!empty($brand)) {
-        $sql .= " AND brand = '" . $conn->real_escape_string($brand) . "'";
-    }
-    if (!empty($product_type)) {
-        $sql .= " AND category = '" . $conn->real_escape_string($product_type) . "'";
-    }
-    if (!empty($price_range)) {
-        $price_parts = explode("-", $price_range);
-        if (count($price_parts) == 2) {
-            $min_price = (float)$price_parts[0];
-            $max_price = (float)$price_parts[1];
-            $sql .= " AND price BETWEEN $min_price AND $max_price";
-        }
-    }
+
+    // Execute the query
     $result = $conn->query($sql);
+
+    // Return results as an associative array
     return $result ? $result->fetch_all(MYSQLI_ASSOC) : [];
 }
-    if (isset($_GET['productType'])) {
-        $product_type = $_GET['productType'] ?? '';
-        $materials = $_GET['materials'] ?? '';
-    $general_color = $_GET['general_color'] ?? '';
-    $brand = $_GET['brand'] ?? '';
-    $price_range = $_GET['price_range'] ?? '';
-        $conn = connectToDatabase();
-        $products = getProducts($conn, $materials, $general_color, $brand, $product_type, $price_range);
-        $conn->close();
-        if (!empty($products)) {
-            echo '<section class="property-section spad"><div class="container"><div class="row">';
-            foreach ($products as $row) {
-                $stock_label = $row['stock'] > 0 ? 'label' : 'label c-red';
-                $stock_status = $row['stock'] > 0 ? 'IN STOCK' : 'NOT IN STOCK';
-                echo '
-                    <div class="col-lg-4 col-md-6 mix all house" onclick="product_redirect(' . htmlspecialchars($row["product_id"]) . ')" style="cursor:pointer;">
-                        <div class="property-item">
-                            <div class="pi-pic set-bg" data-setbg="https://www.osrtpanel.epravidi.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">
-                                <div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>
-                            </div>
-                            <div class="pi-text">
-                                <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                                <div class="pt-price">Rs. ' . htmlspecialchars($row["price"]) . '<span>/MRP</span></div>
-                                <h5><a href="#">' . htmlspecialchars($row["product_name"]) . '</a></h5>
-                                <p>Item Code: ' . htmlspecialchars($row["product_code"]) . '<br>Color: ' . htmlspecialchars($row["color"]) . ', Brand: ' . htmlspecialchars($row["brand"]) . ', Material: ' . htmlspecialchars($row["material"]) . '</p>
-                                <ul>
-                                    <li>' . htmlspecialchars($row["dimensions"]) . '</li>
-                                    <li><i class="fa fa-object-group"></i>&nbsp;<i class="fa fa-bathtub"></i>&nbsp;<i class="fa fa-bed"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>';
-            }
-            echo '</div></div></section>';
-        } else {
-            echo "<p>No products found matching your criteria.</p>";
-        }
-    }
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    $materials = $_POST['materials'] ?? '';
-    $general_color = $_POST['general_color'] ?? '';
-    $brand = $_POST['brand'] ?? '';
-    $product_type = $_POST['product_type'] ?? '';
-    $price_range = $_POST['price_range'] ?? '';
+    $search = isset($_POST['search']) ? trim($_POST['search']) : '';
     $conn = connectToDatabase();
-    $products = getProducts($conn, $materials, $general_color, $brand, $product_type, $price_range);
+    $products = getProducts($conn, $search);
     $conn->close();
     if (!empty($products)) {
         echo '<section class="property-section spad"><div class="container"><div class="row">';
@@ -283,7 +232,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         echo '</div></div></section>';
     } else {
-        echo "<p>No products found matching your criteria.</p>";
+        echo "<p>No products found matching your search.</p>";
     }
 }
 ?>

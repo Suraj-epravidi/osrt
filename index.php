@@ -402,8 +402,8 @@ include 'visitor.php';
 
                         <!-- Search Box  -->
                         <div class="cb-item">
-                            <form class="product-search-box" action="#">
-                                <input type="text" name="query" placeholder="Search products">
+                            <form class="product-search-box" action="searchresult.php">
+                                <input type="text" name="search" placeholder="Search products">
                                 <button type="submit"
                                     style="border: none; padding: 0; margin: 0; height: 47px; width: 50px; background-color: #bb8e29; cursor: pointer;">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
