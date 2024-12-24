@@ -402,7 +402,7 @@ include 'visitor.php';
 
                         <!-- Search Box  -->
                         <div class="cb-item">
-                            <form class="product-search-box" method="POST" action="searchresult.php">
+                            <form class="product-search-box" method="POST" action="searchresult">
                                 <input type="text" name="search" placeholder="Search products">
                                 <button type="submit"
                                     style="border: none; padding: 0; margin: 0; height: 47px; width: 50px; background-color: #bb8e29; cursor: pointer;">
