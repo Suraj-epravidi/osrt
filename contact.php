@@ -264,7 +264,7 @@
                     <div class="fs-widget">
                         <h5>Help</h5>
                         <ul>
-                            <li><a href="privacypolice.pdf" download="privacypolicy.pdf">Privacy Policy</a></li>
+                            <li><a href="https://osrt.epravidi.com/files/privacypolicy.pdf" download="privacypolicy.pdf">Privacy Policy</a></li>
                             <li><a href="#">Contact Support</a></li>
                             <li><a href="#">Contact us</a></li>
                        <li><a href="returnpolicy.pdf" download="returnpolicy.pdf">Return Policy</a></li>
