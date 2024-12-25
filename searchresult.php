@@ -266,7 +266,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <li><a href="https://osrt.epravidi.com/files/privacypolicy.pdf" download="privacypolicy.pdf">Privacy Policy</a></li>
                             <li><a href="#">Contact Support</a></li>
                             <li><a href="#">Contact us</a></li>
-                       <li><a href="returnpolicy.pdf" download="returnpolicy.pdf">Return Policy</a></li>
+                        <li><a href="https://osrt.epravidi.com/files/returnpolicy.pdf" download="returnpolicy.pdf">Return Policy</a></li>
                             <li><a href="#">FAQs</a></li>
                         </ul>
                     </div>
