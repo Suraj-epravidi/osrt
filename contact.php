@@ -53,10 +53,10 @@
             <a href="https://osrt.epravidi.com/contact#osrt-contact-form" class="hw-btn">Visit Us Today</a>
         </div>
         <div class="om-social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube-play"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/osrtrade/"><i class="fa fa-facebook"></i></a>
+            <a href="https://x.com/OSR_Traders"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@OSRTraders"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.instagram.com/o.s.r.traders/"><i class="fa fa-instagram"></i></a>
         </div>
     </div>
     <!-- Offcanvas Menu Wrapper End -->
