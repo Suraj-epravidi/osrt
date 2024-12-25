@@ -218,12 +218,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>
                         </div>
                         <div class="pi-text">
-                   
-                           
+
+
                             <h5><a href="#">' . htmlspecialchars($row["product_name"]) . '</a></h5>
-                           
+                            <p>' . htmlspecialchars($row["description"]).'</p>
                             <ul>
-                                
+                              
                             </ul>
                         </div>
                     </div>
