@@ -242,6 +242,82 @@ $conn->close();
 
         </div>
     </section>
+    <!--Store Brands-->
+    <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title">
+                        <h4>Brands in Store</h4>
+                    </div>
+                </div>
+            </div>
+            <?php
+        $servername = "192.250.235.20";
+        $username = "epravidi_osrt_data";
+        $password = "UQ!r.gTOz=oo";
+        $dbname = "epravidi_osrt";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch brand data
+$sql = "SELECT brand_logo, brand_name, brand_website FROM store_brands";
+$result = $conn->query($sql);
+
+// Display structure
+if ($result->num_rows > 0) {
+    echo '<div class="as-slider owl-carousel">';
+    
+    // Row counter to create rows of 6 brands
+    $count = 0;
+    
+    while ($row = $result->fetch_assoc()) {
+        if ($count % 6 == 0) {
+            echo '<div class="row">';   
+        }
+        
+        echo '
+            <div class="col-lg-4 col-md-6">
+                <div class="as-item">
+                    <div class="as-pic">
+                        <img src="https://osrtpanel.epravidi.com/pages/brands/' . $row['brand_logo'] . '" alt="">
+                    </div>
+                    <div class="as-text">
+                        <div class="at-title">
+                            <h6>' . $row['brand_name'] . '</h6>
+                        </div>
+                        <a href="' . $row['brand_website'] . '" class="primary-btn">View Website</a>
+                    </div>
+                </div>
+            </div>
+        ';
+
+        $count++;
+
+        // Close row div every 6 items
+        if ($count % 3 == 0) {
+            echo '</div>';
+        }
+    }
+    
+    // Close any remaining open row div
+    if ($count % 3 != 0) {
+        echo '</div>';
+    }
+    
+    echo '</div>';
+} else {
+    echo "No brands found.";
+}
+
+$conn->close();
+?>
+
+        </div>
+    </section>
     <!-- Agent Section End -->
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2024/10/25/06/20241025061942-VB7QGSPE.js"></script>
