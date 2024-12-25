@@ -218,13 +218,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>
                         </div>
                         <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price">Rs. ' . htmlspecialchars($row["price"]) . '<span>/MRP</span></div>
+                   
+                           
                             <h5><a href="#">' . htmlspecialchars($row["product_name"]) . '</a></h5>
-                            <p>Item Code: ' . htmlspecialchars($row["product_code"]) . '<br>Color: ' . htmlspecialchars($row["color"]) . ', Brand: ' . htmlspecialchars($row["brand"]) . ', Material: ' . htmlspecialchars($row["material"]) . '</p>
+                           
                             <ul>
-                                <li>' . htmlspecialchars($row["dimensions"]) . '</li>
-                                <li><i class="fa fa-object-group"></i>&nbsp;<i class="fa fa-bathtub"></i>&nbsp;<i class="fa fa-bed"></i></li>
+                                
                             </ul>
                         </div>
                     </div>
