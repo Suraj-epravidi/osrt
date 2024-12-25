@@ -817,16 +817,17 @@ include 'visitor.php';
                     </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">
-                    <div class="fs-widget">
-                        <h5>Help</h5>
-                        <ul>
-                            <li><a href="./privacypolice.pdf" download="./privacypolicy.pdf">Privacy Policy</a></li>
-                            <li><a href="#">Contact Support</a></li>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="returnpolicy.pdf" download="returnpolicy.pdf">Return Policy</a></li>
-                            <li><a href="#">FAQs</a></li>
-                        </ul>
-                    </div>
+                <div class="fs-widget">
+    <h5>Help</h5>
+    <ul>
+        <li><a href="./privacypolicy.pdf" download="privacypolicy.pdf">Privacy Policy</a></li>
+        <li><a href="#">Contact Support</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="./returnpolicy.pdf" download="returnpolicy.pdf">Return Policy</a></li>
+        <li><a href="#">FAQs</a></li>
+    </ul>
+</div>
+
                 </div>
                 <div class="col-lg-2 col-sm-6">
                     <div class="fs-widget">
