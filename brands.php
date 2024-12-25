@@ -271,10 +271,15 @@ $conn->close();
                     <div class="fs-widget">
                         <h5>Help</h5>
                         <ul>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="privacypolice.pdf" download="privacypolicy.pdf">Privacy Policy</a></li>
                             <li><a href="#">Contact Support</a></li>
                             <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Careers</a></li>
+               <div class="fs-social">
+                            <a href="https://www.facebook.com/osrtrade/"><i class="fa fa-facebook"></i></a>
+                            <a href="https://x.com/OSR_Traders"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/@OSRTraders"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.instagram.com/o.s.r.traders/"><i class="fa fa-instagram"></i></a>
+                        </div>
                             <li><a href="#">FAQs</a></li>
                         </ul>
                     </div>
