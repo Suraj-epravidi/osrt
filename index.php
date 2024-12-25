@@ -417,10 +417,7 @@ include 'visitor.php';
                                 </button>
                             </form>
                         </div>
-<<<<<<< HEAD
-=======
                        
->>>>>>> 650f0871f17653c35f19ab46a38f4ee3277ecbaf
                     </div>
                 </div>
             </div>
