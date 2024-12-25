@@ -398,7 +398,8 @@ include 'visitor.php';
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="change-btn">
+                      <div class="change-btn">
+
                         <!-- Search Box  -->
                         <div class="cb-item">
                             <form class="product-search-box" action="#">
@@ -412,6 +413,10 @@ include 'visitor.php';
                                 </button>
                             </form>
                         </div>
+<<<<<<< HEAD
+=======
+                       
+>>>>>>> 650f0871f17653c35f19ab46a38f4ee3277ecbaf
                     </div>
                 </div>
             </div>
@@ -785,8 +790,8 @@ include 'visitor.php';
     <!-- Contact Section End -->
     <!-- chatbot -->
 
-    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-    <script src="https://files.bpcontent.cloud/2024/10/25/06/20241025061942-VB7QGSPE.js"></script>
+ <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/11/12/13/20241112133346-PL5ZLF1B.js"></script>
 
 
     <!-- Footer Section Begin -->
