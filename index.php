@@ -121,11 +121,15 @@ include 'visitor.php';
             <a href="https://osrt.epravidi.com/contact#osrt-contact-form" class="hw-btn">Visit Us Today</a>
         </div>
         <div class="om-social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube-play"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.facebook.com/osrtrade/"><i class="fa fa-facebook"></i></a>
+            <a href="https://x.com/OSR_Traders"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@OSRTraders"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.instagram.com/o.s.r.traders/"><i class="fa fa-instagram"></i></a>
+        
         </div>
+     
+             
+                      
     </div>
     <!-- Offcanvas Menu Wrapper End -->
     <script>
@@ -402,8 +406,8 @@ include 'visitor.php';
 
                         <!-- Search Box  -->
                         <div class="cb-item">
-                            <form class="product-search-box" action="#">
-                                <input type="text" name="query" placeholder="Search products">
+                            <form class="product-search-box" method="POST" action="searchresult">
+                                <input type="text" name="search" placeholder="Search products">
                                 <button type="submit"
                                     style="border: none; padding: 0; margin: 0; height: 47px; width: 50px; background-color: #bb8e29; cursor: pointer;">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
@@ -808,10 +812,10 @@ include 'visitor.php';
                         <p>Be sure to follow us on our social media platforms. Stay informed about industry trends, new
                             products, and expert tips to keep your projects on the cutting edge.</p>
                         <div class="fs-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/osrtrade/"><i class="fa fa-facebook"></i></a>
+                            <a href="https://x.com/OSR_Traders"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/@OSRTraders"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.instagram.com/o.s.r.traders/"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -819,10 +823,10 @@ include 'visitor.php';
                     <div class="fs-widget">
                         <h5>Help</h5>
                         <ul>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="privacypolice.pdf" download="privacypolicy.pdf">Privacy Policy</a></li>
                             <li><a href="#">Contact Support</a></li>
                             <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Careers</a></li>
+                            <li><a href="returnpolicy.pdf" download="returnpolicy.pdf">Return Policy</a></li>
                             <li><a href="#">FAQs</a></li>
                         </ul>
                     </div>
