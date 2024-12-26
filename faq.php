@@ -184,10 +184,10 @@ include 'visitor.php';
                         </div>
                         <?php
                         // Database connection
-                        $servername = "192.250.235.20";
-                        $username = "epravidi_osrt_data";
+                        $servername = "localhost";
+                        $username = "osrtraders_epravidi";
                         $password = "UQ!r.gTOz=oo";
-                        $dbname = "epravidi_osrt";
+                        $dbname = "osrtraders_epravidi_osrt";
                         
                         $conn = new mysqli($servername, $username, $password, $dbname);
                         

@@ -1,9 +1,9 @@
 <?php
 // Database connection settings
-$host = "192.250.235.20";
-$username = "epravidi_osrt_data";
+$host = "localhost";
+$username = "osrtraders_epravidi";
 $password = "UQ!r.gTOz=oo";
-$dbname = "epravidi_osrt";
+$dbname = "osrtraders_epravidi_osrt";
 
 try {
     // Connect to the database

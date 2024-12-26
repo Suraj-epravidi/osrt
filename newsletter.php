@@ -1,9 +1,9 @@
 <?php
 // Database credentials
-$host = "192.250.235.20";  // Replace with your server name
-$username = "epravidi_osrt_data";   // Replace with your database username
+$host = "localhost";  // Replace with your server name
+$username = "osrtraders_epravidi";   // Replace with your database username
 $password = "UQ!r.gTOz=oo";      // Replace with your database password
-$dbname = "epravidi_osrt";       // Replace with your database name
+$dbname = "osrtraders_epravidi_osrt";       // Replace with your database name
 
 // Create a database connection
 try {
