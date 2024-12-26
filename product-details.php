@@ -49,7 +49,7 @@ include 'visitor.php';
         <div id="mobile-menu-wrap"></div>
         <div class="om-widget">
             <ul>
-                <li><i class="icon_mail_alt"></i> info@osrtraders.com.np</li>
+                <li><i class="icon_mail_alt"></i> info@osrtraders.com</li>
                 <li><i class="fa fa-mobile-phone"></i> 977-01-5554421 </li>
             </ul>
             <a href="https://osrt.epravidi.com/contact#osrt-contact-form" class="hw-btn">Visit Us Today</a>
@@ -101,7 +101,7 @@ include 'visitor.php';
                     <div class="col-lg-10">
                         <div class="ht-widget">
                             <ul>
-                                <li><i class="icon_mail_alt"></i> info@osrtraders.com.np</li>
+                                <li><i class="icon_mail_alt"></i> info@osrtraders.com</li>
                                 <li><i class="fa fa-mobile-phone"></i> 977-01-5554421</span></li>
                             </ul>
                             <a href="https://osrt.epravidi.com/contact#osrt-contact-form" class="hw-btn">Visit Us Today</a>
