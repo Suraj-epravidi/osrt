@@ -176,16 +176,21 @@ include 'visitor.php';
                 </div>
             </div>
             <?php
-        $servername = "localhost";
-        $username = "osrtraders_epravidi";
-        $password = "UQ!r.gTOz=oo";
-        $dbname = "osrtraders_epravidi_osrt";
+        function connectToDatabase()
+        {
+            $servername = "localhost";
+            $username = "osrtraders_epravidi";
+            $password = "UQ!r.gTOz=oo";
+            $dbname = "osrtraders_epravidi_osrt";
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+            return $conn;
+        }
 
-        $conn = new mysqli($servername, $username, $password, $dbname);
+        $conn = connectToDatabase();
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 // Fetch brand data
 $sql = "SELECT brand_logo, brand_name, brand_website FROM brands";
@@ -252,17 +257,7 @@ $conn->close();
                 </div>
             </div>
             <?php
-      $servername = "localhost";
-      $username = "osrtraders_epravidi";
-      $password = "UQ!r.gTOz=oo";
-      $dbname = "osrtraders_epravidi_osrt";
-
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+    $conn = connectToDatabase();
 // Fetch brand data
 $sql = "SELECT brand_logo, brand_name, brand_website FROM store_brands";
 $result = $conn->query($sql);
