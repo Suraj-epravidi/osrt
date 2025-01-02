@@ -214,7 +214,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo '
                 <div class="col-lg-4 col-md-6 mix all house" onclick="product_redirect(' . htmlspecialchars($row["product_id"]) . ')" style="cursor:pointer;">
                     <div class="property-item">
-                        <div class="pi-pic set-bg" data-setbg="https://www.osrtpanel.epravidi.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">
+                        <div class="pi-pic set-bg" data-setbg="https://www.panelpro.osrtraders.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">
                             <div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>
                         </div>
                         <div class="pi-text">
