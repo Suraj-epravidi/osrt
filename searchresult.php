@@ -200,7 +200,7 @@ function getProducts($conn, $search) {
     // Add condition for search box input
     if (!empty($search)) {
         $searchTerm = $conn->real_escape_string($search);
-        $sql .= " AND (product_name LIKE '%$searchTerm%' OR description LIKE '%$searchTerm%' OR brand LIKE '%$searchTerm% LIMIT 99')";
+        $sql .= " AND (product_name LIKE '%$searchTerm%' OR description LIKE '%$searchTerm%' OR brand LIKE '%$searchTerm%' LIMIT 99)";
     }
 
     // Execute the query
