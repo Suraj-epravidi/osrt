@@ -212,7 +212,7 @@ if ($result->num_rows > 0) {
             <div class="col-lg-4 col-md-6">
                 <div class="as-item">
                     <div class="as-pic">
-                        <img src="https://osrtpanel.epravidi.com/pages/brands/' . $row['brand_logo'] . '" alt="">
+                        <img src="https://panelpro.osrtraders.com/pages/brands/' . $row['brand_logo'] . '" alt="">
                     </div>
                     <div class="as-text">
                         <div class="at-title">
@@ -278,7 +278,7 @@ if ($result->num_rows > 0) {
             <div class="col-lg-4 col-md-6">
                 <div class="as-item">
                     <div class="as-pic">
-                        <img src="https://osrtpanel.epravidi.com/pages/brands/' . $row['brand_logo'] . '" alt="">
+                        <img src="https://panelpro.osrtraders.com/pages/brands/' . $row['brand_logo'] . '" alt="">
                     </div>
                     <div class="as-text">
                         <div class="at-title">
