@@ -212,7 +212,7 @@ function getProducts($conn, $materials, $general_color, $brand, $product_type, $
         if (count($price_parts) == 2) {
             $min_price = (float)$price_parts[0];
             $max_price = (float)$price_parts[1];
-            $sql .= " AND price BETWEEN $min_price AND $max_price";
+            $sql .= " AND price BETWEEN $min_price AND $max_price LIMIT 100";
         }
     }
     $result = $conn->query($sql);
