@@ -125,11 +125,11 @@ include 'visitor.php';
             <a href="https://x.com/OSR_Traders"><i class="fa fa-twitter"></i></a>
             <a href="https://www.youtube.com/@OSRTraders"><i class="fa fa-youtube-play"></i></a>
             <a href="https://www.instagram.com/o.s.r.traders/"><i class="fa fa-instagram"></i></a>
-        
+
         </div>
-     
-             
-                      
+
+
+
     </div>
     <!-- Offcanvas Menu Wrapper End -->
     <script>
@@ -204,10 +204,10 @@ include 'visitor.php';
                     </div>
                     <div class="col-lg-3">
                         <div class="hn-social">
-          <a href="https://www.facebook.com/osrtrade/"><i class="fa fa-facebook"></i></a>
-            <a href="https://x.com/OSR_Traders"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.youtube.com/@OSRTraders"><i class="fa fa-youtube-play"></i></a>
-            <a href="https://www.instagram.com/o.s.r.traders/"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/osrtrade/"><i class="fa fa-facebook"></i></a>
+                            <a href="https://x.com/OSR_Traders"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/@OSRTraders"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.instagram.com/o.s.r.traders/"><i class="fa fa-instagram"></i></a>
 
                         </div>
                     </div>
@@ -402,7 +402,7 @@ include 'visitor.php';
                     </div>
                 </div>
                 <div class="col-lg-5">
-                      <div class="change-btn">
+                    <div class="change-btn">
 
                         <!-- Search Box  -->
                         <div class="cb-item">
@@ -417,7 +417,7 @@ include 'visitor.php';
                                 </button>
                             </form>
                         </div>
-                       
+
                     </div>
                 </div>
             </div>
@@ -563,7 +563,7 @@ include 'visitor.php';
                         // Display each property item 
                         echo '<div class="col-lg-4 col-md-6 mix all house" onclick="product_redirect(' . $row["product_id"] . ')" style="cursor:pointer;">';
                         echo '<div class="property-item">';
-                        echo '<div class="pi-pic set-bg" data-setbg="https://www.panelpro.osrtraders.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">';
+                        echo '<div class="pi-pic set-bg" style="background-size:contain; image-rendering:auto" data-setbg="https://www.panelpro.osrtraders.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">';
                         echo '<div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>';
                         echo '</div>';
                         echo '<div class="pi-text">';
@@ -791,8 +791,8 @@ include 'visitor.php';
     <!-- Contact Section End -->
     <!-- chatbot -->
 
- <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2024/11/12/13/20241112133346-PL5ZLF1B.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/11/12/13/20241112133346-PL5ZLF1B.js"></script>
 
 
     <!-- Footer Section Begin -->
@@ -817,16 +817,16 @@ include 'visitor.php';
                     </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">
-                <div class="fs-widget">
-    <h5>Help</h5>
-    <ul>
-        <li><a href="https://osrt.epravidi.com/files/privacypolicy.pdf" download="privacypolicy.pdf">Privacy Policy</a></li>
-        <li><a href="#">Contact Support</a></li>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="https://osrt.epravidi.com/files/returnpolicy.pdf" download="returnpolicy.pdf">Return Policy</a></li>
-        <li><a href="#">FAQs</a></li>
-    </ul>
-</div>
+                    <div class="fs-widget">
+                        <h5>Help</h5>
+                        <ul>
+                            <li><a href="https://osrt.epravidi.com/files/privacypolicy.pdf" download="privacypolicy.pdf">Privacy Policy</a></li>
+                            <li><a href="#">Contact Support</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="https://osrt.epravidi.com/files/returnpolicy.pdf" download="returnpolicy.pdf">Return Policy</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
 
                 </div>
                 <div class="col-lg-2 col-sm-6">
