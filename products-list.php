@@ -340,7 +340,7 @@ include 'visitor.php';
                         // Display each product item
                         echo '<div class="col-lg-4 col-md-6 mix all house" onclick="product_redirect(' . $row["product_id"] . ')" style="cursor:pointer;">';
                         echo '<div class="property-item">';
-                        echo '<div class="pi-pic set-bg" data-setbg="https://www.panelpro.osrtraders.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">';
+                        echo '<div class="pi-pic set-bg" style="background-size:contain; image-rendering:auto" data-setbg="https://www.panelpro.osrtraders.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">';
                         echo '<div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>';
                         echo '</div>';
                         echo '<div class="pi-text">';
