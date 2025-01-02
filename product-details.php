@@ -256,8 +256,8 @@ include 'visitor.php';
                                         <div class="tab-details">
                                             <ul class="left-table">
                                                 <li>
-                                                    <span class="type-name">Product Type</span>
-                                                    <span class="type-value">House</span>
+                                                    <span class="type-name">Product Category</span>
+                                                    <span class="type-value"><?php echo htmlspecialchars($product['category']); ?></span>
                                                 </li>
                                                 <li>
                                                     <span class="type-name">Product ID</span>

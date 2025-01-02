@@ -712,11 +712,6 @@ include 'visitor.php';
                     </a>
                     <a href="#" class="lc-item">
                         <div class="lc-item-inner">
-                            <img src="img/logo-carousel/Roca.jpeg" alt="">
-                        </div>
-                    </a>
-                    <a href="#" class="lc-item">
-                        <div class="lc-item-inner">
                             <img src="img/logo-carousel/Schneider.jpeg" alt="">
                         </div>
                     </a>
