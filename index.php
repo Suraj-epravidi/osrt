@@ -753,7 +753,7 @@ include 'visitor.php';
                             </div>
                             <div class="ci-text">
                                 <h5>Address</h5>
-                                <p>Khumaltar-15, Sathadobato Road, Lalitpur</p>
+                                <p>Khumaltar-15, Satdobato Road, Lalitpur</p>
                             </div>
                         </div>
                         <div class="ci-item">
