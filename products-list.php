@@ -242,7 +242,7 @@ include 'visitor.php';
                     <div class="col-lg-4">
                         <div class="profile-agent-newslatter">
                             <h5>Search our products </h5>
-                            <form class="product-search-box" action="searchresult">
+                            <form class="product-search-box" action="searchresult" method="POST">
                                 <input type="text" name="search" placeholder="Search products">
                                 <button type="submit"
                                     style="border: none; padding: 0; margin: 0; height: 47px; width: 50px; background-color: #bb8e29; cursor: pointer;">
