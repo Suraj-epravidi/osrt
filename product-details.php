@@ -61,7 +61,7 @@ include 'visitor.php';
                 <li><i class="icon_mail_alt"></i> info@osrtraders.com</li>
                 <li><i class="fa fa-mobile-phone"></i> 977-01-5554421 </li>
             </ul>
-            <a href="https://osrt.epravidi.com/contact#osrt-contact-form" class="hw-btn">Visit Us Today</a>
+            <a href="https://osrtraders.com/contact#osrt-contact-form" class="hw-btn">Visit Us Today</a>
         </div>
         <div class="om-social">
                 <a href="https://www.facebook.com/osrtrade/"><i class="fa fa-facebook"></i></a>
@@ -113,7 +113,7 @@ include 'visitor.php';
                                 <li><i class="icon_mail_alt"></i> info@osrtraders.com</li>
                                 <li><i class="fa fa-mobile-phone"></i> 977-01-5554421</span></li>
                             </ul>
-                            <a href="https://osrt.epravidi.com/contact#osrt-contact-form" class="hw-btn">Visit Us Today</a>
+                            <a href="https://osrtraders.com/contact#osrt-contact-form" class="hw-btn">Visit Us Today</a>
                         </div>
                     </div>
                 </div>
@@ -392,10 +392,10 @@ include 'visitor.php';
                     <div class="fs-widget">
                         <h5>Help</h5>
                         <ul>
-                            <li><a href="https://osrt.epravidi.com/files/privacypolicy.pdf" download="privacypolicy.pdf">Privacy Policy</a></li>
+                            <li><a href="https://osrtraders.com/files/privacypolicy.pdf" download="privacypolicy.pdf">Privacy Policy</a></li>
                             <li><a href="#">Contact Support</a></li>
                             <li><a href="#">Contact us</a></li>
-                        <li><a href="https://osrt.epravidi.com/files/returnpolicy.pdf" download="returnpolicy.pdf">Return Policy</a></li>
+                        <li><a href="https://osrtraders.com/files/returnpolicy.pdf" download="returnpolicy.pdf">Return Policy</a></li>
                             <li><a href="#">FAQs</a></li>
                         </ul>
                     </div>
