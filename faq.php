@@ -4,6 +4,15 @@ include 'visitor.php';
 <html lang="zxx">
 
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WSK2K5FJPX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WSK2K5FJPX');
+</script>
     <meta charset="UTF-8">
     <meta name="description" content="OSR traders">
     <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders NEPAL, Khumaltar">
