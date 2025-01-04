@@ -64,10 +64,10 @@ include 'visitor.php';
             <a href="https://osrtraders.com/contact#osrt-contact-form" class="hw-btn">Visit Us Today</a>
         </div>
         <div class="om-social">
-                <a href="https://www.facebook.com/osrtrade/"><i class="fa fa-facebook"></i></a>
-            <a href="https://x.com/OSR_Traders"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.youtube.com/@OSRTraders"><i class="fa fa-youtube-play"></i></a>
-            <a href="https://www.instagram.com/o.s.r.traders/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/osrtrade/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://x.com/OSR_Traders" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@OSRTraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.instagram.com/o.s.r.traders/" target="_blank"><i class="fa fa-instagram"></i></a>
         </div>
     </div>
     <!-- Offcanvas Menu Wrapper End -->
@@ -144,10 +144,10 @@ include 'visitor.php';
                     </div>
                     <div class="col-lg-3">
                         <div class="hn-social">
-          <a href="https://www.facebook.com/osrtrade/"><i class="fa fa-facebook"></i></a>
-            <a href="https://x.com/OSR_Traders"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.youtube.com/@OSRTraders"><i class="fa fa-youtube-play"></i></a>
-            <a href="https://www.instagram.com/o.s.r.traders/"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.facebook.com/osrtrade/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://x.com/OSR_Traders" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@OSRTraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.instagram.com/o.s.r.traders/" target="_blank"><i class="fa fa-instagram"></i></a>
 
                         </div>
                     </div>
@@ -381,10 +381,10 @@ include 'visitor.php';
                         </div>
                         <p>Be sure to follow us on our social media platforms. Stay informed about industry trends, new products, and expert tips to keep your projects on the cutting edge.</p>
                       <div class="fs-social">
-                            <a href="https://www.facebook.com/osrtrade/"><i class="fa fa-facebook"></i></a>
-                            <a href="https://x.com/OSR_Traders"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.youtube.com/@OSRTraders"><i class="fa fa-youtube-play"></i></a>
-                            <a href="https://www.instagram.com/o.s.r.traders/"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/osrtrade/" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://x.com/OSR_Traders" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/@OSRTraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.instagram.com/o.s.r.traders/" target="_blank"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
