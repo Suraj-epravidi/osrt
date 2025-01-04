@@ -227,7 +227,7 @@ if ($result->num_rows > 0) {
                         <div class="at-title">
                             <h6>' . $row['brand_name'] . '</h6>
                         </div>
-                        <a href="' . $row['brand_website'] . '" class="primary-btn">View Website</a>
+                        <a target="_blank" href="' . $row['brand_website'] . '" class="primary-btn">View Website</a>
                     </div>
                 </div>
             </div>
@@ -293,7 +293,7 @@ if ($result->num_rows > 0) {
                         <div class="at-title">
                             <h6>' . $row['brand_name'] . '</h6>
                         </div>
-                        <a href="' . $row['brand_website'] . '" class="primary-btn">View Website</a>
+                        <a target="_blank" href="' . $row['brand_website'] . '" class="primary-btn">View Website</a>
                     </div>
                 </div>
             </div>
