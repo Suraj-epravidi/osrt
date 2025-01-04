@@ -279,7 +279,7 @@ if ($result->num_rows > 0) {
     $count = 0;
     
     while ($row = $result->fetch_assoc()) {
-        if ($count % 6 == 0) {
+        if ($count % 3 == 0) {
             echo '<div class="row">';   
         }
         
