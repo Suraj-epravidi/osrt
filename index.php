@@ -547,19 +547,20 @@ include 'visitor.php';
                 }
 
                 // SQL Query to fetch product data
-                $sql = "(
-    SELECT price, product_id, product_code, color, brand, material, dimensions, product_name, image, category, stock
-    FROM products 
-    WHERE category = 'Tiles'
-    LIMIT 5
-)
-UNION ALL
-(
-    SELECT price, product_id, product_code, color, brand, material, dimensions, product_name, image, category, stock
-    FROM products
-    WHERE brand = 'EMTOP'
-    LIMIT 4
-);";
+//                 $sql = "(
+//     SELECT price, product_id, product_code, color, brand, material, dimensions, product_name, image, category, stock
+//     FROM products 
+//     WHERE category = 'Tiles'
+//     LIMIT 5
+// )
+// UNION ALL
+// (
+//     SELECT price, product_id, product_code, color, brand, material, dimensions, product_name, image, category, stock
+//     FROM products
+//     WHERE brand = 'EMTOP'
+//     LIMIT 4
+// );";         
+                $sql= "SELECT price, product_id, product_code, color, brand, material, dimensions, product_name, image, category, stock FROM products LIMIT 9";
                 $result = $conn->query($sql);
 
                 if (!$result) {
