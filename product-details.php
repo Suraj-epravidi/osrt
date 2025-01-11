@@ -347,8 +347,8 @@ include 'visitor.php';
                                 <div class="section-title sidebar-title">
                                     <h4>Product Image</h4>
                                 </div>
-                                <div class="sf-slider owl-carousel">
-                                    <div class="sf-item set-bg" style="filter:brightness(1.2) contrast(1.1);" data-setbg="<?php echo 'https://panelpro.osrtraders.com/pages/product_image/' . htmlspecialchars($product['image']); ?>">
+                                <div class="sf-slider owl-carousel" style="pointer-events: none;">
+                                    <div class="sf-item set-bg" style="filter:contrast(1.1);" data-setbg="<?php echo 'https://panelpro.osrtraders.com/pages/product_image/' . htmlspecialchars($product['image']); ?>">
 
                                     </div>
 
