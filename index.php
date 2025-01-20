@@ -2,7 +2,7 @@
 include 'visitor.php';
 
 ?>
-
+<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -19,6 +19,7 @@ include 'visitor.php';
     <meta charset="UTF-8">
     <meta name="description" content="OSR traders">
     <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders NEPAL, Khumaltar">
+    <meta name="description" content="osrTraders – Your trusted partner in global trading and supply chain solutions. We specialize in quality products, efficient logistics, and excellent customer service. Explore innovative trading opportunities with us today!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OSR traders</title>
