@@ -14,9 +14,18 @@ include 'visitor.php';
 </script>
 <meta charset="UTF-8">
     <meta name="description" content="OSR traders">
-    <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders NEPAL, Khumaltar">
+    <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders NEPAL, Khumaltar, brands">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="OSR Traders - Brands">
+    <meta property="og:description" content="Discover the brands available at OSR Traders.">
+    <meta property="og:url" content="https://osrtraders.com">
+    <meta property="og:image" content="https://osrtraders.com/img/About-us.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="OSR Traders">
+    <meta property="og:locale" content="ne_NP">
+    <meta property="og:video" content="https://osrtraders.com/video_osrt.mp4">
+    <meta name="author" content="OSR Traders">
     <title>OSR traders</title>
 
     <!-- Google Font -->
@@ -51,7 +60,7 @@ include 'visitor.php';
         </div>
         <div class="logo">
             <a href="./index">
-                <img src="img/logo.png" alt="">
+                <img src="img/logo.png" alt="OSR Traders Logo">
             </a>
         </div>
         <div id="mobile-menu-wrap"></div>
@@ -103,7 +112,7 @@ include 'visitor.php';
                     <div class="row">
                         <div class="col-lg-2">
                             <div class="logo">
-                                <a href="./index"><img src="img/logo.png" alt=""></a>
+                                <a href="./index"><img src="img/logo.png" alt="OSR Traders Logo"></a>
                             </div>
                         </div>
                         <div class="col-lg-10">
@@ -221,7 +230,7 @@ if ($result->num_rows > 0) {
             <div class="col-lg-4 col-md-6">
                 <div class="as-item">
                     <div class="as-pic">
-                        <img src="https://panelpro.osrtraders.com/pages/brands/' . $row['brand_logo'] . '" alt="">
+                        <img src="https://panelpro.osrtraders.com/pages/brands/' . $row['brand_logo'] . '" alt="' . $row['brand_name'] . ' Logo">
                     </div>
                     <div class="as-text">
                         <div class="at-title">
@@ -287,7 +296,7 @@ if ($result->num_rows > 0) {
             <div class="col-lg-4 col-md-6">
                 <div class="as-item">
                     <div class="as-pic">
-                        <img src="https://panelpro.osrtraders.com/pages/brands/' . $row['brand_logo'] . '" alt="">
+                        <img src="https://panelpro.osrtraders.com/pages/brands/' . $row['brand_logo'] . '" alt="' . $row['brand_name'] . ' Logo">
                     </div>
                     <div class="as-text">
                         <div class="at-title">

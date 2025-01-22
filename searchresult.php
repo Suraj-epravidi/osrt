@@ -15,9 +15,17 @@ include 'visitor.php';
 </script>
     <meta charset="UTF-8">
     <meta name="description" content="OSR traders">
-    <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders NEPAL, Khumaltar">
+    <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders NEPAL, Khumaltar, search results">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="OSR Traders - Search Results">
+    <meta property="og:description" content="Search results for products at OSR Traders.">
+    <meta property="og:url" content="https://osrtraders.com">
+    <meta property="og:image" content="https://osrtraders.com/img/About-us.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="OSR Traders">
+    <meta property="og:locale" content="ne_NP">
+    <meta property="og:video" content="https://osrtraders.com/video_osrt.mp4">
     <title>OSR traders</title>
 
     <!-- Google Font -->

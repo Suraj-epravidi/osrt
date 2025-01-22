@@ -13,9 +13,18 @@
 </script>
     <meta charset="UTF-8">
     <meta name="description" content="OSR traders">
-    <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders NEPAL, Khumaltar">
+    <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders NEPAL, Khumaltar, about">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="OSR Traders - About Us">
+    <meta property="og:description" content="Learn more about OSR Traders.">
+    <meta property="og:url" content="https://osrtraders.com">
+    <meta property="og:image" content="https://osrtraders.com/img/About-us.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="OSR Traders">
+    <meta property="og:locale" content="ne_NP">
+    <meta property="og:video" content="https://osrtraders.com/video_osrt.mp4">
+    <meta name="author" content="OSR Traders">
     <title>OSR traders</title>
 
     <!-- Google Font -->
@@ -50,7 +59,7 @@
         </div>
         <div class="logo">
             <a href="./index">
-                <img src="img/logo.png" alt="">
+                <img src="img/logo.png" alt="OSR Traders Logo">
             </a>
         </div>
         <div id="mobile-menu-wrap"></div>
@@ -102,7 +111,7 @@
                     <div class="row">
                         <div class="col-lg-2">
                             <div class="logo">
-                                <a href="./index"><img src="img/logo.png" alt=""></a>
+                                <a href="./index"><img src="img/logo.png" alt="OSR Traders Logo"></a>
                             </div>
                         </div>
                         <div class="col-lg-10">
@@ -213,7 +222,7 @@
                         <div class="at-feature">
                             <div class="af-item">
                                 <div class="af-icon">
-                                    <img src="img/chooseus/chooseus-icon-1.png" alt="">
+                                    <img src="img/chooseus/chooseus-icon-1.png" alt="Home Delivery Icon">
                                 </div>
                                 <div class="af-text">
                                     <h6>Home Delivery</h6>
@@ -222,7 +231,7 @@
                             </div>
                             <div class="af-item">
                                 <div class="af-icon">
-                                    <img src="img/chooseus/chooseus-icon-2.png" alt="">
+                                    <img src="img/chooseus/chooseus-icon-2.png" alt="Sales & Discounts Icon">
                                 </div>
                                 <div class="af-text">
                                     <h6>Sales & Discounts</h6>
@@ -231,7 +240,7 @@
                             </div>
                             <div class="af-item">
                                 <div class="af-icon">
-                                    <img src="img/chooseus/chooseus-icon-3.png" alt="">
+                                    <img src="img/chooseus/chooseus-icon-3.png" alt="Quality Assurance Icon">
                                 </div>
                                 <div class="af-text">
                                     <h6>Quality Assurance</h6>
@@ -240,7 +249,7 @@
                             </div>
                             <div class="af-item">
                                 <div class="af-icon">
-                                    <img src="img/chooseus/chooseus-icon-4.png" alt="">
+                                    <img src="img/chooseus/chooseus-icon-4.png" alt="Customer Satisfaction Icon">
                                 </div>
                                 <div class="af-text">
                                     <h6>Customer Satisfaction</h6>
@@ -283,7 +292,7 @@
                         </div>
                         <div class="ti-author">
                             <div class="ta-pic">
-                                <img src="img/testimonial-author/1.png" alt="">
+                                <img src="img/testimonial-author/1.png" alt="Suraj Thapa">
                             </div>
                             <div class="ta-text">
                                 <h5>Suraj Thapa</h5>
@@ -307,7 +316,7 @@
                         </div>
                         <div class="ti-author">
                             <div class="ta-pic">
-                                <img src="img/testimonial-author/2.png" alt="">
+                                <img src="img/testimonial-author/2.png" alt="Manas Sangam">
                             </div>
                             <div class="ta-text">
                                 <h5>Manas Sangam</h5>
@@ -330,7 +339,7 @@
                         </div>
                         <div class="ti-author">
                             <div class="ta-pic">
-                                <img src="img/testimonial-author/1.png" alt="">
+                                <img src="img/testimonial-author/1.png" alt="Kiran Neupane">
                             </div>
                             <div class="ta-text">
                                 <h5>Kiran Neupane</h5>
