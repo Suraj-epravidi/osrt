@@ -1,6 +1,7 @@
 <?php
 include 'visitor.php';
 ?>
+<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -15,7 +16,9 @@ include 'visitor.php';
 </script>
     <meta charset="UTF-8">
     <meta name="description" content="OSR traders">
-    <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders NEPAL, Khumaltar, product details">
+    <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders NEPAL, Khumaltar">
+    <meta name="description" content="osrTraders – Your trusted partner in global trading and supply chain solutions. We specialize in quality products, efficient logistics, and excellent customer service. Explore innovative trading opportunities with us today!">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta property="og:title" content="OSR Traders - Product Details">
@@ -356,8 +359,8 @@ include 'visitor.php';
                                 <div class="section-title sidebar-title">
                                     <h4>Product Image</h4>
                                 </div>
-                                <div class="sf-slider owl-carousel">
-                                    <div class="sf-item set-bg" style="filter:brightness(1.2) contrast(1.1);" data-setbg="<?php echo 'https://panelpro.osrtraders.com/pages/product_image/' . htmlspecialchars($product['image']); ?>">
+                                <div class="sf-slider owl-carousel" style="pointer-events: none;">
+                                    <div class="sf-item set-bg" style="filter:contrast(1.1);" data-setbg="<?php echo 'https://panelpro.osrtraders.com/pages/product_image/' . htmlspecialchars($product['image']); ?>">
 
                                     </div>
 
