@@ -232,27 +232,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stock_label = $row['stock'] > 0 ? 'label' : 'label c-red';
             $stock_status = $row['stock'] > 0 ? 'IN STOCK' : 'NOT IN STOCK';
             echo '
-                <div class="col-lg-4 col-md-6 mix all house" onclick="product_redirect(' . htmlspecialchars($row["product_id"]) . ')" style="cursor:pointer;">
-                    <div class="property-item">
-                        <div class="pi-pic set-bg" style="background-size:contain; image-rendering:auto" data-setbg="https://www.panelpro.osrtraders.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">
-                            <div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>
+                    <div class="col-lg-4 col-md-6 mix all house" onclick="product_redirect(' . htmlspecialchars($row["product_id"]) . ')" style="cursor:pointer;">
+                        <div class="property-item">
+                            <div class="pi-pic set-bg" data-setbg="https://www.panelpro.osrtraders.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">
+                                <div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>
+                            </div>
+                            <div class="pi-text">
+                                <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                                <div class="pt-price">Rs. ' . htmlspecialchars($row["price"]) . '<span>/MRP</span></div>
+                                <h5><a href="#">' . htmlspecialchars($row["product_name"]) . '</a></h5>
+                                <p>Item Code: ' . htmlspecialchars($row["product_code"]) . '<br>Color: ' . htmlspecialchars($row["color"]) . ', Brand: ' . htmlspecialchars($row["brand"]) . ', Material: ' . htmlspecialchars($row["material"]) . '</p>
+                                <ul>
+                                    <li>' . htmlspecialchars($row["dimensions"]) . '</li>
+                                    <li><i class="fa fa-object-group"></i>&nbsp;<i class="fa fa-bathtub"></i>&nbsp;<i class="fa fa-bed"></i></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="pi-text">
-
-
-                            <h5><a href="#">' . htmlspecialchars($row["product_name"]) . '</a></h5>
-                            <p>' . htmlspecialchars($row["description"]).'</p>
-                            <ul>
-                              
-                            </ul>
-                        </div>
-                    </div>
-                </div>';
+                    </div>';
+            }
+            echo '</div></div></section>';
+        } else {
+            echo "<p>No products found matching your criteria.</p>";
         }
-        echo '</div></div></section>';
-    } else {
-        echo "<p>No products found matching your search.</p>";
-    }
 }
 ?>
 
