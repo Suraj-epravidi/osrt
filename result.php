@@ -51,6 +51,7 @@ include 'visitor.php';
 </head>
 
 <body>
+    <h1 style="display:none;">Product Results - OSR Traders</h1>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>

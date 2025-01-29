@@ -50,6 +50,7 @@ include 'visitor.php';
 </head>
 
 <body>
+    <h1 style="display:none;">Search Results - OSR Traders</h1>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>

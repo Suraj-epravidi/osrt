@@ -48,6 +48,7 @@
 </head>
 
 <body>
+    <h1 style="display:none;">About OSR Traders - Learn More About Us</h1>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>

@@ -51,7 +51,7 @@ include 'visitor.php';
 </head>
 
 <body>
-
+    <h1 style="display:none;">Products List - OSR Traders</h1>
     <script>
         // JavaScript to handle activating the sticky navbar after scrolling 20% of the page
         document.addEventListener("DOMContentLoaded", function () {
