@@ -16,7 +16,7 @@ include 'visitor.php';
 </script>
     <meta charset="UTF-8">
     <meta name="description" content="OSR traders">
-    <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders NEPAL, Khumaltar">
+    <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders , OSRT, osrt, osr, osr traders">
     <meta name="description" content="osrTraders – Your trusted partner in global trading and supply chain solutions. We specialize in quality products, efficient logistics, and excellent customer service. Explore innovative trading opportunities with us today!">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
