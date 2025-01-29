@@ -6,8 +6,10 @@ include 'visitor.php';
 <html lang="zxx">
 
 <head>
+<meta name="google-site-verification" content="PXc4fRMZs3NeocI9_z5d1mh8yLWdrxH3f0Ylg7Nl5Uc" />
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSK2K5FJPX"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
