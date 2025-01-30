@@ -14,7 +14,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="description" content="OSR traders">
-    <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders , OSRT, osrt, osr, osr traders">
+    <meta name="keywords" content="OSR Traders, OSR traders, OSR Traders NEPAL, OSR traders , OSR Traders, osrt, osr, osr traders">
     <meta name="description" content="osrTraders – Your trusted partner in global trading and supply chain solutions. We specialize in quality products, efficient logistics, and excellent customer service. Explore innovative trading opportunities with us today!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -76,7 +76,7 @@
         <div class="om-social">
                 <a href="https://www.facebook.com/osrtrade/" target="_blank"><i class="fa fa-facebook"></i></a>
             <a href="https://x.com/OSR_Traders" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.youtube.com/@OSRTraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.youtube.com/@OSR Tradersraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
             <a href="https://www.instagram.com/o.s.r.traders/" target="_blank"><i class="fa fa-instagram"></i></a>
         </div>
     </div>
@@ -156,7 +156,7 @@
                             <div class="hn-social">
                             <a href="https://www.facebook.com/osrtrade/" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="https://x.com/OSR_Traders" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.youtube.com/@OSRTraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.youtube.com/@OSR Tradersraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
                             <a href="https://www.instagram.com/o.s.r.traders/" target="_blank"><i class="fa fa-instagram"></i></a>
 
                         </div>
@@ -290,7 +290,7 @@
                 <div class="col-lg-6">
                     <div class="testimonial-item">
                         <div class="ti-text">
-                            <p>OSRT is my go-to store for construction materials. They offer a wide variety of quality products at competitive prices, and their staff is always helpful and professional. Highly recommend their services!
+                            <p>OSR Traders is my go-to store for construction materials. They offer a wide variety of quality products at competitive prices, and their staff is always helpful and professional. Highly recommend their services!
                             </p>
                         </div>
                         <div class="ti-author">
@@ -314,7 +314,7 @@
                 <div class="col-lg-6">
                     <div class="testimonial-item">
                         <div class="ti-text">
-                            <p>I had a great experience with OSRT. The bathware and hardware selection is excellent, and their team made the entire process seamless. Reliable and trustworthy for all construction needs!
+                            <p>I had a great experience with OSR Traders. The bathware and hardware selection is excellent, and their team made the entire process seamless. Reliable and trustworthy for all construction needs!
                                 </p>
                         </div>
                         <div class="ti-author">
@@ -338,7 +338,7 @@
                 <div class="col-lg-6">
                     <div class="testimonial-item">
                         <div class="ti-text">
-                            <p>OSRT stands out with its top-notch customer service and premium-quality products. From construction equipment to hardware, they have everything under one roof. Definitely a trusted partner!</p>
+                            <p>OSR Traders stands out with its top-notch customer service and premium-quality products. From construction equipment to hardware, they have everything under one roof. Definitely a trusted partner!</p>
                         </div>
                         <div class="ti-author">
                             <div class="ta-pic">
@@ -381,7 +381,7 @@
                       <div class="fs-social">
                             <a href="https://www.facebook.com/osrtrade/" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="https://x.com/OSR_Traders" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.youtube.com/@OSRTraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.youtube.com/@OSR Tradersraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
                             <a href="https://www.instagram.com/o.s.r.traders/" target="_blank"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>

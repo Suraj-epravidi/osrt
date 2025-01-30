@@ -16,7 +16,7 @@ include 'visitor.php';
 </script>
     <meta charset="UTF-8">
     <meta name="description" content="OSR traders">
-    <meta name="keywords" content="OSRT, OSR traders, OSRT NEPAL, OSR traders , OSRT, osrt, osr, osr traders">
+    <meta name="keywords" content="OSR Traders, OSR traders, OSR Traders NEPAL, OSR traders , OSR Traders, osrt, osr, osr traders">
     <meta name="description" content="osrTraders – Your trusted partner in global trading and supply chain solutions. We specialize in quality products, efficient logistics, and excellent customer service. Explore innovative trading opportunities with us today!">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,7 +79,7 @@ include 'visitor.php';
         <div class="om-social">
                 <a href="https://www.facebook.com/osrtrade/" target="_blank"><i class="fa fa-facebook"></i></a>
             <a href="https://x.com/OSR_Traders" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.youtube.com/@OSRTraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.youtube.com/@OSR Tradersraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
             <a href="https://www.instagram.com/o.s.r.traders/" target="_blank"><i class="fa fa-instagram"></i></a>
         </div>
     </div>
@@ -159,7 +159,7 @@ include 'visitor.php';
                         <div class="hn-social">
           <a href="https://www.facebook.com/osrtrade/" target="_blank"><i class="fa fa-facebook"></i></a>
             <a href="https://x.com/OSR_Traders" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.youtube.com/@OSRTraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.youtube.com/@OSR Tradersraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
             <a href="https://www.instagram.com/o.s.r.traders/" target="_blank"><i class="fa fa-instagram"></i></a>
 
                         </div>
@@ -396,7 +396,7 @@ include 'visitor.php';
                       <div class="fs-social">
                             <a href="https://www.facebook.com/osrtrade/" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="https://x.com/OSR_Traders" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.youtube.com/@OSRTraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.youtube.com/@OSR Tradersraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
                             <a href="https://www.instagram.com/o.s.r.traders/" target="_blank"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
