@@ -34,6 +34,7 @@ include 'visitor.php';
     <meta property="og:video" content="https://osrtraders.com/video_osrt.mp4">
     <meta name="author" content="OSR Traders">
     <title>OSR traders</title>
+    <link rel="canonical" href="https://www.osrtraders.com/index" />
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <!-- Google Font -->
     <link="hhrefttps: //fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
