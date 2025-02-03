@@ -87,9 +87,9 @@ include 'visitor.php';
             const cookieName = "product_agreement";
             document.addEventListener('DOMContentLoaded', function() {
                 if (checkCookie(cookieName)) {
-                    console.log("Cookie found!");
+                    console.log("Cookie product_agreement found!");
                 } else {
-                    console.log("Cookie not found");
+                    console.log("Cookie product_agreement not found");
                     document.getElementById('product-list-overlay').style.display = 'flex';
                     const date = new Date();
                     date.setTime(date.getTime() + (30 * 60 * 1000)); // 30 minutes in milliseconds
@@ -107,7 +107,7 @@ include 'visitor.php';
                 width: 100%;
                 height: 100%;
                 background: rgba(0, 0, 0, 0.7);
-                display: flex;
+                display: none;
                 align-items: center;
                 justify-content: center;
                 z-index: 1000;
