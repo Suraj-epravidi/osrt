@@ -63,7 +63,7 @@ include 'visitor.php';
             <p>By continuing to browse and view the products, you confirm your understanding and acceptance of these terms.</p>
 
             <!-- Agree button at the bottom center -->
-            <!-- <button class="agree-btn" onclick="closeOverlay()">Agree</button> -->
+            <button class="agree-btn" onclick="closeOverlay()">Agree</button>
         </div>
 
         <script>
@@ -72,7 +72,29 @@ include 'visitor.php';
                 document.getElementById('search-overlay').style.display = 'none';
             }
         </script>
+<script>
+            function checkCookie(cookieName) {
+                // Get all cookies as a single string
+                const cookies = document.cookie;
 
+                // Check if the cookie name exists in the string
+                return cookies.split('; ').some(cookie => cookie.startsWith(`${cookieName}=`));
+            }
+
+            // Example usage
+            const cookieName = "product_agreement";
+            document.addEventListener('DOMContentLoaded', function() {
+                if (checkCookie(cookieName)) {
+                    console.log("Cookie found!");
+                } else {
+                    console.log("Cookie not found");
+                    document.getElementById('search-overlay').style.display = 'flex';
+                    const date = new Date();
+                    date.setTime(date.getTime() + (30 * 60 * 1000)); // 30 minutes in milliseconds
+                    document.cookie = `product_agreement=agreed; path=/; expires=${date.toUTCString()}`;
+                }
+            });
+        </script>
         <style>
             /* Style for the overlay */
             #search-overlay {
@@ -81,7 +103,7 @@ include 'visitor.php';
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(0, 0, 0, 1);
+                background: rgba(0, 0, 0, 0.7);
                 display: flex;
                 align-items: center;
                 justify-content: center;
