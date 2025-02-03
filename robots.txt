@@ -5,4 +5,4 @@ Disallow: /tmp/
 Disallow: /junk/
 Allow: /
 
-Sitemap: https://osrtraders.com/sitemap.xml
+Sitemap: https://www.osrtraders.com/sitemap/sitemap.xml

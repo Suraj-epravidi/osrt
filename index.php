@@ -6,6 +6,8 @@ include 'visitor.php';
 <html lang="zxx">
 
 <head>
+<script type="application/ld+json" src="https://www.osrtraders.com/schema/schema-localbusiness.json"></script>
+<link rel="canonical" href="https://www.osrtraders.com" />
 <meta name="google-site-verification" content="PXc4fRMZs3NeocI9_z5d1mh8yLWdrxH3f0Ylg7Nl5Uc" />
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSK2K5FJPX"></script>
@@ -17,24 +19,23 @@ include 'visitor.php';
 
   gtag('config', 'G-WSK2K5FJPX');
 </script>
-
+    
     <meta charset="UTF-8">
-    <meta name="description" content="OSR traders">
-    <meta name="keywords" content="OSR Traders, OSR traders, OSR Traders NEPAL, OSR traders , OSR Traders, osrt, osr, osr traders">
-    <meta name="description" content="osrTraders – Your trusted partner in global trading and supply chain solutions. We specialize in quality products, efficient logistics, and excellent customer service. Explore innovative trading opportunities with us today!">
+    <meta name="description" content="Get premium construction materials, bathware, and hardware from Nepal’s top supplier, OSR Traders. Quality products and reliable service for all your building needs!">
+    <meta name="keywords" content="Osr Traders, OSR traders, OSR Traders NEPAL, OSRtraders , osrtraders, osrt, osrTRADERS, OSRtraders">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta property="og:title" content="OSR Traders - Home">
-    <meta property="og:description" content="Welcome to OSR Traders. Explore our wide range of products.">
-    <meta property="og:url" content="https://osrtraders.com">
-    <meta property="og:image" content="https://osrtraders.com/img/About-us.png">
+    <meta property="og:description" content="OSR Traders. Explore our high-quality construction materials, bathware, and hardware from Nepal’s leading supplier">
+    <meta property="og:url" content="https://www.osrtraders.com">
+    <meta property="og:image" content="https://www.osrtraders.com/img/About-us.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="OSR Traders">
     <meta property="og:locale" content="ne_NP">
-    <meta property="og:video" content="https://osrtraders.com/video_osrt.mp4">
+    <meta property="og:video" content="https://www.osrtraders.com/video_osrt.mp4">
     <meta name="author" content="OSR Traders">
-    <title>OSR traders</title>
-    <link rel="canonical" href="https://www.osrtraders.com/index" />
+    <title>OSR traders | Best Construction Materials in Nepal</title>
+    
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <!-- Google Font -->
     <link="hhrefttps: //fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
@@ -55,7 +56,7 @@ include 'visitor.php';
 </head>
 
 <body>
-    <h1 style="display:none;">Welcome to OSR Traders - Your Trusted Partner in Global Trading</h1>
+    <h1 style="display:none;">OSR Traders - Explore our high-quality construction materials, bathware, and hardware from Nepal’s leading supplier</h1>
     <!-- Page Preloder
     <div id="preloder">
         <div class="loader"></div>
