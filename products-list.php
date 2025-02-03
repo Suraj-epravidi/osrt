@@ -53,7 +53,7 @@ include 'visitor.php';
 <body>
     <h1 style="display:none;">Products List - OSR Traders</h1>
 
-    <div id="product-overlay">
+    <div id="product-list-overlay">
         <!-- Content with the text -->
         <div class="overlay-content">
             <h2>Product Display and Pricing Agreement</h2>
@@ -65,25 +65,25 @@ include 'visitor.php';
             <p>By continuing to browse and view the products, you confirm your understanding and acceptance of these terms.</p>
 
             <!-- Agree button at the bottom center -->
-            <button class="agree-btn" onclick="closeOverlay()">Agree</button>
+            <!-- <button class="agree-btn" onclick="closeOverlay()">Agree</button> -->
         </div>
 
         <script>
             // Function to close the overlay when the "Agree" button is clicked
             function closeOverlay() {
-                document.getElementById('product-overlay').style.display = 'none';
+                document.getElementById('product-list-overlay').style.display = 'none';
             }
         </script>
 
         <style>
             /* Style for the overlay */
-            #product-overlay {
+            #product-list-overlay {
                 position: fixed;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(0, 0, 0, 0.7);
+                background: rgba(0, 0, 0, 1);
                 display: flex;
                 align-items: center;
                 justify-content: center;

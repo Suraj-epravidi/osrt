@@ -53,6 +53,90 @@ include 'visitor.php';
 <body>
     <h1 style="display:none;">Product Details - OSR Traders</h1>
     <!-- Page Preloder -->
+    <div id="product-details-overlay">
+        <!-- Content with the text -->
+        <div class="overlay-content">
+            <h2>Product Display and Pricing Agreement</h2>
+            <p>By accessing and viewing the products listed on this website, you acknowledge and agree to the following terms:</p>
+            <ul>
+                <li><strong>Price Variation:</strong> The prices displayed on this website may differ from the actual prices in the physical store. The prices listed on the website are subject to change and may not reflect the current pricing at the store location.</li>
+                <li><strong>Product Images:</strong> The images displayed for each product on the website are fetched directly from the official website of the dealer company. As such, the images may not necessarily match the actual product, and there could be discrepancies between the image, product name, and the actual product.</li>
+            </ul>
+            <p>By continuing to browse and view the products, you confirm your understanding and acceptance of these terms.</p>
+
+            <!-- Agree button at the bottom center -->
+            <!-- <button class="agree-btn" onclick="closeOverlay()">Agree</button> -->
+        </div>
+
+        <script>
+            // Function to close the overlay when the "Agree" button is clicked
+            function closeOverlay() {
+                document.getElementById('product-details-overlay').style.display = 'none';
+            }
+        </script>
+
+        <style>
+            /* Style for the overlay */
+            #product-details-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+            }
+
+            .overlay-content {
+                background: #fff;
+                padding: 20px;
+                max-width: 600px;
+                text-align: center;
+                border-radius: 10px;
+            }
+
+            h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            li {
+                font-size: 16px;
+                margin: 10px 0;
+            }
+
+            .agree-btn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .agree-btn:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </div>
     <div id="preloder">
         <div class="loader"></div>
     </div>
