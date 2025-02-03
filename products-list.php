@@ -53,7 +53,7 @@ include 'visitor.php';
 <body>
     <h1 style="display:none;">Products List - OSR Traders</h1>
 
-    <div id="home-overlay">
+    <div id="product-overlay">
         <!-- Content with the text -->
         <div class="overlay-content">
             <h2>Product Display and Pricing Agreement</h2>
@@ -76,6 +76,20 @@ include 'visitor.php';
         </script>
 
         <style>
+            /* Style for the overlay */
+            #product-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+            }
+
             .overlay-content {
                 background: #fff;
                 padding: 20px;
