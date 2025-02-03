@@ -71,7 +71,7 @@ include 'visitor.php';
         <script>
             // Function to close the overlay when the "Agree" button is clicked
             function closeOverlay() {
-                document.getElementById('home-overlay').style.display = 'none';
+                document.getElementById('product-overlay').style.display = 'none';
             }
         </script>
 
