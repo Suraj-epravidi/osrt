@@ -1,4 +1,4 @@
-<?php
+<?php 
 include 'visitor.php';
 ?>
 <!DOCTYPE html>
@@ -21,8 +21,8 @@ include 'visitor.php';
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:title" content="OSR Traders - Product Details">
-    <meta property="og:description" content="Detailed information about the products available at OSR Traders.">
+    <meta property="og:title" content="OSR Traders - Products List">
+    <meta property="og:description" content="Explore the wide range of products available at OSR Traders.">
     <meta property="og:url" content="https://osrtraders.com">
     <meta property="og:image" content="https://osrtraders.com/img/About-us.png">
     <meta property="og:type" content="website">
@@ -51,9 +51,9 @@ include 'visitor.php';
 </head>
 
 <body>
-    <h1 style="display:none;">Product Details - OSR Traders</h1>
-    <!-- Page Preloder -->
-    <div id="product-details-overlay">
+    <h1 style="display:none;">Products List - OSR Traders</h1>
+
+    <div id="product-list-overlay">
         <!-- Content with the text -->
         <div class="overlay-content">
             <h2>Product Display and Pricing Agreement</h2>
@@ -71,7 +71,7 @@ include 'visitor.php';
         <script>
             // Function to close the overlay when the "Agree" button is clicked
             function closeOverlay() {
-                document.getElementById('product-details-overlay').style.display = 'none';
+                document.getElementById('product-list-overlay').style.display = 'none';
             }
         </script>
         <script>
@@ -87,10 +87,10 @@ include 'visitor.php';
             const cookieName = "product_agreement";
             document.addEventListener('DOMContentLoaded', function() {
                 if (checkCookie(cookieName)) {
-                    console.log("Cookie found!");
+                    console.log("Cookie product_agreement found!");
                 } else {
-                    console.log("Cookie not found");
-                    document.getElementById('product-details-overlay').style.display = 'flex';
+                    console.log("Cookie product_agreement not found");
+                    document.getElementById('product-list-overlay').style.display = 'flex';
                     const date = new Date();
                     date.setTime(date.getTime() + (30 * 60 * 1000)); // 30 minutes in milliseconds
                     document.cookie = `product_agreement=agreed; path=/; expires=${date.toUTCString()}`;
@@ -100,7 +100,7 @@ include 'visitor.php';
 
         <style>
             /* Style for the overlay */
-            #product-details-overlay {
+            #product-list-overlay {
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -160,44 +160,12 @@ include 'visitor.php';
             }
         </style>
     </div>
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Offcanvas Menu Wrapper Begin -->
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="canvas-close">
-            <span class="icon_close"></span>
-        </div>
-        <div class="logo">
-            <a href="./index">
-                <img src="img/logo.png" alt="">
-            </a>
-        </div>
-        <div id="mobile-menu-wrap"></div>
-        <div class="om-widget">
-            <ul>
-                <li><i class="icon_mail_alt"></i> info@osrtraders.com</li>
-                <li><i class="fa fa-mobile-phone"></i> 977-01-5554421 </li>
-            </ul>
-            <a href="https://osrtraders.com/contact#osrt-contact-form" class="hw-btn">Visit Us Today</a>
-        </div>
-        <div class="om-social">
-                <a href="https://www.facebook.com/osrtrade/" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="https://x.com/OSR_Traders" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.youtube.com/@OSR Tradersraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
-            <a href="https://www.instagram.com/o.s.r.traders/" target="_blank"><i class="fa fa-instagram"></i></a>
-        </div>
-    </div>
-    <!-- Offcanvas Menu Wrapper End -->
-
     <script>
         // JavaScript to handle activating the sticky navbar after scrolling 20% of the page
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             var navbar = document.getElementById("stickyNav");
 
-            window.addEventListener("scroll", function() {
+            window.addEventListener("scroll", function () {
                 var scrollPosition = window.scrollY;
                 var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
                 var scrollPercentage = (scrollPosition / pageHeight) * 100;
@@ -216,7 +184,56 @@ include 'visitor.php';
 
             });
         });
+        function getQueryParam(param) {
+            let params = new URLSearchParams(window.location.search);
+            return params.get(param);
+        }
+
+        // Function to show alert on page load if alert_message exists
+
+        window.onload = function () {
+            let alertMessage = getQueryParam('alert_message');
+
+            if (alertMessage) {
+                console.log(alertMessage);
+                alert(alertMessage); // Display the alert box
+            }
+        }
+
+       
     </script>
+
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Wrapper Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <span class="icon_close"></span>
+        </div>
+        <div class="logo">
+            <a href="./index"><img src="img/logo.png" alt="OSR Traders Logo"></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="om-widget">
+            <ul>
+                <li><i class="icon_mail_alt"></i> info@osrtraders.com</li>
+                <li><i class="fa fa-mobile-phone"></i> 977-01-5554421 </li>
+            </ul>
+            <a href="https://osrtraders.com/contact#osrt-contact-form" class="hw-btn">Visit Us Today</a>
+        </div>
+        <div class="om-social">
+                <a href="https://www.facebook.com/osrtrade/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://x.com/OSR_Traders" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@OSR Tradersraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.instagram.com/o.s.r.traders/" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu Wrapper End -->
+
     <!-- Header Section Begin -->
     <header class="header-section" style="z-index: 30;">
         <div class="hs-top">
@@ -252,7 +269,7 @@ include 'visitor.php';
                                 <li><a href="./about">About</a></li>
                                 <li class="active"><a href="#">Products</a>
                                     <ul class="dropdown">
-                                        <li><a href="./products-list">Product List</a></li>
+                                        <li class="active"><a href="./products-list">Product List</a></li>
                                         <li><a href="./category">Product Category</a></li>
                                     </ul>
                                 </li>
@@ -276,217 +293,252 @@ include 'visitor.php';
         </div>
     </header>
     <!-- Header End -->
+     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/11/12/13/20241112133346-PL5ZLF1B.js"></script>
 
-
-    <?php
-    // Step 1: Database connection (Adjust the connection details as per your setup)
-    // Database connection
-    $servername = "localhost";
-    $username = "osrtraders_epravidi";
-    $password = "UQ!r.gTOz=oo";
-    $dbname = "osrtraders_epravidi_osrt";
-
-    // Create a connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check the connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Step 2: Retrieve Product ID from URL
-    // Assuming the URL is something like: http://yourwebsite.com/product.php?id=123
-    if (isset($_GET['id']) && is_numeric($_GET['id'])) {
-        $product_id = intval($_GET['id']);  // Ensure it's an integer
-
-        // Step 3: Prepare the SQL statement to get product details by product_id
-        $sql = "SELECT * FROM products WHERE product_id = ?";
-        $stmt = $conn->prepare($sql);
-
-        if ($stmt) {
-            $stmt->bind_param("i", $product_id);  // Bind the product_id to the query
-            $stmt->execute();
-            $result = $stmt->get_result();
-
-            // Step 4: Check if product exists
-            if ($result->num_rows > 0) {
-                // Fetch the product details
-                $product = $result->fetch_assoc();
-            } else {
-                echo "<p>Product not found.</p>";
-            }
-
-            $stmt->close();
-        } else {
-            echo "<p>Failed to prepare statement.</p>";
-        }
-    } else {
-        echo "<p>Invalid product ID.</p>";
-    }
-
-    // Close the connection
-    $conn->close();
-    ?>
-
-
-    <!-- Property Details Section Begin -->
-    <section class="property-details-section">
-        <section class="property-details-section">
-            <br>
-            <br>
-            </div>
-        </section>
-
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section spad set-bg" data-setbg="img/breadcrum.png">
         <div class="container">
-            <div class="product-details">
-                <div class="col-lg-8">
-                    <div class="pd-text">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="pd-title">
-                                    <div class="label <?php if ($product['stock'] < 0) {
-                                                            echo "bg-danger";
-                                                        } ?>  .bg-danger"> <?php if ($product['stock'] < 0) {
-                                                                                echo "Out of stock";
-                                                                            } else {
-                                                                                echo "In Stock";
-                                                                            } ?> </div>
-                                    <div class="pt-price">Rs.
-                                        <?php echo htmlspecialchars($product['price']); ?>
-                                    </div>
-                                    <h3><?php echo htmlspecialchars($product['product_name']); ?></h3>
-                                </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h4>Products</h4>
+                        <div class="bt-option">
+                            <a href="./index"><i class="fa fa-home"></i> Home</a>
+                            <a href="./brands">Products</a>
+                            <span>Lists</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Profile Section Begin -->
+    <section class="profile-section spad">
+        <div class="container">
+            <div class="profile-agent-content">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="profile-agent-info">
+                            <div class="pi-pic">
+                                <img src="img/agents/LOGO.png" alt="">
+
                             </div>
-                            <div class="col-lg-6">
+                            <div class="pi-text">
+                                <h5>OSR Traders</h5>
+                                <span>Khumaltar Lalitpur</span>
+                                <p>Since 2019</p>
                             </div>
                         </div>
-                        <div class="pd-board">
-                            <div class="tab-board">
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Overview</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Description</a>
-                                    </li>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="profile-agent-widget">
+                            <ul>
+                                <li>Product <span>
+                                    <?php
+                                    $servername = "localhost";
+                                    $username = "osrtraders_epravidi";
+                                    $password = "UQ!r.gTOz=oo";
+                                    $dbname = "osrtraders_epravidi_osrt";
 
-                                </ul><!-- Tab panes -->
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="tabs-1" role="tabpanel">
-                                        <div class="tab-details">
-                                            <ul class="left-table">
-                                                <li>
-                                                    <span class="type-name">Product Category</span>
-                                                    <span class="type-value"><?php echo htmlspecialchars($product['category']); ?></span>
-                                                </li>
-                                                <li>
-                                                    <span class="type-name">Product ID</span>
-                                                    <span class="type-value">#<?php echo htmlspecialchars($product['product_code']); ?></span>
-                                                </li>
-                                                <li>
-                                                    <span class="type-name">Price</span>
-                                                    <span class="type-value">Rs.<?php echo htmlspecialchars($product['price']); ?></span>
-                                                </li>
+                                    $conn = new mysqli($servername, $username, $password, $dbname);
 
-                                                <li>
-                                                    <span class="type-name">Material</span>
-                                                    <span class="type-value"><?php echo htmlspecialchars($product['material']); ?></span>
-                                                </li>
-                                            </ul>
-                                            <ul class="right-table">
-                                                <li>
-                                                    <span class="type-name">Dimension</span>
-                                                    <span class="type-value"><?php echo htmlspecialchars($product['dimensions']); ?></span>
-                                                </li>
-                                                <li>
-                                                    <span class="type-name">Pattern</span>
-                                                    <span class="type-value">#</span>
-                                                </li>
-                                                <li>
-                                                    <span class="type-name">Color</span>
-                                                    <span class="type-value"><?php echo htmlspecialchars($product['color']); ?></span>
-                                                </li>
-                                                <li>
-                                                    <span class="type-name">Brand</span>
-                                                    <span class="type-value"><?php echo htmlspecialchars($product['brand']); ?></span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="tabs-2" role="tabpanel">
-                                        <div class="tab-desc">
-                                            <?php echo "<p>Description: " . htmlspecialchars($product['description']) . "</p>" ?>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
+                                    // Check connection
+                                    if ($conn->connect_error) {
+                                        die("Connection failed: " . $conn->connect_error);
+                                    }
+                                    
+                                    $sql_products = "SELECT COUNT(*) AS product_count FROM products";
+                                    $result_products = $conn->query($sql_products);
+                                    
+                                    $product_count = 0;
+                                    if ($result_products->num_rows > 0) {
+                                        $row = $result_products->fetch_assoc();
+                                        $product_count = $row['product_count'];
+                                    }
+                                    echo $product_count;
+                                    
+                                    ?></span></li>
+                                <li>Email <span>info@osrtraders.com</span></li>
+                                <li>Phone <span>977-01-5554421</span></li>
+                            </ul>
                         </div>
-
-                        <div class="pd-widget">
-                            <h4>Address</h4>
-                            <div class="map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4173.916163515737!2d85.32849037479467!3d27.653187787351264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1780d7621ea1%3A0x8b58e862052fa651!2sOSR%20TRADERS%20Pvt.Ltd.!5e0!3m2!1sen!2snp!4v1726069735507!5m2!1sen!2snp" height="350" style="border:0;" allowfullscreen=""></iframe>
-                            </div>
-                            <div class="map-location">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="ml-item">
-                                            <div class="ml-single-item">
-                                                <h6>OSR Traders <span>( <i class="fa fa-location-arrow"></i> 5 km )</span></h6>
-                                                <p>Khumaltar, Lalitpur</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="pd-widget">
-                            <h4>Inquiry on product</h4>
-                            <form action="process_contact" class="review-form" method="post">
-                                <div class="group-input">
-                                    <input name="name" type="text" placeholder="Name" required>
-                                    <input type="text" name="email" placeholder="Email" required>
-                                    <input type="text" name="website" placeholder="Website">
-                                </div>
-                                <textarea placeholder="Messages" name="comment" required></textarea>
-
-                                <button type="submit" class="site-btn">send messages</button>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="profile-agent-newslatter">
+                            <h5>Search our products </h5>
+                            <form class="product-search-box" action="searchresult" method="POST">
+                                <input type="text" name="search" placeholder="Search products">
+                                <button type="submit"
+                                    style="border: none; padding: 0; margin: 0; height: 47px; width: 50px; background-color: #bb8e29; cursor: pointer;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
+                                        <path
+                                            d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                                    </svg>
+                                </button>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="property-sidebar">
-                        <div class="single-sidebar">
+            </div>
+        </div>
+    </section>
+    <!-- Profile Section End -->
 
 
-                            <div class="single-sidebar slider-op">
-                                <div class="section-title sidebar-title">
-                                    <h4>Product Image</h4>
-                                </div>
-                                <div class="sf-slider owl-carousel" style="pointer-events: none;">
-                                    <div class="sf-item set-bg" style="filter:contrast(1.1);" data-setbg="<?php echo 'https://panelpro.osrtraders.com/pages/product_image/' . htmlspecialchars($product['image']); ?>">
 
-                                    </div>
+    <!-- Property Section Begin -->
+    <section class="property-section profile-page spad">
+        <div class="container">
+            <div class="row">
+            <script>
+                function product_redirect(id) {
+                    window.location.href = './product-details?id=' + id;
+                }
+            </script>
+                <?php
+                // Database connection
+                $servername = "localhost";
+                $username = "osrtraders_epravidi";
+                $password = "UQ!r.gTOz=oo";
+                $dbname = "osrtraders_epravidi_osrt";
 
-                                </div>
-                            </div>
+                $conn = new mysqli($servername, $username, $password, $dbname);
 
-                        </div>
-                    </div>
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                // Get page number from URL, default to 1 if not provided
+                $page_no = isset($_GET['page_no']) ? (int) $_GET['page_no'] : 1;
+                if ($page_no < 1) {
+                    $page_no = 1;
+                }
+                $products_per_page = 9; // Display 9 products per page  
+                
+                // Calculate the ID range for the current page
+                $start_id = $products_per_page * ($page_no - 1) + 1;
+                $end_id = ($start_id + $products_per_page) - 1;
+
+                // SQL Query to fetch product data within the calculated ID range
+                $sql = "SELECT price, product_id, product_code, color, brand, material, dimensions, product_name, image, category, stock 
+        FROM products 
+        WHERE product_id BETWEEN ? AND ?";
+
+                // Initialize the prepared statement
+                $stmt = $conn->prepare($sql);
+
+                // Bind the parameters to the statement (two integers)
+                $stmt->bind_param("ii", $start_id, $end_id);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                // SQL Query to count total products
+                $sql_count = "SELECT COUNT(*) as total_products FROM products";
+                $result_count = $conn->query($sql_count);
+
+                if (!$result_count) {
+                    die("Query failed: " . $conn->error);
+                }
+
+                $row_count = $result_count->fetch_assoc();
+                $total_products = (int) $row_count['total_products']; // Convert to integer
+                echo '<input name="total_products" type="number" id="total_products" readonly value="' . $total_products . '" style="display:none;">';
+                if (!$result) {
+                    die("Query failed: " . $conn->error);
+                }
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        // Determine the stock status
+                        $stock_label = '';
+                        $stock_status = '';
+
+                        if ($row['stock'] > 0) {
+                            $stock_label = 'label';
+                            $stock_status = 'IN STOCK';
+                        } else {
+                            $stock_label = 'label c-red';
+                            $stock_status = 'NOT IN STOCK';
+                        }
+
+                        // Display each product item
+                        echo '<div class="col-lg-4 col-md-6 mix all house" onclick="product_redirect(' . $row["product_id"] . ')" style="cursor:pointer;">';
+                        echo '<div class="property-item">';
+                        echo '<div class="pi-pic set-bg" style="background-size:contain; image-rendering:auto" data-setbg="https://www.panelpro.osrtraders.com/pages/product_image/' . htmlspecialchars($row["image"]) . '">';
+                        echo '<div class="' . $stock_label . '">' . htmlspecialchars($stock_status) . '</div>';
+                        echo '</div>';
+                        echo '<div class="pi-text">';
+                        echo '<a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>';
+                        echo '<div class="pt-price">Rs. ' . htmlspecialchars($row["price"]) . '<span>/MRP</span></div>';
+                        echo '<h5><a href="#">' . htmlspecialchars($row["product_name"]) . '</a></h5>';
+                        echo '<p>Item Code: ' . htmlspecialchars($row["product_code"]) . '<br>';
+                        echo 'Color: ' . htmlspecialchars($row["color"]) . ', Brand: ' . htmlspecialchars($row["brand"]) . ', Material: ' . htmlspecialchars($row["material"]) . '</p>';
+                        echo '<ul>';
+                        echo '<li>' . htmlspecialchars($row["dimensions"]) . '</li>';
+                        echo '<li>';
+                        echo '<i class="fa fa-object-group"></i>&nbsp;&nbsp;';
+                        echo '<i class="fa fa-bathtub"></i>&nbsp;&nbsp;';
+                        echo '<i class="fa fa-bed"></i>&nbsp;&nbsp;';
+                        echo '</li>';
+                        echo '</ul>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo "<script>
+
+        let pageNo =  getQueryParam('page_no');
+        console.log('pagination is working');
+        if(pageNo==null){
+            pageNo=1;
+            }
+            console.log(pageNo);
+            window.onload=function(){
+        generatePagination(pageNo);
+    }
+        </script>";
+                    }
+                } else {
+                    echo "No products found in the database";
+                }
+
+                // Close the database connection
+                $conn->close();
+                ?>
+
+
+                <div class="col-lg-12">
+
+                    <?php echo '<div class="property-pagination">';
+                    $last_page = ceil($total_products / 9);
+                    if ($page_no > 1 ) {
+                        echo '<a href="./products-list?page_no=' . $page_no - 1 . '" class="icon"><span class="arrow_left"></span></a>';
+                    }
+                    if ($page_no != 1  && $page_no != 2) {
+                        echo ' <a href="./products-list?page_no=1">1</a>';
+                    }
+                    if ($last_page > 1 && $page_no > 1) {
+                        echo '<a href="./products-list?page_no=' . $page_no - 1 . '">' . $page_no - 1 . '</a>';
+                    }
+                    echo '<a href="./products-list?page_no=' . $page_no . '">' . $page_no . '</a>';
+                    if($page_no < $last_page-1){
+                        echo '<a href="./products-list?page_no=' . $page_no + 1 . '">' . $page_no + 1 . '</a>';
+                    }
+                    if ($page_no < $last_page) {
+                        echo '<a href="./products-list?page_no=' . $last_page . '">' . $last_page . '</a>';
+                        echo '<a href="./products-list?page_no=' . $page_no + 1 . '" class="icon"><span class="arrow_right"></span></a>';
+                    }
+
+
+                    echo '</div>';
+                    ?>
                 </div>
             </div>
+        </div>
     </section>
-    <!-- Property Details Section End -->
- <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2024/11/12/13/20241112133346-PL5ZLF1B.js"></script>
-
-    <!-- Contact Section Begin -->
-
-    <!-- Contact Section End -->
+    <!-- Property Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer-section">
@@ -521,7 +573,7 @@ include 'visitor.php';
                     </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">
-                    <div class="fs-widget">
+                   <div class="fs-widget">
                         <h5>Links</h5>
                         <ul>
                             <li><a href="./contact">Contact</a></li>
@@ -544,11 +596,9 @@ include 'visitor.php';
                 </div>
             </div>
             <div class="copyright-text">
-
-                Copyright &copy;<script>
-                    document.write(new Date().getFullYear());
-                </script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
-                </p>
+                
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
+  </p>
             </div>
         </div>
     </footer>
@@ -566,6 +616,7 @@ include 'visitor.php';
     <script src="js/jquery.richtext.min.js"></script>
     <script src="js/image-uploader.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>
