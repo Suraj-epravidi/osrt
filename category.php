@@ -283,7 +283,81 @@ include 'visitor.php';
     <!-- Breadcrumb Section End -->
     <br>
     <br>
+    
+    
+    <!-- Profile Section Begin -->
+    <section class="profile-section spad">
+        <div class="container">
+            <div class="profile-agent-content">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="profile-agent-info">
+                            <div class="pi-pic">
+                                <img src="img/agents/LOGO.png" alt="">
 
+                            </div>
+                            <div class="pi-text">
+                                <h5>OSR Traders</h5>
+                                <span>Khumaltar Lalitpur</span>
+                                <p>Since 2019</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="profile-agent-widget">
+                            <ul>
+                                <li>Product <span>
+                                    <?php
+                                    $servername = "localhost";
+                                    $username = "osrtraders_epravidi";
+                                    $password = "UQ!r.gTOz=oo";
+                                    $dbname = "osrtraders_epravidi_osrt";
+
+                                    $conn = new mysqli($servername, $username, $password, $dbname);
+
+                                    // Check connection
+                                    if ($conn->connect_error) {
+                                        die("Connection failed: " . $conn->connect_error);
+                                    }
+                                    
+                                    $sql_products = "SELECT COUNT(*) AS product_count FROM products";
+                                    $result_products = $conn->query($sql_products);
+                                    
+                                    $product_count = 0;
+                                    if ($result_products->num_rows > 0) {
+                                        $row = $result_products->fetch_assoc();
+                                        $product_count = $row['product_count'];
+                                    }
+                                    echo $product_count;
+                                    
+                                    ?></span></li>
+                                <li>Email <span>info@osrtraders.com</span></li>
+                                <li>Phone <span>977-01-5554421</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="profile-agent-newslatter">
+                            <h5>Search our products </h5>
+                            <form class="product-search-box" action="searchresult" method="POST">
+                                <input type="text" name="search" placeholder="Search products">
+                                <button type="submit"
+                                    style="border: none; padding: 0; margin: 0; height: 47px; width: 50px; background-color: #bb8e29; cursor: pointer;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
+                                        <path
+                                            d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Profile Section End -->
+
+    
     <!-- Categories Section Begin -->
     <section class="categories">
         <div class="cs-item-list">

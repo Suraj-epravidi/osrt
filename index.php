@@ -404,11 +404,25 @@ include 'visitor.php';
         return $values;
     }
 
+    function fetchDistinctValuesRand($conn, $column)
+    {
+        $sql = "SELECT DISTINCT $column FROM products ORDER BY RAND() LIMIT 5";
+        $result = $conn->query($sql);
+
+        $values = [];
+        if ($result && $result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $values[] = $row[$column];
+            }
+        }
+        return $values;
+    }
+
     // Get dropdown data
     $materials = fetchDistinctValues($conn, 'material');
     $colors = fetchDistinctValues($conn, 'color');
     $brands = fetchDistinctValues($conn, 'brand');
-    $types = fetchDistinctValues($conn, 'category');
+    $types = fetchDistinctValuesRand($conn, 'category');
 
     // Close the database connection after fetching all values
     $conn->close();
