@@ -357,7 +357,7 @@ include 'visitor.php';
     </section>
     <!-- Profile Section End -->
 
-    
+
     <!-- Categories Section Begin -->
     <section class="categories">
         <div class="cs-item-list">
@@ -383,7 +383,7 @@ include 'visitor.php';
             if ($result && $result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     // Category display
-                    echo '<div class="cs-item set-bg" data-setbg="https://panelpro.osrtraders.com/pages/category/' . htmlspecialchars($row["category_image"]) . '" onclick=window.location.href="https://osrtraders.com/result?productType=' . htmlspecialchars($row["category_name"]) . '">';
+                    echo '<div class="cs-item set-bg" data-setbg="https://panelpro.osrtraders.com/pages/category/' . str_replace(' ', '%20', htmlspecialchars($row["category_image"])) . '" onclick=window.location.href="https://osrtraders.com/result?productType=' . str_replace(' ', '%20', htmlspecialchars($row["category_name"])) . '">';
                     echo '<div class="cs-text">';
                     echo '<h5>' . htmlspecialchars($row["category_name"]) . '</h5>';
                     echo '<span>' . htmlspecialchars($row["product_count"]) . ' Products</span>';
@@ -418,133 +418,6 @@ include 'visitor.php';
                 }
 
             </script>
-   <section class="feature-property-section spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 p-0">
-                <div class="feature-property-left">
-                    <div class="section-title">
-                        <h4>Feature Product</h4>
-                    </div>
-                        <ul>
-                            <li onclick="pageRedirect(this)">Tiles</li>
-                            <li onclick="pageRedirect(this)">Shower Head</li>
-                            <li onclick="pageRedirect(this)">Light Switches</li>
-                            <li onclick="pageRedirect(this)">Commode</li>
-                            <li onclick="pageRedirect(this)">Vanity Basin's</li>
-                            <li onclick="pageRedirect(this)">Bathware's</li>
-                        </ul>
-                        <a href="./result?productType">View all Products</a>
-                    </div>
-                </div>
-                <div class="col-lg-8 p-0">
-                    <div class="fp-slider owl-carousel">
-                        <div class="fp-item set-bg" data-setbg="img/feature-property/fp-1.jpg">
-                            <div class="fp-text">
-                                <h5 class="title">Island Carara</h5>
-                                <p> Item Code .: 1001<br>
-                                    Color.: Cream, Brand.: Somany, Material.: Marble</p>
-                                <div class="label">IN STOCK</div>
-                                <h5>Rs 2900<span>/MRP</span></h5>
-
-                            </div>
-                        </div>
-                        <div class="fp-item set-bg" data-setbg="img/feature-property/fp-2.jpg">
-                            <div class="fp-text">
-                                <h5 class="title">Island Carara</h5>
-                                <p> Item Code .: 1001<br>
-                                    Color.: Cream, Brand.: Somany, Material.: Marble</p>
-                                <div class="label">IN STOCK</div>
-                                <h5>Rs 2900<span>/MRP</span></h5>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Feature Product Section End -->
-
-
-    <!-- Footer Section Begin -->
-    <footer class="footer-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="fs-about">
-                        <div class="fs-logo">
-                            <a href="#">
-                                <img src="img/f-logo.png" alt="">
-                            </a>
-                        </div>
-                        <p>Be sure to follow us on our social media platforms. Stay informed about industry trends, new products, and expert tips to keep your projects on the cutting edge.</p>
-                      <div class="fs-social">
-                            <a href="https://www.facebook.com/osrtrade/" target="_blank"><i class="fa fa-facebook"></i></a>
-                            <a href="https://x.com/OSR_Traders" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.youtube.com/@OSR Tradersraders" target="_blank"><i class="fa fa-youtube-play"></i></a>
-                            <a href="https://www.instagram.com/o.s.r.traders/" target="_blank"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-sm-6">
-                    <div class="fs-widget">
-                        <h5>Help</h5>
-                        <ul>
-                            <li><a href="https://osrtraders.com/files/privacypolicy.pdf" download="privacypolicy.pdf">Privacy Policy</a></li>
-                            <li><a href="#">Contact Support</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        <li><a href="https://osrtraders.com/files/returnpolicy.pdf" download="returnpolicy.pdf">Return Policy</a></li>
-                            <li><a href="#">FAQs</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-sm-6">
-                    <div class="fs-widget">
-                        <h5>Links</h5>
-                        <ul>
-                            <li><a href="./contact">Contact</a></li>
-                            <li><a href="./products-list">Products</a></li>
-                            <li><a href="./contact">Product Inquiry</a></li>
-                            <li><a href="./brands">Brands</a></li>
-                            <li><a href="./faq">FAQ's</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="fs-widget">
-                        <h5>Newsletter</h5>
-                        <p>Subscribe to receive inspiration, ideas, and news in your inbox.</p>
-                        <form action="newsletter" class="subscribe-form" method="POST">
-                            <input type="text" placeholder="Email" name="email">
-                            <button type="submit" class="site-btn">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright-text">
-
-                Copyright &copy;<script>
-                    document.write(new Date().getFullYear());
-                </script> OSR Traders. All rights reserved | Forged by <a href="https://www.epravidi.com" target="_blank">E-pravidi Pvt. Ltd.</a>
-                </p>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer Section End -->
-
-    <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.richtext.min.js"></script>
-    <script src="js/image-uploader.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
+   </body>
 
 </html>
