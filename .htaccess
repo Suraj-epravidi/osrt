@@ -1,0 +1,15 @@
+# Enable the Rewrite Engine
+RewriteEngine On
+
+# Redirect Non-WWW to WWW
+RewriteCond %{HTTP_HOST} ^osrtraders\.com [NC]
+RewriteRule ^(.*)$ https://www.osrtraders.com/$1 [L,R=301]
+
+# Redirect clean URLs to corresponding .php or .html files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)$ $1.php [L]
+RewriteRule ^([^/]+)$ $1.html [L]
+
+# Optional: Handle a 404 error for unmatched routes
+ErrorDocument 404 /404.php

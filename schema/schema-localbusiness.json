@@ -1,0 +1,12 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "OSR Traders",
+  "address": {
+    "@type": "44700",
+    "streetAddress": "SATHADOBATO ROAD, Godawari",
+    "addressLocality": "Kathmandu",
+    "addressCountry": "NP"
+  },
+  "telephone": "+977-9851339726"
+}
